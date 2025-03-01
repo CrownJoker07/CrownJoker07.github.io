@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://crownjoker07.github.io/post/hello-world/</loc>
+    <loc>https://crownjoker07.github.io/p/hello-world/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crownjoker07.github.io/</loc>
@@ -20,7 +20,7 @@
     <loc>https://crownjoker07.github.io/tags/markdown/</loc>
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crownjoker07.github.io/post/markdown-syntax/</loc>
+    <loc>https://crownjoker07.github.io/p/markdown-syntax-guide/</loc>
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crownjoker07.github.io/post/</loc>
@@ -38,17 +38,14 @@
     <loc>https://crownjoker07.github.io/categories/themes/</loc>
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crownjoker07.github.io/post/image-gallery/</loc>
+    <loc>https://crownjoker07.github.io/p/image-gallery/</loc>
     <lastmod>2023-08-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crownjoker07.github.io/post/shortcodes/</loc>
+    <loc>https://crownjoker07.github.io/p/shortcodes/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crownjoker07.github.io/post/math-typesetting/</loc>
+    <loc>https://crownjoker07.github.io/p/math-typesetting/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crownjoker07.github.io/page/archives/</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crownjoker07.github.io/categories/example-category/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
@@ -59,10 +56,13 @@
     <loc>https://crownjoker07.github.io/page/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crownjoker07.github.io/page/links/</loc>
+    <loc>https://crownjoker07.github.io/archives/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crownjoker07.github.io/page/resume/</loc>
+    <loc>https://crownjoker07.github.io/resume/</loc>
   </url><url>
-    <loc>https://crownjoker07.github.io/page/search/</loc>
+    <loc>https://crownjoker07.github.io/links/</loc>
+  </url><url>
+    <loc>https://crownjoker07.github.io/search/</loc>
   </url>
 </urlset>
