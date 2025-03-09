@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programs on 庄泽伟的博客</title><link>https://crownjoker07.github.io/categories/programs/</link><description>Recent content in Programs on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>ZhuangZewei</copyright><lastBuildDate>Sun, 09 Mar 2025 20:48:00 +0800</lastBuildDate><atom:link href="https://crownjoker07.github.io/categories/programs/index.xml" rel="self" type="application/rss+xml"/><item><title>正则表达式说明书</title><link>https://crownjoker07.github.io/p/programs-1/</link><pubDate>Sun, 09 Mar 2025 20:48:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/programs-1/</guid><description>&lt;blockquote>
+&lt;p>正则表达式是一种用于匹配和操作文本的强大工具，它是由一系列字符和特殊字符组成的模式，用于描述要匹配的文本模式。&lt;/p>&lt;/blockquote>
+&lt;h2 id="正则表达式的模式">正则表达式的模式
+&lt;/h2>&lt;p>正则表达式的模式可以包括以下内容：&lt;/p>
+&lt;ul>
+&lt;li>字面值字符：例如字母、数字、空格等，可以直接匹配它们自身。&lt;/li>
+&lt;li>特殊字符：例如点号 .、星号 *、加号 +、问号 ? 等，它们具有特殊的含义和功能。&lt;/li>
+&lt;li>字符类：用方括号 [ ] 包围的字符集合，用于匹配方括号内的任意一个字符。&lt;/li>
+&lt;li>元字符：例如 \d、\w、\s 等，用于匹配特定类型的字符，如数字、字母、空白字符等。&lt;/li>
+&lt;li>量词：例如 {n}、{n,}、{n,m} 等，用于指定匹配的次数或范围。&lt;/li>
+&lt;li>边界符号：例如 ^、$、\b、\B 等，用于匹配字符串的开头、结尾或单词边界位置。&lt;/li>
+&lt;/ul>
+&lt;h2 id="简介">简介
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">^[a-zA-Z0-9_-]{3,15}$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>^ 表示匹配字符串的开头。&lt;/li>
+&lt;li>[a-zA-Z0-9_-] 表示字符集，包含小写字母、大写字母、数字、下划线和连接字符 -。&lt;/li>
+&lt;li>{3,15} 表示前面的字符集最少出现 3 次，最多出现 15 次，从而限制了用户名的长度在 3 到 15 个字符之间。&lt;/li>
+&lt;li>$ 表示匹配字符串的结尾。&lt;/li>
+&lt;/ul>
+&lt;h2 id="语法">语法
+&lt;/h2>&lt;ul>
+&lt;li>[abc] 匹配所有a、b、c字符&lt;/li>
+&lt;li>[^abc] 匹配所有非a、b、c 字符&lt;/li>
+&lt;li>[A-Z] 匹配所有A-Z字符&lt;/li>
+&lt;li>. 相当于 [^\n\r]&lt;/li>
+&lt;li>[\s\S] 匹配所有。\s 是匹配所有空白符，包括换行，\S 非空白符，不包括换行。&lt;/li>
+&lt;li>\w 等价于 [A-Za-z0-9_]&lt;/li>
+&lt;li>\d 等价于 [0-9]&lt;/li>
+&lt;/ul></description></item></channel></rss>
