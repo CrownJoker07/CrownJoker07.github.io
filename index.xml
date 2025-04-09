@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>庄泽伟的博客</title><link>https://crownjoker07.github.io/</link><description>Recent content on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>ZhuangZewei</copyright><lastBuildDate>Mon, 07 Apr 2025 19:47:00 +0800</lastBuildDate><atom:link href="https://crownjoker07.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>文件整理及备份流程研究</title><link>https://crownjoker07.github.io/p/wemedia-3/</link><pubDate>Mon, 07 Apr 2025 19:47:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/wemedia-3/</guid><description>&lt;blockquote>
+&lt;p>互联网人肯定会产生许多的文件，例如视频、图片、文档等，数据是最重要的，记录着一切，因此如何整理及备份好是及其重要的。&lt;/p>&lt;/blockquote>
+&lt;h3 id="文件类型">文件类型
+&lt;/h3>&lt;ul>
+&lt;li>视频：A-Roll、B-Roll、日常视频&lt;/li>
+&lt;li>图片：素材图片、封面图、缩略图、日常图片&lt;/li>
+&lt;li>音频：BGM、SFX&lt;/li>
+&lt;li>其他：工程文件、字幕文件、特效模板等&lt;/li>
+&lt;/ul>
+&lt;h3 id="树状分类体系">树状分类体系
+&lt;/h3>&lt;ul>
+&lt;li>原始素材
+&lt;ul>
+&lt;li>视频
+&lt;ul>
+&lt;li>原始视频&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>图片
+&lt;ul>
+&lt;li>原始图片&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>字体&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>加工素材（特效模板、字母文件）&lt;/li>
+&lt;li>工程目录（例如PR、AE）&lt;/li>
+&lt;li>成品输出（发布的视频版本）&lt;/li>
+&lt;li>辅助资料（文案脚本、参考案例、版权证明等）&lt;/li>
+&lt;/ul>
+&lt;h3 id="标准化命名规则">标准化命名规则
+&lt;/h3>&lt;p>根据文件类型的主要参数或内容进行命名&lt;/p>
+&lt;h3 id="素材库">素材库
+&lt;/h3>&lt;p>用来存放共同的视频素材、图片素材、音频素材等，使用Billfish进行管理&lt;/p>
+&lt;h3 id="备份">备份
+&lt;/h3>&lt;p>使用Raid2阵列进行备份，再使用网盘备份一份&lt;/p></description></item><item><title>视频格式全解析</title><link>https://crownjoker07.github.io/p/wemedia-2/</link><pubDate>Sat, 05 Apr 2025 21:54:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/wemedia-2/</guid><description>&lt;p>视频格式是指用于存储、传输和播放视频数据的标准化规范，包含编码格式​（压缩算法）和容器格式​（封装方式）两大部分。其核心目的是在保证画质的前提下，通过压缩技术减少文件体积，并适配不同设备和场景的播放需求。&lt;/p>
+&lt;h3 id="容器格式container">​容器格式（Container）
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>MKV：Matroska Video，开放标准的多媒体容器格式，由俄罗斯开发者Steve Lhomme于2002年提出。它并非视频编码格式，而是通过“容器”形式将多种编码的视频、音频、字幕等数据封装到单一文件中。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WMV（Windows Media Video）：微软公司开发的视频编解码技术，属于Windows媒体框架的核心组件&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>AVI（Audio Video Interleaved）：微软于1992年推出的多媒体容器格式，采用RIFF（资源交换文件格式）结构，将音频和视频数据交错存储以实现同步播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG1 System（Moving Picture Experts Group）：MPEG-1标准的核心组成部分，负责将压缩后的视频、音频及辅助数据进行多路复用和同步控制，确保音视频数据在播放时保持时间一致性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG1 Video CD：基于MPEG-1编码标准的光盘存储格式，诞生于1993年，由飞利浦、索尼等公司联合推广。它利用MPEG-1压缩技术将视频和音频数据存储于CD光盘中，实现了家庭影音数字化，成为20世纪90年代至21世纪初主流的视频传播媒介.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 VOB（Video Object）​：MPEG-2​是国际通用的视频压缩标准，支持高清分辨率和多声道音频编码，​VOB​是DVD专用的多媒体容器格式，基于MPEG-2标准封装视频、音频、字幕及导航数据&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 SVCD（Super Video CD）：​VCD的升级版，由中国主导研发并于1998年成为国家标准。它基于MPEG-2编码技术，旨在提供比VCD更高的画质和功能，同时避免依赖DVD的专利技术。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 DVD：数字多功能光盘（Digital Versatile Disc）的核心技术组合，通过MPEG-2编码标准实现视频压缩与存储，结合VOB（Video Object）容器格式管理音视频数据。MPEG-2为DVD提供广播级画质（最高720×576分辨率）和高效压缩能力，支持动态码率（3-15 Mbps），同时兼容多声道音频与交互功能。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 TS（Transport Stream）：基于MPEG-2标准的容器格式，专为数字电视广播和不可靠传输介质​（如卫星、地面信号）设计。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 MP4：​MPEG-4是国际标准化组织（ISO/IEC）制定的多媒体压缩标准，涵盖音视频编码、交互式媒体、数字版权管理（DRM）等综合功能。其核心目标是实现高效压缩与内容交互性，支持从低带宽通信到高清视频的广泛场景。​MP4​（MPEG-4 Part 14）则是MPEG-4标准中定义的容器格式，负责封装视频、音频、字幕等数据流，并管理多媒体的同步与复用。简言之，MPEG-4是技术标准，而MP4是该标准下的一种文件存储与传输形式。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 MOV（QuickTime Movie）：苹果公司开发的容器格式，最初用于QuickTime播放器，支持封装视频、音频、文本、图像等多媒体数据。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 3GP1：为移动通信设备设计的简化版MP4容器，专为低带宽、小存储的移动设备优化。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 3GP2：核心目标是为CDMA网络（如CDMA2000）提供低带宽、高兼容性的音视频传输方案。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 PSP：索尼PlayStation Portable（PSP）掌机支持的基于MPEG-4标准的视频格式，主要包含普通MP4和MP4-AVC两种规格
+。其核心目标是适配PSP硬件性能与屏幕分辨率（480×272），同时通过高效压缩实现视频内容的便携播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 IPOD：便携设备的高效视频播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 Fragment：MPEG-4标准（ISO/IEC 14496-12）中定义的流式容器格式，专为动态传输和自适应流媒体设计。其核心特性在于将媒体数据分割为多个独立的片段（Fragment）​，每个片段包含元数据（moof）和媒体数据（mdat），从而实现高效的分发与灵活播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>OGV（Ogg Video）：基于Ogg容器的开源视频文件格式，由Xiph.Org基金会开发，旨在提供免专利限制、高质量的多媒体解决方案。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Flash FLV：Adobe Systems开发的流媒体视频容器格式，专为网络传输设计，早期与Macromedia Flash Player深度绑定。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Flash SWF（Shock Wave Flash）：矢量动画格式&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>DPG（Nintendo）：由日本开发者moonlight为任天堂NDS掌机设计的非官方视频格式，需配合Moonshell等软件播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WebM：由 Google 主导开发的开源视频容器格式，旨在为网络提供高质量、免版税的视频压缩方案。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Real Media：由 RealNetworks 公司于 20 世纪 90 年代开发的流媒体容器格式，主要服务于早期互联网环境下的音视频传输。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WTV（Windows Recorded TV Show）：微软为 ​Windows Media Center​ 开发的 ​电视录制容器格式，主要用于存储电视节目内容，包含音视频流、元数据及数字版权管理（DRM）信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MXF（素材交换格式）：由 ​SMPTE（美国电影与电视工程师学会）​​ 主导开发的专业音视频容器格式，旨在解决影视制作、存储和交换中的兼容性问题。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WEBP：由 Google 于 2010 年推出的开源图像格式，旨在通过更高效的压缩算法减少网络传输中的图片体积，同时保持视觉质量。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>GIF（Graphics Interchange Format，图形交换格式）：由 ​CompuServe 公司于 1987 年开发的位图图像格式，旨在解决早期互联网环境下跨平台图像交换的需求。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Raw（原始图像格式）：数码相机、扫描仪等设备直接记录的未经处理的传感器数据，保留了拍摄场景的完整光学信息。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="编码格式">编码格式
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>MPEG-1（1992年）：首个国际标准，用于VCD制作，支持352×240@30fps分辨率，码率1.5 Mbps，采用YCbCr 4:2:0采样和DCT压缩。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG-2（1994年）：提升至高清支持（1920×1080），码率3-10 Mbps，应用于DVD和数字电视广播，支持隔行扫描和5.1声道音频。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG-4（1998年）：引入基于对象的编码技术，支持流媒体和交互式内容，压缩效率比MPEG-2提升30%以上，扩展了H.264（MPEG-4 Part 10）标准。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>H.264（AVC）（2003年）：采用运动补偿、DCT变换和CABAC熵编码，压缩效率比MPEG-2提升50%，支持蓝光、视频会议和流媒体，兼容性极广。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>H.265 （HEVC）（2013年）：引入更精细的块划分（最大64×64）、多角度预测和并行处理，压缩效率比H.264高40%-50%，适配4K/8K视频，但专利费用较高。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>H.266 (VVC) (2020年)：支持360°全景视频和动态分辨率切换，压缩效率比HEVC再提升40%-50%，但解码复杂度大幅增加。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="视频码率">视频码率
+&lt;/h3>&lt;p>视频码率（Bitrate）指单位时间内传输的视频数据量，单位为 ​kbps（千比特每秒）​，表示每秒传输的二进制位数。码率越高，视频数据的“取样率”越高，画质越接近原始素材，但文件体积也会随之增大。&lt;/p>
+&lt;h3 id="音频编码">音频编码
+&lt;/h3>&lt;p>音频编码是将声音的模拟信号转换为数字信号的过程，核心目标是通过压缩减少数据冗余，同时尽可能保留听觉质量。&lt;/p>
+&lt;ul>
+&lt;li>AAC：优化频率划分和预测算法，相同码率下音质优于MP3，流媒体首选。&lt;/li>
+&lt;li>ALAC：苹果设备专用，兼容性与FLAC相当。&lt;/li>
+&lt;li>FLAC：开源无损格式，压缩率约50%，适合音乐存档。&lt;/li>
+&lt;li>Opus:开源、免专利费的现代音频编码格式，由国际互联网工程任务组（IETF）标准化，专为满足从语音通话到高保真音乐流媒体的多样化需求设计。&lt;/li>
+&lt;li>PCM（脉冲编码调制）：未经压缩的原始音频格式，直接记录模拟信号的采样值，属于无损编码。&lt;/li>
+&lt;/ul>
+&lt;h3 id="比特率控制">比特率控制
+&lt;/h3>&lt;ul>
+&lt;li>CBR（恒定比特率）：全程保持固定码率，通过调整量化参数（如压缩强度）维持稳定传输。&lt;/li>
+&lt;li>VBR（可变比特率）：根据内容复杂度动态调整码率，高动态画面分配更高码率，静态场景降低码率。&lt;/li>
+&lt;/ul></description></item><item><title>自媒体攻略书</title><link>https://crownjoker07.github.io/p/wemedia-1/</link><pubDate>Mon, 31 Mar 2025 20:55:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/wemedia-1/</guid><description>&lt;blockquote>
+&lt;p>身为一名专业的程序员（自称），肯定要在互联网留下我的痕迹，想要自由，因此开始走上自媒体的道路&lt;/p>&lt;/blockquote>
+&lt;p>和我的好朋友DeepSeek深度讨论了之后，在琳琅满目的平台中选择适合自己的平台，本来打算是广撒网（就是一篇文章全平台发），但是一个人确实分不出这么多精力，而且我是真想在这个浮躁的社会，静下心来做成一件事，所以选择GitHubPage和Bilibili。&lt;br>
+基本流程：技术类的深度文章发布在博客中，有趣的技术内容发布B站，然后互相引流。&lt;/p>
+&lt;p>主要分几个步骤&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>文件归纳、备份流程&lt;/strong>。【视频、图片、游戏资源、各种工程文件等】&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>自媒体肯定会有非常多的视频、图片资源，如何合理归纳提高效率，及时备份避免文件丢失，导致工作功亏一篑。&lt;/p>&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>&lt;strong>完善个人博客&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>将之前记录下来的研究成果搬运到博客上，并完善简历（将人生当成一场游戏，时刻记录自己变强的时间点）&lt;/p>&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>&lt;strong>学习新技术并分享&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>自媒体主要走技术分享这条赛道，满足自身的求知欲，想以透过本质看问题，通俗易懂的形式分享技术，提高自身的技术壁垒和自媒体水平&lt;/p>&lt;/blockquote>
+&lt;ol start="4">
+&lt;li>&lt;strong>制作一款属于自己的游戏&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>既然是游戏开发，那就得有游戏开发的样子，那就是制作自己的游戏&lt;/p>&lt;/blockquote>
+&lt;p>初心：不为了挣钱而挣钱，把自媒体或游戏制作当作一件服务大家的事&lt;/p></description></item><item><title>正则表达式说明书</title><link>https://crownjoker07.github.io/p/programs-1/</link><pubDate>Sun, 09 Mar 2025 20:48:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/programs-1/</guid><description>&lt;blockquote>
+&lt;p>正则表达式是一种用于匹配和操作文本的强大工具，它是由一系列字符和特殊字符组成的模式，用于描述要匹配的文本模式。&lt;/p>&lt;/blockquote>
+&lt;h2 id="正则表达式的模式">正则表达式的模式
+&lt;/h2>&lt;p>正则表达式的模式可以包括以下内容：&lt;/p>
+&lt;ul>
+&lt;li>字面值字符：例如字母、数字、空格等，可以直接匹配它们自身。&lt;/li>
+&lt;li>特殊字符：例如点号 .、星号 *、加号 +、问号 ? 等，它们具有特殊的含义和功能。&lt;/li>
+&lt;li>字符类：用方括号 [ ] 包围的字符集合，用于匹配方括号内的任意一个字符。&lt;/li>
+&lt;li>元字符：例如 \d、\w、\s 等，用于匹配特定类型的字符，如数字、字母、空白字符等。&lt;/li>
+&lt;li>量词：例如 {n}、{n,}、{n,m} 等，用于指定匹配的次数或范围。&lt;/li>
+&lt;li>边界符号：例如 ^、$、\b、\B 等，用于匹配字符串的开头、结尾或单词边界位置。&lt;/li>
+&lt;/ul>
+&lt;h2 id="简介">简介
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">^[a-zA-Z0-9_-]{3,15}$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>^ 表示匹配字符串的开头。&lt;/li>
+&lt;li>[a-zA-Z0-9_-] 表示字符集，包含小写字母、大写字母、数字、下划线和连接字符 -。&lt;/li>
+&lt;li>{3,15} 表示前面的字符集最少出现 3 次，最多出现 15 次，从而限制了用户名的长度在 3 到 15 个字符之间。&lt;/li>
+&lt;li>$ 表示匹配字符串的结尾。&lt;/li>
+&lt;/ul>
+&lt;h2 id="语法">语法
+&lt;/h2>&lt;ul>
+&lt;li>[abc] 匹配所有a、b、c字符&lt;/li>
+&lt;li>[^abc] 匹配所有非a、b、c 字符&lt;/li>
+&lt;li>[A-Z] 匹配所有A-Z字符&lt;/li>
+&lt;li>. 相当于 [^\n\r]&lt;/li>
+&lt;li>[\s\S] 匹配所有。\s 是匹配所有空白符，包括换行，\S 非空白符，不包括换行。&lt;/li>
+&lt;li>\w 等价于 [A-Za-z0-9_]&lt;/li>
+&lt;li>\d 等价于 [0-9]&lt;/li>
+&lt;/ul></description></item><item><title>git中subtree和submodule的区别</title><link>https://crownjoker07.github.io/p/git-3/</link><pubDate>Sun, 09 Mar 2025 16:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/git-3/</guid><description>&lt;blockquote>
+&lt;p>最近在公司的项目中有一部分的代码需要多个项目共用（其实这部分代码就是我所写的一些工具代码），简单调查了一下发现有 subtree（子树）和 submodule（子模块）这两种方式，于是乎就有了这一篇文章&lt;/p>&lt;/blockquote>
+&lt;p>以下是 Git 子树（Subtree）与子模块（Submodule）的详细对比，涵盖核心概念、使用场景及操作差异，并附对比表格：&lt;/p>
+&lt;hr>
+&lt;h3 id="一核心区别">一、核心区别
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Git 子模块（Submodule）&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Git 子树（Subtree）&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>存储方式&lt;/strong>&lt;/td>
+&lt;td>子模块是主仓库中的一个&lt;strong>引用&lt;/strong>，指向子仓库的特定提交，子仓库独立存在。&lt;/td>
+&lt;td>子树是主仓库中的一个&lt;strong>完整副本&lt;/strong>，子仓库的代码和历史直接合并到主仓库中。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>版本控制&lt;/strong>&lt;/td>
+&lt;td>子模块的提交历史独立于主仓库，主仓库仅记录子模块的提交 ID。&lt;/td>
+&lt;td>子树的提交历史与主仓库共享，子仓库的修改会体现在主仓库的提交记录中。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>依赖管理&lt;/strong>&lt;/td>
+&lt;td>需要显式维护子模块的版本，主仓库与子模块的更新需分别操作。&lt;/td>
+&lt;td>子树的代码与主仓库代码统一管理，更新和修改可直接通过主仓库完成。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>工作流程&lt;/strong>&lt;/td>
+&lt;td>克隆主仓库后需额外执行 &lt;code>git submodule init&lt;/code> 和 &lt;code>git update&lt;/code> 初始化子模块。&lt;/td>
+&lt;td>开发者无需特殊操作，子树被视为普通目录，工作流程与常规 Git 操作一致。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>文件结构&lt;/strong>&lt;/td>
+&lt;td>生成 &lt;code>.gitmodules&lt;/code> 文件记录子模块信息，子模块代码存放在独立目录中。&lt;/td>
+&lt;td>无额外配置文件，子树的代码完全嵌入主仓库目录结构。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>更新与同步&lt;/strong>&lt;/td>
+&lt;td>需手动执行 &lt;code>git submodule update --remote&lt;/code> 拉取子模块更新，并提交主仓库中的子模块引用变更。&lt;/td>
+&lt;td>通过 &lt;code>git subtree pull&lt;/code> 合并子仓库更新到主仓库，或直接提交子树的修改到主仓库。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>适用场景&lt;/strong>&lt;/td>
+&lt;td>适合需要独立维护的组件库（如公共依赖库），且需与主仓库版本解耦的场景。&lt;/td>
+&lt;td>适合紧密集成的子项目，或希望将子项目代码与主项目统一管理的场景。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="二详细解析">二、详细解析
+&lt;/h3>&lt;h4 id="1-存储与版本管理">1. &lt;strong>存储与版本管理&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块&lt;/strong>&lt;br>
+子模块通过 &lt;code>.gitmodules&lt;/code> 文件记录子仓库的 URL 和路径，主仓库仅存储子模块的提交 ID。子模块的代码独立维护，开发者需分别管理主仓库和子模块的提交。例如，更新子模块需进入子模块目录执行 &lt;code>git pull&lt;/code>，再提交主仓库中的子模块引用变更。&lt;/li>
+&lt;li>&lt;strong>子树&lt;/strong>&lt;br>
+子树将子仓库的代码和历史直接合并到主仓库中，无独立配置文件。子树的修改会反映在主仓库的提交记录中，且更新通过 &lt;code>git subtree pull&lt;/code> 或 &lt;code>git subtree push&lt;/code> 完成，无需切换目录。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-协作与维护">2. &lt;strong>协作与维护&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>优点&lt;/strong>：子模块的独立性适合需要多团队协作的场景，例如多个父项目共用同一子模块时，可确保子模块的版本一致性。&lt;/li>
+&lt;li>&lt;strong>缺点&lt;/strong>：克隆主仓库后需手动初始化子模块（&lt;code>git submodule update --init&lt;/code>），且删除子模块步骤繁琐（需清理 &lt;code>.gitmodules&lt;/code> 和缓存）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>子树&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>优点&lt;/strong>：对开发者透明，适合不希望暴露子项目独立性的场景。例如，将第三方库嵌入主项目时，子树可简化依赖管理。&lt;/li>
+&lt;li>&lt;strong>缺点&lt;/strong>：历史记录混杂，难以单独追踪子仓库的修改。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-更新与冲突处理">3. &lt;strong>更新与冲突处理&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块&lt;/strong>&lt;br>
+子模块的更新需显式操作，若子仓库有更新，需在主仓库中提交新的子模块提交 ID。若多个开发者同时修改子模块，可能因版本不一致导致冲突。&lt;/li>
+&lt;li>&lt;strong>子树&lt;/strong>&lt;br>
+子树的更新通过合并完成，类似常规分支合并。若子仓库和主仓库同时修改同一文件，需手动解决冲突，但整体流程更接近标准 Git 操作。&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-典型场景">4. &lt;strong>典型场景&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块适用场景&lt;/strong>
+&lt;ul>
+&lt;li>公共工具库（如通用组件、SDK）需要被多个主项目引用。&lt;/li>
+&lt;li>子项目需独立版本控制，且主项目需灵活切换子项目版本。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>子树适用场景&lt;/strong>
+&lt;ul>
+&lt;li>第三方库的直接嵌入（如开源项目依赖的代码片段）。&lt;/li>
+&lt;li>子项目与主项目高度耦合，无需独立维护。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="三总结建议">三、总结建议
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>选择子模块&lt;/strong>：若需子项目独立维护、版本解耦，或需要跨项目共享同一子仓库。&lt;/li>
+&lt;li>&lt;strong>选择子树&lt;/strong>：若希望简化依赖管理、减少协作复杂度，或子项目无需独立存在。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>提示&lt;/strong>：Git 官方自 1.7.11 版本起推荐优先使用子树，因其操作更直观且与常规 Git 流程兼容性更好。&lt;/p>&lt;/blockquote>
+&lt;p>由于子树推送时，无法直观的看出推送了哪些文件，我还是选择 git 仓库里面嵌入 git 仓库，虽然要提交两次，但是至少清晰直观&lt;/p></description></item><item><title>Github如何一键部署</title><link>https://crownjoker07.github.io/p/git-2/</link><pubDate>Mon, 03 Mar 2025 00:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/git-2/</guid><description>&lt;blockquote>
+&lt;p>由于最近一直更新博客（小骄傲），但是发现每次部署，都要博客仓库打包后，手动复制到网页仓库发布，很麻烦，所以研究一下有没有什么自动化部署的工具&lt;/p>&lt;/blockquote>
+&lt;p>需要在源码仓库根目录创建.github/workflows/deploy.yml文件，然后配置&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy Hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">main] &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 触发分支（源码分支）&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">build-deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">拉取代码&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v4&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">submodules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 如果用了主题子模块必加&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">安装 Hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">sudo snap install hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">生成静态文件&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo --minify&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">部署到 GitHub Pages&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 从默认的 GITHUB_TOKEN 改为自己的 Personal Token&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">personal_token&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.PERSONAL_TOKEN }} &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 指定目标仓库（格式：用户名/仓库名）&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">external_repository&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">CrownJoker07/CrownJoker07.github.io&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 强制目标分支为 main&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">main&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 添加以下参数解决历史提交冲突&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">force_orphan&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">true构建目录&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>secrets.PERSONAL_TOKEN&lt;/strong>需要在源码仓库的&lt;strong>Settings/Secrets and Variables/Actions&lt;/strong>创建Secrets，名字叫PERSONAL_TOKEN，内容是 GitHub账号**Settings/Developer Settings/Personal access tokens (classic)**的具有工作流权限的密令&lt;/p>
+&lt;p>配置好后，试试推送，就会发现已经触发Github Action.&lt;/p></description></item><item><title>git如何删除历史大文件</title><link>https://crownjoker07.github.io/p/git-1/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/git-1/</guid><description>&lt;blockquote>
+&lt;p>刚刚写第一篇“终于拥有自己的博客啦！！！”的时候，不小心上传了个 10M 左右的 gif 图，即使我已经删掉了，.git文件夹里面还是保留（意味着历史记录也保留了），问题来了应该如何删除历史大文件呢？&lt;/p>&lt;/blockquote>
+&lt;p>&lt;strong>概要：&lt;/strong>&lt;br>
+找到大文件，删除即可，发现其实本质上就是克隆了个新项目，删除了指定文件，需要强制推送到远程仓库。所以是有可能导致原仓库数据丢失，因此尽量少传大文件，不到必不可以不要使用以下命令！！！&lt;/p>
+&lt;h2 id="第一步找到大文件">第一步：找到大文件
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Shell" data-lang="Shell">&lt;span class="line">&lt;span class="cl">git rev-list --objects --all &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git cat-file --batch-check&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;%(objectname) %(objecttype) %(objectsize) %(rest)&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sort -k3 -n &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tail -5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以下是该命令的详细解析，分步骤解释其作用及实现原理：&lt;/p>
+&lt;p>&lt;strong>1. &lt;code>git rev-list --objects --all&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>功能&lt;/strong>：列出 Git 仓库中所有对象（包括提交、树、blob 等）的哈希值和路径。
+&lt;ul>
+&lt;li>&lt;code>--objects&lt;/code>：输出所有对象的哈希值及关联路径（如文件路径）。&lt;/li>
+&lt;li>&lt;code>--all&lt;/code>：覆盖所有引用（分支、标签等），确保包含整个仓库历史。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>输出示例&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">c7a9d8... blob path/to/file.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8a4d2... commit HEAD
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>2. &lt;code>git cat-file --batch-check='%(objectname) %(objecttype) %(objectsize) %(rest)'&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>功能&lt;/strong>：批量检查对象信息，提取哈希、类型、大小和路径。
+&lt;ul>
+&lt;li>&lt;code>--batch-check&lt;/code>：以批处理模式解析输入行，按格式输出信息。&lt;/li>
+&lt;li>&lt;strong>格式说明&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;code>%(objectname)&lt;/code>：对象哈希值。&lt;/li>
+&lt;li>&lt;code>%(objecttype)&lt;/code>：对象类型（&lt;code>blob&lt;/code>、&lt;code>tree&lt;/code>、&lt;code>commit&lt;/code>）。&lt;/li>
+&lt;li>&lt;code>%(objectsize)&lt;/code>：对象占用存储空间（字节）。&lt;/li>
+&lt;li>&lt;code>%(rest)&lt;/code>：对象关联路径（仅对 &lt;code>blob&lt;/code> 类型有效，其他类型为空）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>输出示例&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">c7a9d8... blob 120000 path/to/large-file.jpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8a4d2... tree 4096 (空)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>3. &lt;code>sort -k3 -n&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>功能&lt;/strong>：按第三列（对象大小）进行数字排序。
+&lt;ul>
+&lt;li>&lt;code>-k3&lt;/code>：指定以第三列为排序键。&lt;/li>
+&lt;li>&lt;code>-n&lt;/code>：按数值大小排序（默认按字符串排序会导致 &lt;code>100&lt;/code> &amp;lt; &lt;code>20&lt;/code>）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>结果示例&lt;/strong>（排序后）：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d3f4a... blob 500 path/to/small.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c7a9d... blob 120000 path/to/large.jpg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>4. &lt;code>tail -5&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>功能&lt;/strong>：取排序结果的最后 5 行，即最大的 5 个对象。
+&lt;ul>
+&lt;li>因 &lt;code>sort&lt;/code> 是升序排列，末尾行对应最大文件。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>最终输出示例&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">c7a9d... blob 120000 path/to/large.jpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9b2e4... blob 95000 path/to/video.mp4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>适用场景&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>定位大文件&lt;/strong>：快速找出仓库中占用空间最大的文件（如误提交的二进制文件）。&lt;/li>
+&lt;li>&lt;strong>性能优化&lt;/strong>：清理历史大文件前进行验证，避免误删关键数据。&lt;/li>
+&lt;li>&lt;strong>兼容性&lt;/strong>：当 &lt;code>.git/objects/pack&lt;/code> 下无 &lt;code>.idx&lt;/code> 文件时（如新仓库），此命令仍可运行。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>注意事项&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>路径显示限制&lt;/strong>：
+&lt;ul>
+&lt;li>仅 &lt;code>blob&lt;/code> 类型对象会显示路径，&lt;code>tree&lt;/code> 和 &lt;code>commit&lt;/code> 类型的 &lt;code>%(rest)&lt;/code> 列为空。&lt;/li>
+&lt;li>需结合 &lt;code>git log&lt;/code> 或 &lt;code>git rev-list&lt;/code> 追溯具体提交记录。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>对象类型区分&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;code>blob&lt;/code> 为文件内容，&lt;code>tree&lt;/code> 为目录结构，&lt;code>commit&lt;/code> 为提交信息。&lt;/li>
+&lt;li>大文件通常为 &lt;code>blob&lt;/code> 类型。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>性能影响&lt;/strong>：
+&lt;ul>
+&lt;li>对大型仓库（如数万提交），&lt;code>git rev-list&lt;/code> 可能耗时较长，建议在空闲时执行。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="第二步删除大文件">第二步：删除大文件
+&lt;/h2>&lt;blockquote>
+&lt;p>研究发现有两条命令：Git filter-branch 和 git filter-repo
+&lt;strong>Git filter-branch 与 git filter-repo 使用对比与选择指南&lt;/strong>&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;p>&lt;strong>一、git filter-repo 核心用法(需要安装 Python、filter-repo)&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>1. 删除文件/目录&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git filter-repo --force --path &lt;span class="s2">&amp;#34;giphy-1.gif&amp;#34;&lt;/span> --invert-paths &lt;span class="c1">#删除指定文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git filter-repo --path-glob &lt;span class="s1">&amp;#39;*.log&amp;#39;&lt;/span> --invert-paths &lt;span class="c1"># 删除所有.log文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git filter-repo --path target/ --invert-paths &lt;span class="c1"># 删除target目录&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>优势&lt;/strong>：直接操作对象数据库，无需检出文件，速度提升数十倍 。&lt;/li>
+&lt;li>&lt;strong>附加功能&lt;/strong>：自动清理空提交，无需 &lt;code>--prune-empty&lt;/code> 参数。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>二、git filter-branch 的局限性与适用场景&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>局限性&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>性能差&lt;/strong>：处理万级提交时耗时可能超过 &lt;code>filter-repo&lt;/code> 的 100 倍 。&lt;/li>
+&lt;li>&lt;strong>操作复杂&lt;/strong>：需手动处理引用残留（如 &lt;code>.git/refs/original&lt;/code>）和强制推送 。&lt;/li>
+&lt;li>&lt;strong>兼容性问题&lt;/strong>：可能破坏 &lt;code>git replace&lt;/code> 或 &lt;code>grafts&lt;/code> 机制 。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>仅推荐在以下场景使用&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>无 Python 环境&lt;/strong>：&lt;code>filter-repo&lt;/code> 依赖 Python，若环境受限可临时用 &lt;code>filter-branch&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>简单单次操作&lt;/strong>：例如删除单个文件的少量历史记录，命令示例：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git filter-branch --index-filter &lt;span class="s1">&amp;#39;git rm --cached --ignore-unmatch secret.txt&amp;#39;&lt;/span> --prune-empty --tag-name-filter cat -- --all
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;p>&lt;strong>三、核心区别总结&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>git filter-branch&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>git filter-repo&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>性能&lt;/strong>&lt;/td>
+&lt;td>极低（逐提交处理）&lt;/td>
+&lt;td>高（批量处理对象数据库）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>安全性&lt;/strong>&lt;/td>
+&lt;td>高风险（残留引用、破坏分支）&lt;/td>
+&lt;td>自动清理无效引用，结构稳定&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>操作复杂度&lt;/strong>&lt;/td>
+&lt;td>需手动处理参数和清理步骤&lt;/td>
+&lt;td>命令简洁，参数语义明确&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>功能扩展性&lt;/strong>&lt;/td>
+&lt;td>有限（依赖 Shell 脚本）&lt;/td>
+&lt;td>支持 Python 回调，灵活定制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>官方推荐度&lt;/strong>&lt;/td>
+&lt;td>已弃用，仅保留兼容性&lt;/td>
+&lt;td>官方推荐替代工具&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>&lt;strong>四、操作注意事项&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>备份仓库&lt;/strong>：操作前务必通过 &lt;code>git clone --mirror&lt;/code> 备份。&lt;/li>
+&lt;li>&lt;strong>协作同步&lt;/strong>：强制推送后需通知协作者重新克隆仓库。&lt;/li>
+&lt;li>&lt;strong>验证结果&lt;/strong>：
+&lt;ul>
+&lt;li>检查文件是否彻底删除：&lt;code>git log -- &amp;lt;file-name&amp;gt;&lt;/code>&lt;/li>
+&lt;li>对比仓库体积：&lt;code>du -sh .git&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>清理远程仓库&lt;/strong>：GitHub/GitLab 需手动触发存储库清理或重新推送。&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;p>&lt;strong>附：命令替换对照表&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>filter-branch 场景&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>filter-repo 等效命令&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>删除文件&lt;/td>
+&lt;td>&lt;code>--path &amp;lt;file&amp;gt; --invert-paths&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>保留子目录&lt;/td>
+&lt;td>&lt;code>--subdirectory-filter &amp;lt;dir&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>修改提交邮箱&lt;/td>
+&lt;td>&lt;code>--email-callback&lt;/code> + Python 函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>清理空提交&lt;/td>
+&lt;td>自动处理，无需参数&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>通过以上对比，&lt;strong>&lt;code>git filter-repo&lt;/code> 在效率、安全性和易用性上全面胜出&lt;/strong>，建议优先使用。仅在对环境或兼容性有特殊需求时考虑 &lt;code>filter-branch&lt;/code>。&lt;/p>
+&lt;h2 id="第三步强制推送到远程仓库">第三步：强制推送到远程仓库
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git push --force origin main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>终于拥有自己的博客啦！！！</title><link>https://crownjoker07.github.io/p/daily-1/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/daily-1/</guid><description>&lt;p>终于搭建出自己的博客了!!!😄😄😄&lt;/p>
+&lt;p>原本想学习稚晖君什么都从零开始撸，想着自己从前后端一点点搭建出自己的博客，但是实在是太麻烦了，而且想把搭建过程给记录下来，如果博客没搭建好，也不太好记录（绝对不是找理由），就想从简单的入手先。&lt;/p>
+&lt;p>通过多个方案的尝试，一开始使用 jekyll + GithubPage，发现 jekyll 环境异常难搭建（我个人感觉应该是jekyll 已经有点老了，很多技术没有更新）&lt;/p>
+&lt;p>最终采用 Hugo + GithubPage，hugo 可以直接写 MarkDown 文章，正好适合我不会前端的人，而且方便迁移到知乎、CSDN 等地方，只能说非常适合我。&lt;/p>
+&lt;p>Hugo 还真是方便，我只是套了个主题，稍微配置了一下，就是很好看的页面了，剩下的我只管写文章就好，而且可以很好的分类文章。&lt;/p>
+&lt;p>终于可以开始写想写的文章啦，看起来真装13哈哈哈&lt;/p></description></item><item><title>Markdown Syntax Guide</title><link>https://crownjoker07.github.io/p/markdown-syntax-guide/</link><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/p/markdown-syntax-guide/</guid><description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p>
+&lt;h2 id="headings">Headings
+&lt;/h2>&lt;p>The following HTML &lt;code>&amp;lt;h1&amp;gt;&lt;/code>—&lt;code>&amp;lt;h6&amp;gt;&lt;/code> elements represent six levels of section headings. &lt;code>&amp;lt;h1&amp;gt;&lt;/code> is the highest section level while &lt;code>&amp;lt;h6&amp;gt;&lt;/code> is the lowest.&lt;/p>
+&lt;h1 id="h1">H1
+&lt;/h1>&lt;h2 id="h2">H2
+&lt;/h2>&lt;h3 id="h3">H3
+&lt;/h3>&lt;h4 id="h4">H4
+&lt;/h4>&lt;h5 id="h5">H5
+&lt;/h5>&lt;h6 id="h6">H6
+&lt;/h6>&lt;h2 id="paragraph">Paragraph
+&lt;/h2>&lt;p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p>
+&lt;p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p>
+&lt;h2 id="blockquotes">Blockquotes
+&lt;/h2>&lt;p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code>footer&lt;/code> or &lt;code>cite&lt;/code> element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p>
+&lt;h3 id="blockquote-without-attribution">Blockquote without attribution
+&lt;/h3>&lt;blockquote>
+&lt;p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+&lt;strong>Note&lt;/strong> that you can use &lt;em>Markdown syntax&lt;/em> within a blockquote.&lt;/p>&lt;/blockquote>
+&lt;h3 id="blockquote-with-attribution">Blockquote with attribution
+&lt;/h3>&lt;blockquote>
+&lt;p>Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;br>
+— &lt;cite>Rob Pike&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/cite>&lt;/p>&lt;/blockquote>
+&lt;h2 id="tables">Tables
+&lt;/h2>&lt;p>Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Age&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Bob&lt;/td>
+&lt;td>27&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Alice&lt;/td>
+&lt;td>23&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="inline-markdown-within-tables">Inline Markdown within tables
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Italics&lt;/th>
+&lt;th>Bold&lt;/th>
+&lt;th>Code&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;em>italics&lt;/em>&lt;/td>
+&lt;td>&lt;strong>bold&lt;/strong>&lt;/td>
+&lt;td>&lt;code>code&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>A&lt;/th>
+&lt;th>B&lt;/th>
+&lt;th>C&lt;/th>
+&lt;th>D&lt;/th>
+&lt;th>E&lt;/th>
+&lt;th>F&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td>
+&lt;td>Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex.&lt;/td>
+&lt;td>Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus&lt;/td>
+&lt;td>Proin sit amet velit nec enim imperdiet vehicula.&lt;/td>
+&lt;td>Ut bibendum vestibulum quam, eu egestas turpis gravida nec&lt;/td>
+&lt;td>Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="code-blocks">Code Blocks
+&lt;/h2>&lt;h3 id="code-block-with-backticks">Code block with backticks
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!doctype html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Example HTML5 Document&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Test&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="code-block-indented-with-four-spaces">Code block indented with four spaces
+&lt;/h3>&lt;pre>&lt;code>&amp;lt;!doctype html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+&amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;h3 id="diff-code-block">Diff code block
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">[dependencies.bevy]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git = &amp;#34;https://github.com/bevyengine/bevy&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rev = &amp;#34;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">- features = [&amp;#34;dynamic&amp;#34;]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+ features = [&amp;#34;jpeg&amp;#34;, &amp;#34;dynamic&amp;#34;]
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="one-line-code-block">One line code block
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>A paragraph&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="list-types">List Types
+&lt;/h2>&lt;h3 id="ordered-list">Ordered List
+&lt;/h3>&lt;ol>
+&lt;li>First item&lt;/li>
+&lt;li>Second item&lt;/li>
+&lt;li>Third item&lt;/li>
+&lt;/ol>
+&lt;h3 id="unordered-list">Unordered List
+&lt;/h3>&lt;ul>
+&lt;li>List item&lt;/li>
+&lt;li>Another item&lt;/li>
+&lt;li>And another item&lt;/li>
+&lt;/ul>
+&lt;h3 id="nested-list">Nested list
+&lt;/h3>&lt;ul>
+&lt;li>Fruit
+&lt;ul>
+&lt;li>Apple&lt;/li>
+&lt;li>Orange&lt;/li>
+&lt;li>Banana&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Dairy
+&lt;ul>
+&lt;li>Milk&lt;/li>
+&lt;li>Cheese&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark
+&lt;/h2>&lt;p>&lt;abbr title="Graphics Interchange Format">GIF&lt;/abbr> is a bitmap image format.&lt;/p>
+&lt;p>H&lt;sub>2&lt;/sub>O&lt;/p>
+&lt;p>X&lt;sup>n&lt;/sup> + Y&lt;sup>n&lt;/sup> = Z&lt;sup>n&lt;/sup>&lt;/p>
+&lt;p>Press &lt;kbd>CTRL&lt;/kbd> + &lt;kbd>ALT&lt;/kbd> + &lt;kbd>Delete&lt;/kbd> to end the session.&lt;/p>
+&lt;p>Most &lt;mark>salamanders&lt;/mark> are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a class="link" href="https://www.youtube.com/watch?v=PAAkCSZUG1c" target="_blank" rel="noopener"
+>talk&lt;/a> during Gopherfest, November 18, 2015.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Image gallery</title><link>https://crownjoker07.github.io/p/image-gallery/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/p/image-gallery/</guid><description>&lt;img src="https://crownjoker07.github.io/p/image-gallery/2.jpg" alt="Featured image of post Image gallery" />&lt;p>Hugo theme Stack supports the creation of interactive image galleries using Markdown. It&amp;rsquo;s powered by &lt;a class="link" href="https://photoswipe.com/" target="_blank" rel="noopener"
+>PhotoSwipe&lt;/a> and its syntax was inspired by &lt;a class="link" href="https://typlog.com/" target="_blank" rel="noopener"
+>Typlog&lt;/a>.&lt;/p>
+&lt;p>To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo&amp;rsquo;s page bundle feature to read the dimensions of the image. &lt;strong>External images are not supported.&lt;/strong>&lt;/p>
+&lt;h2 id="syntax">Syntax
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Image 1&lt;/span>](&lt;span class="na">1.jpg&lt;/span>) ![&lt;span class="nt">Image 2&lt;/span>](&lt;span class="na">2.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="result">Result
+&lt;/h2>&lt;p>&lt;img src="https://crownjoker07.github.io/p/image-gallery/1.jpg"
+width="2000"
+height="1400"
+srcset="https://crownjoker07.github.io/p/image-gallery/1_hu_811b671457ffff1f.jpg 480w, https://crownjoker07.github.io/p/image-gallery/1_hu_c74af69dd7c1dcda.jpg 1024w"
+loading="lazy"
+alt="Image 1"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="342px"
+> &lt;img src="https://crownjoker07.github.io/p/image-gallery/2.jpg"
+width="1500"
+height="2250"
+srcset="https://crownjoker07.github.io/p/image-gallery/2_hu_42f6436cb1637265.jpg 480w, https://crownjoker07.github.io/p/image-gallery/2_hu_27862a49608da0d9.jpg 1024w"
+loading="lazy"
+alt="Image 2"
+class="gallery-image"
+data-flex-grow="66"
+data-flex-basis="160px"
+>&lt;/p>
+&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@mymind" target="_blank" rel="noopener"
+>mymind&lt;/a> and &lt;a class="link" href="https://unsplash.com/@lukechesser" target="_blank" rel="noopener"
+>Luke Chesser&lt;/a> on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>&lt;/blockquote></description></item><item><title>Shortcodes</title><link>https://crownjoker07.github.io/p/shortcodes/</link><pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/p/shortcodes/</guid><description>&lt;img src="https://crownjoker07.github.io/p/shortcodes/cover.jpg" alt="Featured image of post Shortcodes" />&lt;p>For more details, check out the &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes" target="_blank" rel="noopener"
+>documentation&lt;/a>.&lt;/p>
+&lt;h2 id="bilibili-video">Bilibili video
+&lt;/h2>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="tencent-video">Tencent video
+&lt;/h2>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="youtube-video">YouTube video
+&lt;/h2>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0qwALOOvUik"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="generic-video-file">Generic video file
+&lt;/h2>&lt;div class="video-wrapper">
+&lt;video
+controls
+src="https://www.w3schools.com/tags/movie.mp4"
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="https://www.w3schools.com/tags/movie.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;h2 id="gist">Gist
+&lt;/h2>&lt;script src="https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js">&lt;/script>
+&lt;h2 id="gitlab">GitLab
+&lt;/h2>&lt;script
+type="application/javascript"
+src="https://gitlab.com/-/snippets/2589724.js"
+>&lt;/script>
+&lt;h2 id="quote">Quote
+&lt;/h2>&lt;blockquote>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;span>A famous person, &lt;/span>&lt;a href="https://en.wikipedia.org/wiki/Book">&lt;cite>The book they wrote&lt;/cite>&lt;/a>&lt;/span>&lt;/blockquote>
+&lt;hr>
+&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@codioful" target="_blank" rel="noopener"
+>Codioful&lt;/a> on &lt;a class="link" href="https://unsplash.com/photos/WDSN62Qdxuk" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>&lt;/blockquote></description></item><item><title>Math Typesetting</title><link>https://crownjoker07.github.io/p/math-typesetting/</link><pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/p/math-typesetting/</guid><description>&lt;p>Stack has built-in support for math typesetting using &lt;a class="link" href="https://katex.org/" target="_blank" rel="noopener"
+>KaTeX&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>It&amp;rsquo;s not enabled by default side-wide,&lt;/strong> but you can enable it for individual posts by adding &lt;code>math: true&lt;/code> to the front matter. Or you can enable it side-wide by adding &lt;code>math = true&lt;/code> to the &lt;code>params.article&lt;/code> section in &lt;code>config.toml&lt;/code>.&lt;/p>
+&lt;h2 id="inline-math">Inline math
+&lt;/h2>&lt;p>This is an inline mathematical expression: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="block-math">Block math
+&lt;/h2>$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$$
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>$$
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+$$&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$$
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Hello World</title><link>https://crownjoker07.github.io/p/hello-world/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/p/hello-world/</guid><description>&lt;img src="https://crownjoker07.github.io/p/hello-world/cover.jpg" alt="Featured image of post Hello World" />&lt;p>Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!&lt;/p>
+&lt;p>For more information about this theme, check the documentation: &lt;a class="link" href="https://stack.jimmycai.com/" target="_blank" rel="noopener"
+>https://stack.jimmycai.com/&lt;/a>&lt;/p>
+&lt;p>Want a site like this? Check out &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack-starter" target="_blank" rel="noopener"
+>hugo-theme-stack-stater&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+>Pawel Czerwinski&lt;/a> on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>&lt;/blockquote></description></item><item><title>文章</title><link>https://crownjoker07.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/archives/</guid><description/></item><item><title>简历</title><link>https://crownjoker07.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/resume/</guid><description>&lt;h2 id="教育背景">教育背景
+&lt;/h2>&lt;ul>
+&lt;li>广东工业大学 | 数字媒体技术 | 2019-2023&lt;br>
+主修课程：C/C++语言程序设计、数据结构及算法基础、游戏开发原理、以及其他计算机专业课&lt;/li>
+&lt;/ul>
+&lt;h2 id="工作经历">工作经历
+&lt;/h2>&lt;ul>
+&lt;li>轻舟互娱（广州） | Unity 客户端开发 | 2022-至今
+&lt;ul>
+&lt;li>游戏框架开发&lt;/li>
+&lt;li>游戏逻辑开发&lt;/li>
+&lt;li>游戏工具开发&lt;/li>
+&lt;li>游戏性能优化&lt;/li>
+&lt;li>游戏包体优化&lt;/li>
+&lt;li>游戏打包优化&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="项目经历">项目经历
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>WB（模拟经营、休闲、单遥感操作）| 2022-2024&lt;br>
+建筑逻辑、游客逻辑、建筑升级、区域切换、AB测试、主线任务逻辑、游客点赞系统、红点逻辑、建筑解锁（解锁框的多种状态切换）、有限状态机使用（私人舞蹈）、流程（Procedure）、测试专用功能（存档系统）、宠物系统、UI相关功能（滑动自动定位最近的卡片、循环列表）、七天签到、建筑升级优化、剧情TimeLine逻辑编写（特殊剧情的实现）、主页按钮优化（从主页UI上剔除各自实现对应的逻辑）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PA（模拟经营、休闲、单遥感操作） | 2023-2024
+建筑逻辑、服务员解锁逻辑、引导高亮（复制按钮、调整渲染层级）、小游戏逻辑&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="自我评价">自我评价
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>不做重复的事&lt;br>
+代码编写会解耦逻辑、内聚逻辑，做到可复用、可拓展。&lt;br>
+存在重复机械操作时，会通过工具（自我实现或是寻找现成插件）进行流程优化。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>透过本质看问题&lt;br>
+一个bug的出现，底层问题有可能是对某部分框架或系统的错误使用或框架本身就有问题，应自下而上的修复。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>不做多余的事&lt;br>
+游戏画面只有手机屏幕的大小，屏幕看不见（屏幕外、屏幕背后）的对象或逻辑都不应该执行，节省资源消耗、提高游戏性能。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>系统学习技术&lt;br>
+学习一门新技术，先学习底层思维，后构建树状学习体系，自下而上的学习。方便之后遇到问题，可以透过本质看问题。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>数据驱动&lt;br>
+做性能优化、还是其他，都应该通过数据驱动，而不是盲目的使用技术进行实现。&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>链接</title><link>https://crownjoker07.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub is the world&amp;#39;s largest software development platform.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.typescriptlang.org&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>搜索</title><link>https://crownjoker07.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/search/</guid><description/></item></channel></rss>
