@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 庄泽伟的博客</title><link>https://crownjoker07.github.io/page/</link><description>Recent content in Pages on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>ZhuangZewei</copyright><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crownjoker07.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>文章</title><link>https://crownjoker07.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/archives/</guid><description/></item><item><title>简历</title><link>https://crownjoker07.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/resume/</guid><description>&lt;h2 id="教育背景">教育背景
+&lt;/h2>&lt;ul>
+&lt;li>广东工业大学 | 数字媒体技术 | 2019-2023&lt;br>
+主修课程：C/C++语言程序设计、数据结构及算法基础、游戏开发原理、以及其他计算机专业课&lt;/li>
+&lt;/ul>
+&lt;h2 id="工作经历">工作经历
+&lt;/h2>&lt;ul>
+&lt;li>轻舟互娱（广州） | Unity 客户端开发 | 2022-至今
+&lt;ul>
+&lt;li>游戏框架开发&lt;/li>
+&lt;li>游戏逻辑开发&lt;/li>
+&lt;li>游戏工具开发&lt;/li>
+&lt;li>游戏性能优化&lt;/li>
+&lt;li>游戏包体优化&lt;/li>
+&lt;li>游戏打包优化&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="项目经历">项目经历
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>WB（模拟经营、休闲、单遥感操作）| 2022-2024&lt;br>
+建筑逻辑、游客逻辑、建筑升级、区域切换、AB测试、主线任务逻辑、游客点赞系统、红点逻辑、建筑解锁（解锁框的多种状态切换）、有限状态机使用（私人舞蹈）、流程（Procedure）、测试专用功能（存档系统）、宠物系统、UI相关功能（滑动自动定位最近的卡片、循环列表）、七天签到、建筑升级优化、剧情TimeLine逻辑编写（特殊剧情的实现）、主页按钮优化（从主页UI上剔除各自实现对应的逻辑）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PA（模拟经营、休闲、单遥感操作） | 2023-2024
+建筑逻辑、服务员解锁逻辑、引导高亮（复制按钮、调整渲染层级）、小游戏逻辑、特殊剧情（统一逻辑、TimeLine事件）、地图引导（UI实现、模型实现）、一键生成建筑工具、晋升动画制作、循环列表、宠物系统（服务员功能、跟随功能）、多种测试工具实现、复杂解锁框重构、卡牌技能、收纳按钮、站内信（网络请求）、限时活动体系框架、统一全局任务、搬运引导逻辑内聚、ios打包、android打包、剧情系统重构、UI与子UI生命周期同步、剧情框架内聚、SDK接入（内购【消耗、订阅】、广告）、统一所有功能解锁（通过配表进行实现）、玩家装备辅助系统（由于玩家的服装都是动态生成绑定上去的，所以预制体里的都是没有骨骼无法直接查看、因此开发一个可以同时查看所有服装的预制体）、循环列表通用框架、手机聊天系统（不规则循环列表、多条件事件触发），玩家系统统一（统一服装获取逻辑、统一服装Buff获取逻辑、统计服装技能获取逻辑）、引导逻辑优化（分离引导点击事件与按钮本身事件）、指示引导优化（内聚所有逻辑、便于拓展新指示引导样式，支持多引导样式同时存在）、包体优化&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="自我评价">自我评价
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>不做重复的事&lt;br>
+代码编写会解耦逻辑、内聚逻辑，做到可复用、可拓展。&lt;br>
+存在重复机械操作时，会通过工具（自我实现或是寻找现成插件）进行流程优化。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>透过本质看问题&lt;br>
+一个bug的出现，底层问题有可能是对某部分框架或系统的错误使用或框架本身就有问题，应自下而上的修复。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>不做多余的事&lt;br>
+游戏画面只有手机屏幕的大小，屏幕看不见（屏幕外、屏幕背后）的对象或逻辑都不应该执行，节省资源消耗、提高游戏性能。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>系统学习技术&lt;br>
+学习一门新技术，先学习底层思维，后构建树状学习体系，自下而上的学习。方便之后遇到问题，可以透过本质看问题。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>数据驱动&lt;br>
+做性能优化、还是其他，都应该通过数据驱动，而不是盲目的使用技术进行实现。&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>链接</title><link>https://crownjoker07.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub is the world&amp;#39;s largest software development platform.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.typescriptlang.org&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>搜索</title><link>https://crownjoker07.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/search/</guid><description/></item></channel></rss>
