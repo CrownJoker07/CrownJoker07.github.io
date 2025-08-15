@@ -1,0 +1,3397 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 庄泽伟的博客</title><link>https://crownjoker07.github.io/post/</link><description>Recent content in Posts on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>ZhuangZewei</copyright><lastBuildDate>Fri, 15 Aug 2025 07:42:00 +0800</lastBuildDate><atom:link href="https://crownjoker07.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>常用软件汇总</title><link>https://crownjoker07.github.io/p/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B1%87%E6%80%BB/</link><pubDate>Fri, 15 Aug 2025 07:42:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B1%87%E6%80%BB/</guid><description>&lt;blockquote>
+&lt;p>防止之后忘记，汇总一下常用的软件&lt;/p>&lt;/blockquote>
+&lt;p>Steam: &lt;a class="link" href="https://store.steampowered.com/" target="_blank" rel="noopener"
+>https://store.steampowered.com/&lt;/a>&lt;/p>
+&lt;p>NasCab: &lt;a class="link" href="https://www.nascab.cn/" target="_blank" rel="noopener"
+>https://www.nascab.cn/&lt;/a>
+VS Code: &lt;a class="link" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
+>https://code.visualstudio.com/&lt;/a>
+Fork: &lt;a class="link" href="https://git-fork.com/" target="_blank" rel="noopener"
+>https://git-fork.com/&lt;/a>
+WPS: &lt;a class="link" href="https://www.wps.cn/" target="_blank" rel="noopener"
+>https://www.wps.cn/&lt;/a>
+欧路词典：&lt;a class="link" href="https://www.eudic.net/" target="_blank" rel="noopener"
+>https://www.eudic.net/&lt;/a>
+OBS Studio: &lt;a class="link" href="https://obsproject.com/" target="_blank" rel="noopener"
+>https://obsproject.com/&lt;/a>
+FileGee：&lt;a class="link" href="https://cn.filegee.com/" target="_blank" rel="noopener"
+>https://cn.filegee.com/&lt;/a>
+NasCab: &lt;a class="link" href="https://www.nascab.cn/" target="_blank" rel="noopener"
+>https://www.nascab.cn/&lt;/a>
+VS Code: &lt;a class="link" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
+>https://code.visualstudio.com/&lt;/a>
+Fork: &lt;a class="link" href="https://git-fork.com/" target="_blank" rel="noopener"
+>https://git-fork.com/&lt;/a>
+WPS: &lt;a class="link" href="https://www.wps.cn/" target="_blank" rel="noopener"
+>https://www.wps.cn/&lt;/a>
+欧路词典：&lt;a class="link" href="https://www.eudic.net/" target="_blank" rel="noopener"
+>https://www.eudic.net/&lt;/a>
+OBS Studio: &lt;a class="link" href="https://obsproject.com/" target="_blank" rel="noopener"
+>https://obsproject.com/&lt;/a>
+FileGee：&lt;a class="link" href="https://cn.filegee.com/" target="_blank" rel="noopener"
+>https://cn.filegee.com/&lt;/a>
+Clash Verge: &lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev/" target="_blank" rel="noopener"
+>https://github.com/clash-verge-rev/clash-verge-rev/&lt;/a>
+Trae CN: &lt;a class="link" href="https://www.trae.cn/" target="_blank" rel="noopener"
+>https://www.trae.cn/&lt;/a>
+Snipaste: &lt;a class="link" href="https://zh.snipaste.com/" target="_blank" rel="noopener"
+>https://zh.snipaste.com/&lt;/a>
+VMware Workstation Pro: &lt;a class="link" href="https://www.vmware.com/" target="_blank" rel="noopener"
+>https://www.vmware.com/&lt;/a>&lt;/p>
+&lt;p>Windows:
+PowerToys: &lt;a class="link" href="https://github.com/microsoft/PowerToys/" target="_blank" rel="noopener"
+>https://github.com/microsoft/PowerToys/&lt;/a>
+Geek: &lt;a class="link" href="https://geekuninstaller.com/" target="_blank" rel="noopener"
+>https://geekuninstaller.com/&lt;/a>
+everything: &lt;a class="link" href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener"
+>https://www.voidtools.com/zh-cn/&lt;/a>
+scoop: &lt;a class="link" href="https://scoop.sh/" target="_blank" rel="noopener"
+>https://scoop.sh/&lt;/a>&lt;/p>
+&lt;p>Mac:
+Homebrew: &lt;a class="link" href="https://brew.sh/" target="_blank" rel="noopener"
+>https://brew.sh/&lt;/a>&lt;/p></description></item><item><title>如何学习开源项目</title><link>https://crownjoker07.github.io/p/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link><pubDate>Sat, 09 Aug 2025 07:36:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid><description>&lt;p>学习开源项目就像 ​学做一道新菜​ —— 别急着翻锅铲，按这五步走更高效：&lt;/p>
+&lt;h3 id="1-先看菜谱读文档">1. 先看「菜谱」（读文档）
+&lt;/h3>&lt;p>别直接冲去改代码！先啃项目的 README（菜谱）、Wiki（详细做法）和官方文档（食材说明）。搞清楚它「能做什么」（功能）、「需要什么材料」（依赖环境，比如Python版本、数据库）、「最佳烹饪方式」（推荐使用姿势，比如是跑Demo还是集成到项目里）。&lt;/p>
+&lt;h3 id="2-动手备料试做搭环境跑通demo">2. 动手「备料+试做」（搭环境+跑通Demo）
+&lt;/h3>&lt;p>按文档装依赖、配环境（买菜、洗切），然后跑官方给的示例（跟着做一道基础菜）。这一步90%的人会卡壳（比如报错、环境不兼容），但别慌—— 报错信息是「厨房小提示」（比如缺了某包调料），搜GitHub的 Issues或者技术论坛（问其他厨师），99%的问题早有人踩过坑了。&lt;/p>
+&lt;h3 id="3-整体试吃理解架构与运行逻辑">3. 整体「试吃」（理解架构与运行逻辑）
+&lt;/h3>&lt;p>别急着拆解每块肉！​​ Demo跑通后，别一头扎进代码细节（比如研究某块肉怎么切）。先像美食家品菜一样，​整体感受项目：&lt;/p>
+&lt;p>•
+​尝「主味」：​​ 核心功能是什么？运行起来后，主要输入是什么？输出是什么？&lt;/p>
+&lt;p>•
+​品「层次」：​​ 各个功能模块是如何协作的？界面层、业务逻辑层、数据层是怎么交互的？（就像品出菜里的酱香、肉香、香料味各自的作用）&lt;/p>
+&lt;p>•
+​看「摆盘」：​​ 代码/项目结构是怎样的？核心文件、目录组织有没有规律？（就像看一盘菜的色彩搭配、主料辅料摆放）&lt;/p>
+&lt;p>•
+​琢磨「火候」：​​ 运行时观察控制台日志、网络请求、关键流程（比如：请求怎么进来？数据怎么处理？结果怎么返回？）。这能帮你理解项目的执行流程和生命周期。&lt;/p>
+&lt;p>​这一步的关键是：​​ 站在用户/使用者的角度，​宏观理解项目如何运作，建立起对项目整体架构和设计思想的初步印象。就像吃完一道菜，你能说出“这菜是酸甜口，用了炸和炒，主料是鸡，配了菠萝和青椒”一样。这是后续深入修改和贡献的基础。&lt;/p>
+&lt;h3 id="4-改小调料调试改代码">4. 改「小调料」（调试+改代码）
+&lt;/h3>&lt;p>等Demo跑通了，试着改点简单的代码（比如换个端口、调个参数），观察结果变化（比如页面显示从「红烧肉」变成「糖醋排骨」）。这一步像试菜：加勺糖会不会太甜？调低线程数会不会更快？通过小改动理解代码逻辑（比如「原来这个函数是控制火候的」）。&lt;/p>
+&lt;h3 id="5-给大厨提建议参与贡献">5. 给「大厨提建议」（参与贡献）
+&lt;/h3>&lt;p>当你熟悉后，可以试试解决 Good First Issue（新手任务，比如修个小bug、补个注释），或者提优化建议（比如「用这个新调料更健康」）。提交代码（PR）被合并的瞬间，就像你的菜被餐厅列入菜单—— 成就感拉满！&lt;/p>
+&lt;hr>
+&lt;p>​一句话总结​：学开源 = ​看菜谱​ → ​备料试做​ → ​品主味（整体架构）​​ → ​调小味​ → ​给大厨提建议，从「照葫芦画瓢」到「改良创新」，边用边学最有效。&lt;/p></description></item><item><title>编程语言可以怎么分类</title><link>https://crownjoker07.github.io/p/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%8F%AF%E4%BB%A5%E6%80%8E%E4%B9%88%E5%88%86%E7%B1%BB/</link><pubDate>Mon, 02 Jun 2025 08:46:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%8F%AF%E4%BB%A5%E6%80%8E%E4%B9%88%E5%88%86%E7%B1%BB/</guid><description>&lt;blockquote>
+&lt;p>成为Unity客户端开发已经快3年了，意味着用了3年的C#，不过学生时代几乎啥语言都接触过，最近打算深入研究游戏引擎，使用Godot游戏引擎进行开发，它使用的是C++，但却发现，C++不像C#那样我只需要在乎逻辑怎么写，C++需要我考虑代码如何构建，使用类似CMake、Scons这种构建工具，因此我打算从头了解一遍编程语言，深入了解为什么会有这种差异。&lt;/p>&lt;/blockquote>
+&lt;br>
+&lt;h1 id="编程语言分类">编程语言分类
+&lt;/h1>&lt;p>编程语言的分类方式多样，不同维度可以交叉组合。以下是主要分类方式及典型示例：&lt;/p>
+&lt;hr>
+&lt;h3 id="一按执行方式分类">一、按&lt;strong>执行方式&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>类别&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>编译型&lt;/strong>&lt;/td>
+&lt;td>源代码 → 机器码（直接执行）&lt;/td>
+&lt;td>C、C++、Rust、Go&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>解释型&lt;/strong>&lt;/td>
+&lt;td>源代码 → 逐行解释执行&lt;/td>
+&lt;td>Python、Ruby、JavaScript（传统）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>混合型&lt;/strong>&lt;/td>
+&lt;td>编译+解释（如JIT/AOT）&lt;/td>
+&lt;td>Java（JVM JIT）、JavaScript（V8引擎）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="二按编程范式分类">二、按&lt;strong>编程范式&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>范式&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>核心思想&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>面向对象&lt;/strong>&lt;/td>
+&lt;td>以对象为核心（封装、继承、多态）&lt;/td>
+&lt;td>Java、C++、Python&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>函数式&lt;/strong>&lt;/td>
+&lt;td>以函数为核心（不可变数据、高阶函数）&lt;/td>
+&lt;td>Haskell、Scala、Erlang&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>过程式&lt;/strong>&lt;/td>
+&lt;td>以过程/函数调用顺序为核心&lt;/td>
+&lt;td>C、Pascal&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>逻辑式&lt;/strong>&lt;/td>
+&lt;td>基于形式逻辑推理&lt;/td>
+&lt;td>Prolog&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>脚本式&lt;/strong>&lt;/td>
+&lt;td>轻量级、快速开发&lt;/td>
+&lt;td>Python、Perl、Bash&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="三按抽象级别分类">三、按&lt;strong>抽象级别&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>级别&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>低级语言&lt;/strong>&lt;/td>
+&lt;td>接近硬件，需手动管理资源&lt;/td>
+&lt;td>Assembly、C&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>高级语言&lt;/strong>&lt;/td>
+&lt;td>抽象程度高，屏蔽硬件细节&lt;/td>
+&lt;td>Python、Java、C#&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="四按用途分类">四、按&lt;strong>用途&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>领域&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>通用编程&lt;/strong>&lt;/td>
+&lt;td>适用于多种场景&lt;/td>
+&lt;td>Python、Java、C++&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>系统编程&lt;/strong>&lt;/td>
+&lt;td>操作系统、驱动开发&lt;/td>
+&lt;td>C、Rust、Zig&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Web开发&lt;/strong>&lt;/td>
+&lt;td>前端/后端开发&lt;/td>
+&lt;td>JavaScript、PHP、Ruby&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>数据科学&lt;/strong>&lt;/td>
+&lt;td>数据分析、机器学习&lt;/td>
+&lt;td>Python、R、Julia&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>嵌入式&lt;/strong>&lt;/td>
+&lt;td>资源受限设备&lt;/td>
+&lt;td>C、Lua、MicroPython&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="五按类型系统分类">五、按&lt;strong>类型系统&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>类型系统&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>静态类型&lt;/strong>&lt;/td>
+&lt;td>变量类型在编译时确定&lt;/td>
+&lt;td>C++、Java、Rust&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>动态类型&lt;/strong>&lt;/td>
+&lt;td>变量类型在运行时确定&lt;/td>
+&lt;td>Python、JavaScript、Ruby&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>强类型&lt;/strong>&lt;/td>
+&lt;td>禁止隐式类型转换&lt;/td>
+&lt;td>Python、Haskell&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>弱类型&lt;/strong>&lt;/td>
+&lt;td>允许隐式类型转换（如强制转换）&lt;/td>
+&lt;td>JavaScript、PHP&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="六按并发模型分类">六、按&lt;strong>并发模型&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>模型&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>线程模型&lt;/strong>&lt;/td>
+&lt;td>基于操作系统线程&lt;/td>
+&lt;td>Java、C++（std::thread）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Actor模型&lt;/strong>&lt;/td>
+&lt;td>通过消息传递实现并发&lt;/td>
+&lt;td>Erlang、Akka（Scala）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>协程模型&lt;/strong>&lt;/td>
+&lt;td>轻量级用户态线程&lt;/td>
+&lt;td>Go（goroutine）、Python（asyncio）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="七按运行环境分类">七、按&lt;strong>运行环境&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>环境&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>独立运行&lt;/strong>&lt;/td>
+&lt;td>直接生成可执行文件&lt;/td>
+&lt;td>C、Go&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>虚拟机依赖&lt;/strong>&lt;/td>
+&lt;td>需虚拟机/运行时环境&lt;/td>
+&lt;td>Java（JVM）、C#（CLR）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>浏览器环境&lt;/strong>&lt;/td>
+&lt;td>运行在浏览器中&lt;/td>
+&lt;td>JavaScript、TypeScript&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="八按设计哲学分类">八、按&lt;strong>设计哲学&lt;/strong>分类
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>哲学&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型语言&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>简洁性&lt;/strong>&lt;/td>
+&lt;td>语法极简（如强制缩进）&lt;/td>
+&lt;td>Python、Go&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>多范式支持&lt;/strong>&lt;/td>
+&lt;td>支持多种编程范式&lt;/td>
+&lt;td>Scala、F#&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>安全优先&lt;/strong>&lt;/td>
+&lt;td>内存安全、无指针&lt;/td>
+&lt;td>Rust、Go&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="总结分类不是互斥的">总结：分类不是互斥的！
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>示例&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>Python&lt;/strong>：高级、解释型、动态类型、多范式（面向对象+函数式）。&lt;/li>
+&lt;li>&lt;strong>Rust&lt;/strong>：系统级、静态类型、编译型、内存安全。&lt;/li>
+&lt;li>&lt;strong>JavaScript&lt;/strong>：脚本式、动态类型、浏览器环境、多范式（事件驱动+函数式）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>实际选择语言时需综合考虑：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>项目需求&lt;/strong>（性能、开发效率）&lt;/li>
+&lt;li>&lt;strong>团队熟悉度&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>生态支持&lt;/strong>（库、工具链）&lt;/li>
+&lt;/ol>
+&lt;br>
+&lt;h2 id="执行方式分类">执行方式分类
+&lt;/h2>&lt;p>编程语言按执行方式分类，主要分为&lt;strong>编译型&lt;/strong>、&lt;strong>解释型&lt;/strong>和&lt;strong>混合型&lt;/strong>（如JIT）。这种分类源于计算机底层执行机制的差异，以及开发者对&lt;strong>性能&lt;/strong>、&lt;strong>开发效率&lt;/strong>和&lt;strong>跨平台能力&lt;/strong>的权衡。以下是详细分类及其背后的逻辑：&lt;/p>
+&lt;hr>
+&lt;h3 id="一编译型语言compiled-languages">一、编译型语言（Compiled Languages）
+&lt;/h3>&lt;div class="mermaid" align=center>
+graph LR
+A[源代码: .cpp] --> B(预处理)
+B --> C(编译)
+C --> D(汇编)
+D --> E(链接)
+E --> F[可执行文件]
+&lt;/div>
+&lt;h4 id="执行流程">&lt;strong>执行流程&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>&lt;strong>编译&lt;/strong>：源代码通过编译器（如GCC、Clang）一次性转换为&lt;strong>机器码&lt;/strong>（可执行文件）。&lt;/li>
+&lt;li>&lt;strong>执行&lt;/strong>：直接由操作系统运行生成的二进制文件。&lt;/li>
+&lt;/ol>
+&lt;h4 id="典型语言">&lt;strong>典型语言&lt;/strong>
+&lt;/h4>&lt;p>C、C++、Rust、Go、Swift。&lt;/p>
+&lt;h4 id="为何这样设计">&lt;strong>为何这样设计？&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>&lt;strong>性能优先&lt;/strong>：
+&lt;ul>
+&lt;li>机器码直接由CPU执行，无需运行时解释，速度最快。&lt;/li>
+&lt;li>适合系统级开发（如操作系统、游戏引擎）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>硬件控制&lt;/strong>：
+&lt;ul>
+&lt;li>编译器可优化内存管理（如手动内存分配）、寄存器分配等底层细节。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>静态类型系统&lt;/strong>：
+&lt;ul>
+&lt;li>编译时检查类型错误（如C++的强类型），减少运行时崩溃风险。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="代价">&lt;strong>代价&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>跨平台性差&lt;/strong>：需为不同平台（Windows/Linux）编译不同二进制文件。&lt;/li>
+&lt;li>&lt;strong>开发效率低&lt;/strong>：编译时间长，修改代码后需重新编译。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="二解释型语言interpreted-languages">二、解释型语言（Interpreted Languages）
+&lt;/h3>&lt;div class="mermaid" align=center>
+graph LR
+A[源代码: .py] --> B(解释器逐行解析)
+B --> C[生成字节码: .pyc]
+C --> D[执行字节码]
+&lt;/div>
+&lt;h4 id="执行流程-1">&lt;strong>执行流程&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>&lt;strong>逐行解析&lt;/strong>：解释器（如Python解释器）逐行读取源代码。&lt;/li>
+&lt;li>&lt;strong>即时翻译&lt;/strong>：将每行代码转换为中间表示（如字节码）或直接执行。&lt;/li>
+&lt;/ol>
+&lt;h4 id="典型语言-1">&lt;strong>典型语言&lt;/strong>
+&lt;/h4>&lt;p>Python、Ruby、JavaScript（传统浏览器环境）、Bash。&lt;/p>
+&lt;h4 id="为何这样设计-1">&lt;strong>为何这样设计？&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>&lt;strong>开发效率高&lt;/strong>：
+&lt;ul>
+&lt;li>无需编译步骤，修改代码后立即执行，适合快速迭代（如脚本任务）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>跨平台性强&lt;/strong>：
+&lt;ul>
+&lt;li>只需分发源代码，解释器负责适配不同平台（如Python的“一次编写，到处运行”）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>动态特性支持&lt;/strong>：
+&lt;ul>
+&lt;li>支持动态类型（运行时确定变量类型）、反射等灵活功能。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="代价-1">&lt;strong>代价&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>性能较低&lt;/strong>：逐行解释执行，无法充分利用硬件优化。&lt;/li>
+&lt;li>&lt;strong>启动时间长&lt;/strong>：大型脚本（如Python数据分析）可能因解释器初始化而变慢。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="三混合型语言hybrid-execution">三、混合型语言（Hybrid Execution）
+&lt;/h3>&lt;div class="mermaid" align=center>
+graph LR
+A[源代码: .java] --> B(编译)
+B --> C[生成字节码: .class]
+C --> D{运行时环境}
+D -->|首次执行| E[JIT编译为机器码]
+D -->|热点代码| F[直接执行机器码]
+E --> G[可执行程序]
+F --> G
+&lt;/div>
+&lt;h4 id="核心模式">&lt;strong>核心模式&lt;/strong>
+&lt;/h4>&lt;p>结合编译与解释的优势，常见两种实现：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>即时编译（JIT, Just-In-Time）&lt;/strong>：
+&lt;ul>
+&lt;li>源代码先编译为中间字节码（如Java的&lt;code>.class&lt;/code>），运行时由虚拟机（JVM）动态编译为机器码。&lt;/li>
+&lt;li>&lt;strong>典型语言&lt;/strong>：Java、C#、JavaScript（V8引擎）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>AOT编译（Ahead-Of-Time）&lt;/strong>：
+&lt;ul>
+&lt;li>在运行前将源代码或中间代码编译为机器码，但不同于传统编译型语言（如Rust的LLVM优化）。&lt;/li>
+&lt;li>&lt;strong>典型语言&lt;/strong>：Swift、Rust。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="为何这样设计-2">&lt;strong>为何这样设计？&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>&lt;strong>平衡性能与跨平台&lt;/strong>：
+&lt;ul>
+&lt;li>JIT在运行时优化热点代码（如Java的HotSpot JVM），接近编译型性能。&lt;/li>
+&lt;li>字节码保持跨平台能力（如Java的“一次编译，到处运行”）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>动态优化&lt;/strong>：
+&lt;ul>
+&lt;li>JIT可根据实际运行数据优化代码（如V8引擎对JS的优化）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="代价-2">&lt;strong>代价&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>内存占用高&lt;/strong>：需同时维护字节码和JIT编译后的机器码。&lt;/li>
+&lt;li>&lt;strong>启动延迟&lt;/strong>：JIT初始化阶段可能影响性能（如Java应用冷启动较慢）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="四分类的核心逻辑性能-vs-灵活性">四、分类的核心逻辑：性能 vs 灵活性
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>分类&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>核心目标&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>适用场景&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>代表技术&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>编译型&lt;/strong>&lt;/td>
+&lt;td>最大化执行效率&lt;/td>
+&lt;td>操作系统、高频交易、游戏引擎&lt;/td>
+&lt;td>C/C++、Rust&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>解释型&lt;/strong>&lt;/td>
+&lt;td>开发效率与跨平台性&lt;/td>
+&lt;td>脚本任务、Web后端、数据分析&lt;/td>
+&lt;td>Python、JavaScript&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>混合型&lt;/strong>&lt;/td>
+&lt;td>性能与灵活性的折中&lt;/td>
+&lt;td>企业级应用、跨平台移动开发&lt;/td>
+&lt;td>Java（JVM）、JavaScript（V8）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="五为什么会出现这些差异">五、为什么会出现这些差异？
+&lt;/h3>&lt;h4 id="1-硬件与操作系统的限制">1. &lt;strong>硬件与操作系统的限制&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>编译型语言直接操作硬件资源（如内存地址），但不同平台的指令集（x86/ARM）不同，导致代码无法通用。&lt;/li>
+&lt;li>解释型语言通过虚拟机（如JVM）抽象硬件差异，实现跨平台。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-开发者的效率需求">2. &lt;strong>开发者的效率需求&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>编译型语言需要手动管理内存和底层细节，适合有经验的开发者；&lt;/li>
+&lt;li>解释型语言提供高级抽象（如自动垃圾回收），降低学习门槛。&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-语言特性的复杂度">3. &lt;strong>语言特性的复杂度&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>动态类型、反射等特性难以在编译时完全优化，更适合解释执行（如Python的灵活性）。&lt;/li>
+&lt;li>静态类型语言（如Rust）可通过编译时检查提前发现问题，提升安全性。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="六现代趋势打破传统边界">六、现代趋势：打破传统边界
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>编译型语言引入解释特性&lt;/strong>：
+&lt;ul>
+&lt;li>Go语言通过&lt;code>go run&lt;/code>直接解释执行代码，兼顾开发效率。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>解释型语言引入JIT&lt;/strong>：
+&lt;ul>
+&lt;li>JavaScript的V8引擎将代码编译为机器码，性能接近C++。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>全栈语言的混合模式&lt;/strong>：
+&lt;ul>
+&lt;li>TypeScript（编译为JS） + WebAssembly（AOT编译）结合两者的优势。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="总结">总结
+&lt;/h3>&lt;p>编程语言的执行方式分类，本质是&lt;strong>工程需求与硬件能力的博弈结果&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>编译型&lt;/strong>：追求极致性能，牺牲灵活性。&lt;/li>
+&lt;li>&lt;strong>解释型&lt;/strong>：强调开发效率和跨平台，牺牲速度。&lt;/li>
+&lt;li>&lt;strong>混合型&lt;/strong>：在两者间寻找平衡，适应复杂场景。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>选择建议&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>开发系统级软件（如操作系统）→ &lt;strong>C/C++&lt;/strong>&lt;/li>
+&lt;li>快速构建Web应用 → &lt;strong>JavaScript/Python&lt;/strong>&lt;/li>
+&lt;li>需要跨平台且高性能 → &lt;strong>Java（JVM）&lt;/strong> 或 &lt;strong>Rust&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;h2 id="编程范式分类">编程范式分类
+&lt;/h2>&lt;p>编程语言按&lt;strong>编程范式&lt;/strong>分类，常见的核心范式有以下四种。每种范式代表一种独特的代码组织逻辑和问题解决思路：&lt;/p>
+&lt;hr>
+&lt;h3 id="1-面向对象编程oop">1. &lt;strong>面向对象编程（OOP）&lt;/strong>
+&lt;/h3>&lt;p>&lt;strong>核心思想&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>将现实世界抽象为&lt;strong>对象&lt;/strong>（包含数据和行为），通过&lt;strong>封装&lt;/strong>隐藏细节、&lt;strong>继承&lt;/strong>复用代码、&lt;strong>多态&lt;/strong>实现灵活调用。&lt;br>
+&lt;strong>典型语言&lt;/strong>：Java、C++、Python、C#&lt;br>
+&lt;strong>适用场景&lt;/strong>：&lt;/li>
+&lt;li>大型系统（如GUI应用、游戏开发）&lt;/li>
+&lt;li>需要模块化扩展的项目&lt;br>
+&lt;strong>代码示例&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Java：继承与多态&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">Animal&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">sound&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;叫声&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">Dog&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Animal&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nd">@Override&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">sound&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;汪汪&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 多态&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="2-函数式编程fp">2. &lt;strong>函数式编程（FP）&lt;/strong>
+&lt;/h3>&lt;p>&lt;strong>核心思想&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>以&lt;strong>函数&lt;/strong>为基本单元，强调&lt;strong>纯函数&lt;/strong>（输入相同则输出相同）、&lt;strong>不可变数据&lt;/strong>，避免副作用。&lt;br>
+&lt;strong>典型语言&lt;/strong>：Haskell、Scala、JavaScript（部分支持）&lt;br>
+&lt;strong>适用场景&lt;/strong>：&lt;/li>
+&lt;li>并发编程（无共享状态）&lt;/li>
+&lt;li>数据处理（如Map/Reduce）&lt;br>
+&lt;strong>代码示例&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// JavaScript：纯函数（无副作用）
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">add&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 始终返回8
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="3-过程式编程">3. &lt;strong>过程式编程&lt;/strong>
+&lt;/h3>&lt;p>&lt;strong>核心思想&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>按步骤顺序执行&lt;strong>函数&lt;/strong>，通过函数调用组织逻辑，数据与操作分离。&lt;br>
+&lt;strong>典型语言&lt;/strong>：C、Pascal&lt;br>
+&lt;strong>适用场景&lt;/strong>：&lt;/li>
+&lt;li>系统级开发（如操作系统内核）&lt;/li>
+&lt;li>小型脚本工具&lt;br>
+&lt;strong>代码示例&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// C：过程式函数调用
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">void&lt;/span> &lt;span class="nf">printHello&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printHello&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// 顺序执行
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="4-事件驱动编程">4. &lt;strong>事件驱动编程&lt;/strong>
+&lt;/h3>&lt;p>&lt;strong>核心思想&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>由&lt;strong>事件&lt;/strong>（如点击、网络请求）触发响应，通过回调函数或事件循环处理异步操作。&lt;br>
+&lt;strong>典型语言&lt;/strong>：JavaScript、Python（asyncio）&lt;br>
+&lt;strong>适用场景&lt;/strong>：&lt;/li>
+&lt;li>GUI应用、实时系统&lt;/li>
+&lt;li>高并发服务（如Web服务器）&lt;br>
+&lt;strong>代码示例&lt;/strong>：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// JavaScript：事件监听
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">button&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;按钮被点击！&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 事件触发后执行
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="范式对比总结">范式对比总结
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>范式&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>核心单元&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型场景&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>关键优势&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>面向对象&lt;/strong>&lt;/td>
+&lt;td>对象&lt;/td>
+&lt;td>大型系统、模块化扩展&lt;/td>
+&lt;td>代码复用（继承）、灵活性（多态）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>函数式&lt;/strong>&lt;/td>
+&lt;td>函数&lt;/td>
+&lt;td>并发编程、数据处理&lt;/td>
+&lt;td>无副作用、易于测试&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>过程式&lt;/strong>&lt;/td>
+&lt;td>函数&lt;/td>
+&lt;td>系统开发、小型工具&lt;/td>
+&lt;td>简单直接、执行高效&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>事件驱动&lt;/strong>&lt;/td>
+&lt;td>事件&lt;/td>
+&lt;td>GUI应用、实时服务&lt;/td>
+&lt;td>高响应性、资源利用率高&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="重要提示">重要提示：
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>多范式融合&lt;/strong>：现代语言（如Python、JavaScript）通常支持多种范式。
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Python示例：混合OOP和函数式&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">numbers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">squared&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">list&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">lambda&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">numbers&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1"># 函数式&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Calculator&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="c1"># 面向对象&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">square&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>&lt;strong>选择建议&lt;/strong>：
+&lt;ul>
+&lt;li>开发商业系统 → &lt;strong>面向对象&lt;/strong>（Java/C#）&lt;/li>
+&lt;li>高并发后端 → &lt;strong>函数式&lt;/strong>（Scala/Elixir）&lt;/li>
+&lt;li>硬件操作 → &lt;strong>过程式&lt;/strong>（C/Rust）&lt;/li>
+&lt;li>前端交互 → &lt;strong>事件驱动&lt;/strong>（JavaScript）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;h2 id="抽象级别分类">抽象级别分类
+&lt;/h2>&lt;p>编程语言按&lt;strong>抽象级别&lt;/strong>分类，核心依据是语言离硬件底层远近、对开发者的屏蔽程度和代码控制精细度。以下是三级分类详解：&lt;/p>
+&lt;hr>
+&lt;h3 id="一低级语言low-level-languages">一、低级语言（Low-Level Languages）
+&lt;/h3>&lt;p>&lt;strong>抽象特点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>直接映射硬件指令（如寄存器、内存地址）&lt;/li>
+&lt;li>开发者需手动管理底层资源（内存分配、CPU指令）&lt;br>
+&lt;strong>典型语言&lt;/strong>：&lt;/li>
+&lt;li>&lt;strong>汇编语言（Assembly）&lt;/strong>：
+&lt;ul>
+&lt;li>直接对应机器码（如 &lt;code>MOV AX, 5&lt;/code> → 移动数字5到AX寄存器）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：操作系统内核开发、嵌入式设备驱动。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>机器语言（二进制代码）&lt;/strong>：
+&lt;ul>
+&lt;li>由0和1组成，CPU直接执行（如 &lt;code>10110000 00000101&lt;/code> → 将5存入寄存器）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>代码示例（x86汇编）&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">section .data
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> msg db &amp;#39;Hello, World!&amp;#39;, 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">section .text
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> global _start
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">_start:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mov eax, 4 ; 系统调用编号（sys_write）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mov ebx, 1 ; 文件描述符（stdout）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mov ecx, msg ; 字符串地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mov edx, 13 ; 字符串长度
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int 0x80 ; 调用内核
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="二中级语言mid-level-languages">二、中级语言（Mid-Level Languages）
+&lt;/h3>&lt;p>&lt;strong>抽象特点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>平衡控制与抽象&lt;/strong>：提供基础数据结构（数组、结构体）和流程控制（循环、条件），但仍暴露指针等底层操作。&lt;/li>
+&lt;li>开发者需管理内存但可忽略指令集细节。&lt;br>
+&lt;strong>典型语言&lt;/strong>：&lt;/li>
+&lt;li>&lt;strong>C语言&lt;/strong>：
+&lt;ul>
+&lt;li>直接操作内存指针（如 &lt;code>int *ptr = &amp;amp;a;&lt;/code>）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：操作系统、硬件驱动、高性能计算（如Linux内核用C编写）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>C++（部分特性）&lt;/strong>：
+&lt;ul>
+&lt;li>支持面向对象（类、继承），但保留指针操作（如 &lt;code>int* p = new int(10);&lt;/code>）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>代码示例（C语言指针操作）&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// p指向a的内存地址
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 输出10（解引用）
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="三高级语言high-level-languages">三、高级语言（High-Level Languages）
+&lt;/h3>&lt;p>&lt;strong>抽象特点&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>完全屏蔽硬件细节&lt;/strong>：自动内存管理（垃圾回收）、丰富的数据结构（字典、对象）。&lt;/li>
+&lt;li>语法接近自然语言（如英语单词），开发效率高。&lt;br>
+&lt;strong>典型语言&lt;/strong>：&lt;/li>
+&lt;li>&lt;strong>Python&lt;/strong>：
+&lt;ul>
+&lt;li>自动内存回收，无需声明变量类型（如 &lt;code>name = &amp;quot;Alice&amp;quot;&lt;/code>）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Java&lt;/strong>：
+&lt;ul>
+&lt;li>虚拟机（JVM）屏蔽平台差异，自带垃圾回收。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>JavaScript&lt;/strong>：
+&lt;ul>
+&lt;li>解释执行，浏览器/Node.js环境抽象底层操作。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>代码示例（Python高级抽象）&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 列表推导式 + 自动内存管理&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">squares&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">squares&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># [0, 1, 4, 9, ..., 81]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="抽象级别对比总结">抽象级别对比总结
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>级别&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>硬件依赖&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>内存管理&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>开发效率&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>性能&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>典型场景&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>低级语言&lt;/strong>&lt;/td>
+&lt;td>直接依赖&lt;/td>
+&lt;td>手动&lt;/td>
+&lt;td>极低&lt;/td>
+&lt;td>最高&lt;/td>
+&lt;td>操作系统内核、驱动&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>中级语言&lt;/strong>&lt;/td>
+&lt;td>间接依赖&lt;/td>
+&lt;td>手动/半自动&lt;/td>
+&lt;td>中等&lt;/td>
+&lt;td>高&lt;/td>
+&lt;td>系统软件、游戏引擎&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>高级语言&lt;/strong>&lt;/td>
+&lt;td>完全屏蔽&lt;/td>
+&lt;td>自动&lt;/td>
+&lt;td>高&lt;/td>
+&lt;td>中/低&lt;/td>
+&lt;td>Web应用、数据分析、AI&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="关键说明">关键说明
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>为什么C/C++属于中级？&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>C/C++允许直接操作内存（如指针），但又提供高级抽象（C++的类、模板），&lt;strong>介于低级和高级之间&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>现代语言的混合抽象&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Rust&lt;/strong>：高级语法（模式匹配、错误处理） + 低级控制（无垃圾回收，零成本抽象）。&lt;/li>
+&lt;li>&lt;strong>Go&lt;/strong>：高级并发模型（goroutine） + 中级内存管理（手动释放资源）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>抽象级别的核心价值&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>低级语言&lt;/strong>：极致性能 → 适合航空航天、高频交易。&lt;/li>
+&lt;li>&lt;strong>高级语言&lt;/strong>：快速开发 → 适合互联网应用、脚本工具。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>&lt;strong>选择建议&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>开发硬件驱动 → &lt;strong>C/汇编&lt;/strong>&lt;/li>
+&lt;li>构建大型游戏引擎 → &lt;strong>C++&lt;/strong>&lt;/li>
+&lt;li>快速开发Web应用 → &lt;strong>Python/JavaScript&lt;/strong>&lt;/li>
+&lt;/ul>&lt;/blockquote></description></item><item><title>UDP vs. TCP</title><link>https://crownjoker07.github.io/p/udp-vs.-tcp/</link><pubDate>Sun, 25 May 2025 18:42:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/udp-vs.-tcp/</guid><description>&lt;p>以下是您提供的文章的逐段详细解析，结合技术要点和实际应用场景：&lt;/p>
+&lt;hr>
+&lt;h3 id="一tcp与udp的核心区别">&lt;strong>一、TCP与UDP的核心区别&lt;/strong>
+&lt;/h3>&lt;h4 id="1-协议特性对比">&lt;strong>1. 协议特性对比&lt;/strong>
+&lt;/h4>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>特性&lt;/th>
+&lt;th>TCP&lt;/th>
+&lt;th>UDP&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>连接模式&lt;/strong>&lt;/td>
+&lt;td>面向连接（需先建立连接）&lt;/td>
+&lt;td>无连接（直接发数据包）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>可靠性&lt;/strong>&lt;/td>
+&lt;td>保证数据按序到达，丢失自动重传&lt;/td>
+&lt;td>不保证可靠性，数据可能丢失或乱序&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>流量控制&lt;/strong>&lt;/td>
+&lt;td>拥塞控制（如Nagle算法）&lt;/td>
+&lt;td>无内置流量控制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>数据边界&lt;/strong>&lt;/td>
+&lt;td>流式传输（无明确数据包边界）&lt;/td>
+&lt;td>数据报（每个包独立，保留边界）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>适用场景&lt;/strong>&lt;/td>
+&lt;td>文件传输、网页浏览&lt;/td>
+&lt;td>实时游戏、音视频流&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="2-为什么tcp不适合实时游戏">&lt;strong>2. 为什么TCP不适合实时游戏？&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>延迟陷阱&lt;/strong>：&lt;br>
+TCP通过重传丢失包确保可靠性，但重传会导致等待时间（至少1RTT）。例如，125ms延迟下，丢包重传可能增加至250ms以上的等待，破坏实时性。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>示例&lt;/strong>：FPS游戏中，玩家移动指令若丢失，TCP会等待重传，导致角色“卡顿”，而新指令被积压，最终接收时已过时。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>流量控制反效果&lt;/strong>：&lt;br>
+TCP的拥塞控制（如慢启动）在检测到丢包时会主动降速，进一步加剧延迟。而实时游戏需要持续高频率数据传输，TCP的保守策略与之冲突。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>数据粘包问题&lt;/strong>：&lt;br>
+TCP是流式协议，数据可能被合并或拆分。例如，发送两个短指令（如“移动A”和“射击B”）可能被合并为一个包，接收端需自行拆分，增加处理复杂度。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="二udp的优势与挑战">&lt;strong>二、UDP的优势与挑战&lt;/strong>
+&lt;/h3>&lt;h4 id="1-udp的核心优势">&lt;strong>1. UDP的核心优势&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>低延迟&lt;/strong>：&lt;br>
+无重传机制，数据即发即弃。即使丢包，客户端可立即处理最新指令（如“开火”指令丢失后，直接发送下一帧的“换弹”指令）。&lt;/li>
+&lt;li>&lt;strong>无流量控制干扰&lt;/strong>：&lt;br>
+开发者可完全控制发送频率，避免TCP的拥塞控制导致的波动。&lt;/li>
+&lt;li>&lt;strong>数据边界明确&lt;/strong>：&lt;br>
+每个UDP包独立，便于解析。例如，每个包可包含“玩家ID+动作类型+时间戳”，接收端直接处理。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-udp的挑战与解决方案">&lt;strong>2. UDP的挑战与解决方案&lt;/strong>
+&lt;/h4>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>挑战&lt;/th>
+&lt;th>解决方案&lt;/th>
+&lt;th>示例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>丢包&lt;/strong>&lt;/td>
+&lt;td>自定义重传机制（仅对关键数据重传）&lt;/td>
+&lt;td>玩家位置每10ms发送一次，若丢失则下一帧补发&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>乱序&lt;/strong>&lt;/td>
+&lt;td>添加序列号，本地缓冲后按序处理&lt;/td>
+&lt;td>包头包含递增序号，缓存最近5个包&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>拥塞控制&lt;/strong>&lt;/td>
+&lt;td>手动实现速率限制（如动态调整发送间隔）&lt;/td>
+&lt;td>根据丢包率调整发送频率&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="三混合使用tcp与udp的风险">&lt;strong>三、混合使用TCP与UDP的风险&lt;/strong>
+&lt;/h3>&lt;h4 id="1-协议交互影响">&lt;strong>1. 协议交互影响&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>TCP的队头阻塞&lt;/strong>：&lt;br>
+TCP的重传会占用带宽，导致同一网络路径上的UDP包延迟增加。例如，TCP重传大量数据时，UDP的实时控制指令可能被延迟。&lt;/li>
+&lt;li>&lt;strong>NAT穿透问题&lt;/strong>：&lt;br>
+多数家庭路由器仅开放特定端口，同时使用TCP/UDP可能需配置多个端口，增加复杂度。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-设计复杂度">&lt;strong>2. 设计复杂度&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>状态同步困难&lt;/strong>：&lt;br>
+若关键数据（如得分）通过TCP传输，而实时位置通过UDP传输，需维护两套同步逻辑，容易出错。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="四实战建议">&lt;strong>四、实战建议&lt;/strong>
+&lt;/h3>&lt;h4 id="1-何时使用tcp">&lt;strong>1. 何时使用TCP？&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>非实时数据&lt;/strong>：&lt;br>
+如玩家登录验证、排行榜更新等离线操作。&lt;/li>
+&lt;li>&lt;strong>可靠指令&lt;/strong>：&lt;br>
+如游戏存档保存、聊天消息（允许稍有延迟）。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-如何构建可靠的udp协议">&lt;strong>2. 如何构建可靠的UDP协议？&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>分层设计&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">+-------------------+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| 应用层协议 | (自定义可靠性、序列号)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+-------------------+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| UDP | (传输层)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+-------------------+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| IP | (网络层)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+-------------------+
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>&lt;strong>关键机制&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>ACK/NACK&lt;/strong>：接收方发送确认包，超时未收到则重传。&lt;/li>
+&lt;li>&lt;strong>插值与外推&lt;/strong>：客户端预测运动轨迹，服务器校正（如《CS:GO》的回滚机制）。&lt;/li>
+&lt;li>&lt;strong>抖动缓冲&lt;/strong>：缓存少量包以应对网络波动。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="五案例分析">&lt;strong>五、案例分析&lt;/strong>
+&lt;/h3>&lt;h4 id="1-quake的网络架构">&lt;strong>1. 《Quake》的网络架构&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>纯UDP实现&lt;/strong>：&lt;br>
+玩家输入（移动、射击）通过UDP发送，服务器每100ms广播一次权威状态。&lt;/li>
+&lt;li>&lt;strong>可靠性处理&lt;/strong>：&lt;br>
+关键操作（如击杀）通过冗余UDP包发送，客户端本地记录状态，冲突时以服务器状态为准。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-守望先锋的混合模型">&lt;strong>2. 《守望先锋》的混合模型&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>UDP为主&lt;/strong>：&lt;br>
+玩家动作、技能释放使用UDP。&lt;/li>
+&lt;li>&lt;strong>TCP辅助&lt;/strong>：&lt;br>
+语音聊天、好友系统使用TCP，与游戏核心逻辑隔离。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="六总结与延伸">&lt;strong>六、总结与延伸&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>核心原则&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>实时性优先&lt;/strong>：选择UDP，牺牲可靠性换取低延迟。&lt;/li>
+&lt;li>&lt;strong>可控性&lt;/strong>：自行实现所需可靠性，避免TCP的隐性开销。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>进阶方向&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>QUIC协议&lt;/strong>：基于UDP的现代协议（如HTTP/3），结合TCP可靠性与UDP速度。&lt;/li>
+&lt;li>&lt;strong>边缘计算&lt;/strong>：通过全球节点部署减少物理延迟（如《英雄联盟》的全球加速器）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>💡 关键点：实时游戏网络设计的核心矛盾在于&lt;strong>实时性&lt;/strong>与&lt;strong>可靠性&lt;/strong>的权衡，UDP提供了底层灵活性，但需开发者投入更多精力实现定制化解决方案。&lt;/p>&lt;/blockquote>
+&lt;p>参考资料：&lt;/p>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://www.geeksforgeeks.org/udp-vs-tcp/" target="_blank" rel="noopener"
+>UDP vs TCP&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>游戏中的网络模型介绍</title><link>https://crownjoker07.github.io/p/%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D/</link><pubDate>Sun, 25 May 2025 18:32:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D/</guid><description>&lt;blockquote>
+&lt;p>身为一名游戏客户端、工作三年以来除了使用过网络请求，完全没有使用过网络连接，最近使用Godot尝试局域网联机，因此研究一下网络模型&lt;/p>&lt;/blockquote>
+&lt;p>以下是您提供的文章的逐段详细解析，结合技术要点和实际应用场景：&lt;/p>
+&lt;hr>
+&lt;h3 id="一p2p锁步模型peer-to-peer-lockstep">&lt;strong>一、P2P锁步模型（Peer-to-Peer Lockstep）&lt;/strong>
+&lt;/h3>&lt;h4 id="核心机制">&lt;strong>核心机制&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>工作原理&lt;/strong>：所有玩家设备（节点）直接互联，每帧交换操作指令（如移动、攻击）。所有设备从相同初始状态出发，通过完全相同的指令序列和逻辑计算推进游戏状态。&lt;/li>
+&lt;li>&lt;strong>示例&lt;/strong>：《帝国时代》中，每个玩家的输入（如建造建筑）会被广播给其他玩家，所有设备独立计算整个游戏世界的状态。&lt;/li>
+&lt;/ul>
+&lt;h4 id="优点">&lt;strong>优点&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>低带宽需求&lt;/strong>：仅传输操作指令而非完整状态，适合单位数量庞大的RTS游戏（如数千个单位）。&lt;/li>
+&lt;/ul>
+&lt;h4 id="缺点">&lt;strong>缺点&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>确定性难题&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：不同设备的浮点运算、指令顺序等微小差异可能导致状态不同步（如单位路径计算误差）。&lt;/li>
+&lt;li>&lt;strong>现实案例&lt;/strong>：某单位在A设备上因计算顺序早0.1秒到达战场，而在B设备上晚到，导致战术结果截然不同。&lt;/li>
+&lt;li>&lt;strong>解决方案&lt;/strong>：严格限制非确定性操作（如禁用浮点运算，使用定点数），或通过定期同步校验状态。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>延迟累积&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：所有玩家必须等待最慢设备的输入，导致全体延迟等于最差玩家的网络延迟。&lt;/li>
+&lt;li>&lt;strong>缓解手段&lt;/strong>：RTS游戏常通过“延迟补偿”（如预判单位动作）和视觉效果（即时音效）掩盖延迟。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>初始状态同步困难&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：中途加入游戏的玩家需获取完整的初始状态，这在实时对战中几乎不可行。&lt;/li>
+&lt;li>&lt;strong>例外情况&lt;/strong>：部分游戏（如《星际争霸》）允许玩家中途加入，但需复杂的状态快照和回放机制。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="二客户端服务器模型client-server">&lt;strong>二、客户端/服务器模型（Client-Server）&lt;/strong>
+&lt;/h3>&lt;h4 id="核心机制-1">&lt;strong>核心机制&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>架构变革&lt;/strong>：所有玩家作为客户端连接中央服务器，服务器负责计算权威游戏状态并同步给客户端。&lt;/li>
+&lt;li>&lt;strong>示例&lt;/strong>：《Quake》中，客户端仅发送按键输入，服务器计算角色移动和碰撞，客户端仅渲染服务器返回的状态。&lt;/li>
+&lt;/ul>
+&lt;h4 id="优点-1">&lt;strong>优点&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>消除P2P延迟瓶颈&lt;/strong>：延迟取决于客户端与服务器的直接连接，而非其他玩家的延迟。&lt;/li>
+&lt;li>&lt;strong>动态加入支持&lt;/strong>：新玩家可随时加入，无需同步完整初始状态（只需当前状态快照）。&lt;/li>
+&lt;li>&lt;strong>防作弊能力&lt;/strong>：服务器验证所有操作合法性（如移动速度是否合法），减少外挂可能性。&lt;/li>
+&lt;/ul>
+&lt;h4 id="缺点-1">&lt;strong>缺点&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>服务器成为单点故障&lt;/strong>：需高可用性架构（如《英雄联盟》的多区域服务器集群）。&lt;/li>
+&lt;li>&lt;strong>带宽压力&lt;/strong>：服务器需向多个客户端广播状态更新，玩家数量增加时带宽消耗剧增。&lt;/li>
+&lt;li>&lt;strong>客户端延迟感知&lt;/strong>：玩家输入需等待服务器响应，导致操作反馈延迟（如按下射击键后需等待服务器确认命中）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="三客户端预测client-side-prediction">&lt;strong>三、客户端预测（Client-Side Prediction）&lt;/strong>
+&lt;/h3>&lt;h4 id="核心思想">&lt;strong>核心思想&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>本地模拟&lt;/strong>：客户端在发送输入后立即本地模拟角色运动（如向前移动），无需等待服务器确认。&lt;/li>
+&lt;li>&lt;strong>示例&lt;/strong>：在《使命召唤》中，按下开火键后，子弹立即从屏幕射出，即使服务器尚未确认是否命中。&lt;/li>
+&lt;/ul>
+&lt;h4 id="技术挑战与解决方案">&lt;strong>技术挑战与解决方案&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>服务器权威性与纠正冲突&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>问题&lt;/strong>：若客户端预测与服务器状态不符（如被击中后位置回滚），需“无缝修正”以避免画面突兀跳变。&lt;/li>
+&lt;li>&lt;strong>解决方案&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>状态缓冲区（Circular Buffer）&lt;/strong>：客户端保存过去N帧的输入和状态。&lt;/li>
+&lt;li>&lt;strong>回滚与重放&lt;/strong>：收到服务器纠正指令后，丢弃冲突的未来状态，从纠正点重新模拟（使用缓冲的输入数据）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>示例&lt;/strong>：若客户端预测角色位于位置A，但服务器校正到位置B，客户端会“倒带”角色动作，使其看似从B自然移动到当前预测位置。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>作弊防护&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>服务器校验&lt;/strong>：关键操作（如伤害计算、碰撞检测）必须由服务器执行，客户端仅作为“预测显示层”。&lt;/li>
+&lt;li>&lt;strong>示例&lt;/strong>：玩家声称击中敌人，但服务器会根据武器弹道、位置等数据重新验证，防止“穿墙狙杀”。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="四技术演进对比">&lt;strong>四、技术演进对比&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>模型&lt;/th>
+&lt;th>适用场景&lt;/th>
+&lt;th>延迟体验&lt;/th>
+&lt;th>带宽需求&lt;/th>
+&lt;th>防作弊能力&lt;/th>
+&lt;th>实现复杂度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>P2P锁步&lt;/strong>&lt;/td>
+&lt;td>RTS游戏&lt;/td>
+&lt;td>高&lt;/td>
+&lt;td>低&lt;/td>
+&lt;td>弱&lt;/td>
+&lt;td>中（需严格确定性）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>纯客户端/服务器&lt;/strong>&lt;/td>
+&lt;td>早期FPS（如Quake）&lt;/td>
+&lt;td>中&lt;/td>
+&lt;td>高&lt;/td>
+&lt;td>强&lt;/td>
+&lt;td>低&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>客户端预测+服务器权威&lt;/strong>&lt;/td>
+&lt;td>现代FPS（如COD）&lt;/td>
+&lt;td>低&lt;/td>
+&lt;td>中&lt;/td>
+&lt;td>强&lt;/td>
+&lt;td>高&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="五现代技术扩展">&lt;strong>五、现代技术扩展&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>插值与外推（Interpolation &amp;amp; Extrapolation）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>插值&lt;/strong>：平滑过渡服务器状态（如角色移动时的渐变动画）。&lt;/li>
+&lt;li>&lt;strong>外推&lt;/strong>：预测未来状态（如根据速度估算角色位置，用于快速响应）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>延迟补偿技术（Lag Compensation）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>回滚射击（Rewind &amp;amp; Replay）&lt;/strong>：服务器根据客户端延迟时间回溯状态，验证射击有效性（如《CS:GO》的命中判定）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>混合架构&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>区域服务器+边缘计算&lt;/strong>：为降低延迟，将服务器部署在靠近玩家的地理位置（如AWS的全球加速服务）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="六现实案例分析">&lt;strong>六、现实案例分析&lt;/strong>
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>《星际争霸》&lt;/strong>：坚持P2P锁步模型，因单位数量庞大且状态同步成本过高，但需严格限制非确定性因素（如禁用浮点运算）。&lt;/li>
+&lt;li>&lt;strong>《守望先锋》&lt;/strong>：采用客户端预测+服务器校正，结合角色动画的“动画延迟补偿”（如提前播放受击动画，实际伤害稍后生效）。&lt;/li>
+&lt;li>&lt;strong>《WebRTC》&lt;/strong>：现代浏览器实时通信技术，内置网络抖动缓冲和丢包重传机制，适用于低延迟多人游戏（如网页端小游戏）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="七总结与启示">&lt;strong>七、总结与启示&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>架构选择取决于游戏类型&lt;/strong>：
+&lt;ul>
+&lt;li>RTS → P2P锁步（低成本同步）&lt;/li>
+&lt;li>FPS/MMO → 客户端预测+服务器权威（平衡延迟与安全）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>延迟优化永无止境&lt;/strong>：从锁步到预测，再到边缘计算，技术演进始终围绕“更流畅的体验”。&lt;/li>
+&lt;li>&lt;strong>安全与性能的权衡&lt;/strong>：更高的客户端自主权（如预测）需搭配更严格的服务器校验，防止作弊。&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>💡 关键点：游戏网络编程的本质是在&lt;strong>实时性&lt;/strong>、&lt;strong>带宽效率&lt;/strong>和&lt;strong>安全性&lt;/strong>之间寻找平衡，而技术方案的选择深刻影响游戏设计和玩家体验。&lt;/p>&lt;/blockquote>
+&lt;p>参考资料：&lt;/p>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://docs.godotengine.org/en/stable/tutorials/networking/introduction_to_networking.html" target="_blank" rel="noopener"
+>What Every Programmer Needs To Know About Game Networking&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>TLS和SSL传输</title><link>https://crownjoker07.github.io/p/tls%E5%92%8Cssl%E4%BC%A0%E8%BE%93/</link><pubDate>Sun, 25 May 2025 18:20:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/tls%E5%92%8Cssl%E4%BC%A0%E8%BE%93/</guid><description>&lt;blockquote>
+&lt;p>最近研究Godot的多人联机，阅读文档发现TLS和SSL协议&lt;/p>&lt;/blockquote>
+&lt;h3 id="tlsssl-分步解析">TLS/SSL 分步解析
+&lt;/h3>&lt;h4 id="一核心概念">一、核心概念
+&lt;/h4>&lt;p>&lt;strong>TLS (Transport Layer Security)&lt;/strong> 和 &lt;strong>SSL (Secure Sockets Layer)&lt;/strong> 是加密网络通信的协议，用于保护客户端与服务器之间的数据传输安全。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>SSL&lt;/strong> 是早期版本（已淘汰，如 SSL 3.0）&lt;/li>
+&lt;li>&lt;strong>TLS&lt;/strong> 是现代标准（如 TLS 1.2/1.3）&lt;/li>
+&lt;li>&lt;strong>核心功能&lt;/strong>：加密传输、身份验证、数据完整性&lt;/li>
+&lt;/ul>
+&lt;h4 id="二工作流程以-https-为例">二、工作流程（以 HTTPS 为例）
+&lt;/h4>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>握手阶段&lt;/strong>（Handshake）&lt;/p>
+&lt;ul>
+&lt;li>客户端发送支持的协议版本和加密算法列表&lt;/li>
+&lt;li>服务器返回证书和选择的加密方案&lt;/li>
+&lt;li>客户端验证证书合法性，生成会话密钥&lt;/li>
+&lt;li>双方通过非对称加密交换会话密钥&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>数据传输&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>使用对称加密（如 AES）加密实际数据&lt;/li>
+&lt;li>通过哈希算法（如 SHA-256）验证数据完整性&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="三代码实现示例python">三、代码实现示例（Python）
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">requests&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 示例1：强制验证SSL证书（默认行为）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://example.com&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">verify&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="kc">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># verify=True 会检查服务器证书是否由可信CA签发&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 示例2：忽略证书验证（仅测试环境使用！）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://self-signed.badssl.com/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">verify&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="kc">False&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 会抛出 InsecureRequestWarning 警告，生产环境禁止使用&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 示例3：指定自定义CA证书&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://example.com&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">verify&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;/path/to/custom_ca_bundle.pem&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="四关键组件解析">四、关键组件解析
+&lt;/h4>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>组件&lt;/th>
+&lt;th>作用&lt;/th>
+&lt;th>技术细节&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>证书颁发机构(CA)&lt;/td>
+&lt;td>颁发数字证书的受信任实体&lt;/td>
+&lt;td>如 Let&amp;rsquo;s Encrypt（免费CA）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>X.509 证书&lt;/td>
+&lt;td>包含公钥、域名、有效期等信息&lt;/td>
+&lt;td>PEM/DER 格式&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TLS 握手协议&lt;/td>
+&lt;td>协商加密参数的初始化过程&lt;/td>
+&lt;td>使用 Diffie-Hellman 密钥交换&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>AES-256-GCM&lt;/td>
+&lt;td>对称加密算法&lt;/td>
+&lt;td>提供机密性和完整性保护&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="五常见代码问题解决方案">五、常见代码问题解决方案
+&lt;/h4>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>证书验证失败&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 错误示例（生产环境禁止！）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://expired.badssl.com/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">verify&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="kc">False&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 正确做法：更新证书或配置CA路径&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://example.com&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">verify&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;/etc/ssl/certs/ca-certificates.crt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>自签名证书使用&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 生成自签名证书（OpenSSL）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days &lt;span class="m">365&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Node.js HTTPS 服务端示例&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">https&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">key&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFileSync&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;server.key&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">cert&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFileSync&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;server.cert&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">https&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createServer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">req&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">res&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">end&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Secure connection established!&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}).&lt;/span>&lt;span class="nx">listen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">443&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h4 id="六安全最佳实践">六、安全最佳实践
+&lt;/h4>&lt;ol>
+&lt;li>&lt;strong>必须验证证书&lt;/strong>（禁用验证仅限测试环境）&lt;/li>
+&lt;li>&lt;strong>使用最新协议版本&lt;/strong>（优先 TLS 1.3）&lt;/li>
+&lt;li>&lt;strong>定期轮换证书&lt;/strong>（Let&amp;rsquo;s Encrypt 证书有效期 90 天）&lt;/li>
+&lt;li>&lt;strong>配置HSTS头&lt;/strong>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-nginx" data-lang="nginx">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nginx 配置示例
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">add_header&lt;/span> &lt;span class="s">Strict-Transport-Security&lt;/span> &lt;span class="s">&amp;#34;max-age=31536000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">includeSubDomains&amp;#34;&lt;/span> &lt;span class="s">always&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h4 id="七工具链扩展">七、工具链扩展
+&lt;/h4>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>OpenSSL 命令&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看证书详情&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">openssl x509 -in certificate.pem -text -noout
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 测试TLS连接&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">openssl s_client -connect example.com:443 -tls1_2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>在线检测工具&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener"
+>SSL Labs Test&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.whynopadlock.com/" target="_blank" rel="noopener"
+>Why No Padlock?&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="八技术演进路线">八、技术演进路线
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">SSL 2.0 → SSL 3.0 → TLS 1.0 → TLS 1.1 → TLS 1.2 → TLS 1.3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>TLS 1.3 移除了不安全算法（如 SHA-1、RC4）&lt;/li>
+&lt;li>支持 0-RTT 连接（需谨慎使用）&lt;/li>
+&lt;/ul>
+&lt;h4 id="九典型错误模式">九、典型错误模式
+&lt;/h4>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>错误现象&lt;/th>
+&lt;th>可能原因&lt;/th>
+&lt;th>解决方案&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ERR_CERT_AUTHORITY_INVALID&lt;/td>
+&lt;td>证书CA不在信任链&lt;/td>
+&lt;td>更新系统CA证书库&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ERR_CONNECTION_TIMED_OUT&lt;/td>
+&lt;td>防火墙阻断443端口&lt;/td>
+&lt;td>检查网络策略&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ERR_SSL_PROTOCOL_ERROR&lt;/td>
+&lt;td>服务器配置了不兼容的协议版本&lt;/td>
+&lt;td>强制使用 TLS 1.2+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="十进阶学习方向">十、进阶学习方向
+&lt;/h4>&lt;ol>
+&lt;li>&lt;strong>证书透明度（Certificate Transparency）&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>零信任网络架构&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Post-Quantum Cryptography&lt;/strong>（抗量子计算攻击算法）&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>💡 关键点：TLS/SSL 的核心价值在于通过密码学手段建立网络通信的信任链条，理解其工作原理有助于编写安全的代码并排查加密相关故障。&lt;/p>&lt;/blockquote></description></item><item><title>虚拟机网络适配器</title><link>https://crownjoker07.github.io/p/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%80%82%E9%85%8D%E5%99%A8/</link><pubDate>Sun, 25 May 2025 11:23:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%80%82%E9%85%8D%E5%99%A8/</guid><description>&lt;blockquote>
+&lt;p>最近使用虚拟机，不太理解虚拟机是如何网络连接的，因此研究一下&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;h3 id="虚拟机网络适配器详解">&lt;strong>虚拟机网络适配器详解&lt;/strong>
+&lt;/h3>&lt;p>虚拟机网络适配器是虚拟机软件（如 VMware、VirtualBox、Hyper-V）中用于连接虚拟机和物理网络的虚拟硬件组件。它决定了虚拟机如何与宿主机、局域网或互联网通信。以下是关键知识点：&lt;/p>
+&lt;hr>
+&lt;h3 id="一网络适配器的核心作用">&lt;strong>一、网络适配器的核心作用&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>网络通信桥梁&lt;/strong>&lt;br>
+允许虚拟机访问外部网络（如互联网）或与宿主机/其他虚拟机交互。&lt;/li>
+&lt;li>&lt;strong>协议支持&lt;/strong>&lt;br>
+支持 TCP/IP、DHCP、NAT 等协议，自动或手动分配 IP 地址。&lt;/li>
+&lt;li>&lt;strong>隔离与共享&lt;/strong>&lt;br>
+可配置网络隔离（仅主机模式）或共享网络（NAT 模式）。&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="二常见网络模式及适用场景">&lt;strong>二、常见网络模式及适用场景&lt;/strong>
+&lt;/h3>&lt;h4 id="1-nat网络地址转换">&lt;strong>1. NAT（网络地址转换）&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>原理&lt;/strong>：&lt;br>
+虚拟机通过宿主机的 IP 地址共享上网，宿主机充当“中间人”，虚拟机对外不可见。&lt;/li>
+&lt;li>&lt;strong>特点&lt;/strong>：
+&lt;ul>
+&lt;li>虚拟机自动获取 IP（通过 DHCP）。&lt;/li>
+&lt;li>宿主机防火墙可能影响虚拟机网络。&lt;/li>
+&lt;li>&lt;strong>适用场景&lt;/strong>：日常上网、临时测试。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>缺点&lt;/strong>：&lt;br>
+虚拟机无法被外部设备直接访问（如远程桌面）。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-桥接模式bridged">&lt;strong>2. 桥接模式（Bridged）&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>原理&lt;/strong>：&lt;br>
+虚拟机直接连接到物理网络，与宿主机处于同一局域网，拥有独立 IP。&lt;/li>
+&lt;li>&lt;strong>特点&lt;/strong>：
+&lt;ul>
+&lt;li>需手动或通过 DHCP 分配 IP。&lt;/li>
+&lt;li>虚拟机可被局域网内其他设备访问。&lt;/li>
+&lt;li>&lt;strong>适用场景&lt;/strong>：开发测试、需要被外部访问的服务（如 Web 服务器）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>缺点&lt;/strong>：&lt;br>
+需确保局域网 IP 资源充足。&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-仅主机模式host-only">&lt;strong>3. 仅主机模式（Host-Only）&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>原理&lt;/strong>：&lt;br>
+虚拟机与宿主机通过私有虚拟网络通信，无法访问外部网络。&lt;/li>
+&lt;li>&lt;strong>特点&lt;/strong>：
+&lt;ul>
+&lt;li>宿主机和虚拟机间可双向通信。&lt;/li>
+&lt;li>隔离性强，安全性高。&lt;/li>
+&lt;li>&lt;strong>适用场景&lt;/strong>：内部测试、敏感环境。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>缺点&lt;/strong>：&lt;br>
+无互联网连接。&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-内部网络internal-network">&lt;strong>4. 内部网络（Internal Network）&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>原理&lt;/strong>：&lt;br>
+虚拟机之间通过专用网络通信，与宿主机及外部网络完全隔离。&lt;/li>
+&lt;li>&lt;strong>特点&lt;/strong>：
+&lt;ul>
+&lt;li>仅支持虚拟机间通信。&lt;/li>
+&lt;li>需手动配置 IP。&lt;/li>
+&lt;li>&lt;strong>适用场景&lt;/strong>：容器集群模拟、内部服务联调。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="三虚拟机网络适配器类型">&lt;strong>三、虚拟机网络适配器类型&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>类型&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Intel PRO/1000 MT&lt;/strong>&lt;/td>
+&lt;td>通用型适配器，兼容大多数场景（默认推荐）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Intel PRO/1000 T Server&lt;/strong>&lt;/td>
+&lt;td>服务器专用，支持高负载。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Paravirtualized Network&lt;/strong>&lt;/td>
+&lt;td>高性能半虚拟化适配器（如 VMware 的 VMXNET3），需宿主机驱动支持。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="四常见问题与解决方法">&lt;strong>四、常见问题与解决方法&lt;/strong>
+&lt;/h3>&lt;h4 id="1-虚拟机无法联网">&lt;strong>1. 虚拟机无法联网&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>检查步骤&lt;/strong>：
+&lt;ol>
+&lt;li>确认网络适配器模式（如 NAT 是否启用）。&lt;/li>
+&lt;li>检查宿主机网络是否正常（如断网会导致虚拟机无法 NAT 上网）。&lt;/li>
+&lt;li>查看虚拟机内部 IP：&lt;code>ipconfig&lt;/code>（Windows）或 &lt;code>ifconfig&lt;/code>（Linux）。&lt;/li>
+&lt;li>测试宿主机与虚拟机间 Ping 通性。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-宿主机与虚拟机无法通信">&lt;strong>2. 宿主机与虚拟机无法通信&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>桥接模式&lt;/strong>：确保两者在同一局域网子网。&lt;/li>
+&lt;li>&lt;strong>仅主机模式&lt;/strong>：检查虚拟网络编辑器中的 DHCP 设置（如 VMware 的 Host-Only 网络）。&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-外部设备无法访问虚拟机">&lt;strong>3. 外部设备无法访问虚拟机&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>需桥接模式&lt;/strong> + &lt;strong>端口转发&lt;/strong>（如 NAT 模式下需配置端口映射）。
+&lt;ul>
+&lt;li>&lt;strong>VirtualBox 示例&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">VBoxManage modifyvm &lt;span class="s2">&amp;#34;VM名称&amp;#34;&lt;/span> --natpf1 &lt;span class="s2">&amp;#34;ssh,tcp,,2222,,22&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>&lt;strong>VMware 示例&lt;/strong>：&lt;br>
+编辑虚拟机设置 → NAT 设置 → 添加端口转发规则。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="五高级配置">&lt;strong>五、高级配置&lt;/strong>
+&lt;/h3>&lt;h4 id="1-静态-ip-分配">&lt;strong>1. 静态 IP 分配&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>Linux 虚拟机（桥接模式）&lt;/strong>：&lt;br>
+编辑 &lt;code>/etc/network/interfaces&lt;/code>（Debian）或 &lt;code>/etc/sysconfig/network-scripts/ifcfg-eth0&lt;/code>（RHEL）：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">BOOTPROTO&lt;/span>&lt;span class="o">=&lt;/span>static
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">IPADDR&lt;/span>&lt;span class="o">=&lt;/span>192.168.1.100
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">NETMASK&lt;/span>&lt;span class="o">=&lt;/span>255.255.255.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">GATEWAY&lt;/span>&lt;span class="o">=&lt;/span>192.168.1.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-修改-mac-地址">&lt;strong>2. 修改 MAC 地址&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>VMware&lt;/strong>：&lt;br>
+虚拟机设置 → 网络适配器 → 高级 → 生成或手动输入 MAC。&lt;/li>
+&lt;li>&lt;strong>VirtualBox&lt;/strong>：&lt;br>
+&lt;code>VBoxManage modifyvm &amp;quot;VM名称&amp;quot; --macaddress1 auto&lt;/code>（自动生成）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="六虚拟机软件配置示例">&lt;strong>六、虚拟机软件配置示例&lt;/strong>
+&lt;/h3>&lt;h4 id="vmware-workstation">&lt;strong>VMware Workstation&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>打开虚拟机设置 → 网络适配器。&lt;/li>
+&lt;li>选择模式（如 NAT、桥接）。&lt;/li>
+&lt;li>高级选项中可调整适配器类型（推荐 VMXNET3）。&lt;/li>
+&lt;/ol>
+&lt;h4 id="virtualbox">&lt;strong>VirtualBox&lt;/strong>
+&lt;/h4>&lt;ol>
+&lt;li>设置 → 网络 → 启用网络适配器。&lt;/li>
+&lt;li>选择连接方式（如 NAT 网络、桥接到物理网卡）。&lt;/li>
+&lt;li>配置高级属性（混杂模式、MAC 地址）。&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="七总结">&lt;strong>七、总结&lt;/strong>
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>NAT&lt;/strong>：简单上网，适合临时场景。&lt;/li>
+&lt;li>&lt;strong>桥接&lt;/strong>：需外部访问虚拟机时首选。&lt;/li>
+&lt;li>&lt;strong>仅主机&lt;/strong>：隔离环境测试。&lt;/li>
+&lt;li>&lt;strong>内部网络&lt;/strong>：虚拟机集群通信。&lt;/li>
+&lt;li>&lt;strong>故障排查&lt;/strong>：从网络模式、IP 分配、防火墙三方面入手。&lt;/li>
+&lt;/ul></description></item><item><title>什么是SSH传输？</title><link>https://crownjoker07.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AFssh%E4%BC%A0%E8%BE%93/</link><pubDate>Sun, 25 May 2025 10:58:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AFssh%E4%BC%A0%E8%BE%93/</guid><description>&lt;blockquote>
+&lt;p>Git拉取发现有HTTPS拉取和SSH拉取，因此研究一下SSH拉取&lt;/p>&lt;/blockquote>
+&lt;p>SSH（Secure Shell，安全外壳协议）是一种加密网络协议，用于在不安全的网络中安全地访问和管理远程计算机。以下是详细解析：&lt;/p>
+&lt;hr>
+&lt;h3 id="一ssh的核心作用">&lt;strong>一、SSH的核心作用&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>远程登录&lt;/strong>&lt;br>
+用户可通过SSH在本地终端操作远程服务器（如Linux服务器），就像直接在服务器上输入命令一样。&lt;/p>
+&lt;ul>
+&lt;li>示例：&lt;code>ssh username@server_ip&lt;/code>（用用户名和服务器IP登录）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>安全文件传输&lt;/strong>&lt;br>
+通过SCP（Secure Copy）或SFTP（SSH File Transfer Protocol）加密传输文件。&lt;/p>
+&lt;ul>
+&lt;li>示例：&lt;code>scp file.txt username@server_ip:/path/to/destination&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>端口转发&lt;/strong>&lt;br>
+将本地端口与远程服务器端口绑定，实现安全隧道（如绕过防火墙或访问内网服务）。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="二ssh的工作原理">&lt;strong>二、SSH的工作原理&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>加密技术&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>非对称加密&lt;/strong>（公钥/私钥）：
+&lt;ul>
+&lt;li>服务器生成一对密钥（公钥公开，私钥保密）。&lt;/li>
+&lt;li>客户端用公钥加密数据，只有服务器的私钥能解密。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>对称加密&lt;/strong>（会话密钥）：
+&lt;ul>
+&lt;li>首次连接时，通过非对称加密交换一个临时对称密钥，后续数据用此密钥高效加密。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>连接流程&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>客户端发起连接请求。&lt;/li>
+&lt;li>服务器发送公钥（如&lt;code>~/.ssh/id_rsa.pub&lt;/code>）。&lt;/li>
+&lt;li>客户端验证公钥合法性（如检查&lt;code>known_hosts&lt;/code>文件）。&lt;/li>
+&lt;li>协商对称加密算法，生成会话密钥。&lt;/li>
+&lt;li>加密通信开始。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="三ssh的主要功能">&lt;strong>三、SSH的主要功能&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>功能&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>远程命令执行&lt;/strong>&lt;/td>
+&lt;td>通过命令行直接操作远程服务器（如重启服务、编辑配置文件）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>文件传输&lt;/strong>&lt;/td>
+&lt;td>安全上传/下载文件（SCP/SFTP）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>端口转发&lt;/strong>&lt;/td>
+&lt;td>本地端口映射到远程服务器（&lt;code>-L&lt;/code>参数）或反向代理（&lt;code>-R&lt;/code>参数）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>多路复用&lt;/strong>&lt;/td>
+&lt;td>复用已有SSH连接，减少重复认证开销（&lt;code>ControlMaster&lt;/code>配置）。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="四ssh的两种身份验证方式">&lt;strong>四、SSH的两种身份验证方式&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>密码登录&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>输入密码后，服务器验证是否正确。&lt;/li>
+&lt;li>缺点：易被暴力破解，需配合密钥使用更安全。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>密钥对登录&lt;/strong>（推荐）&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>生成密钥对&lt;/strong>：&lt;code>ssh-keygen -t rsa&lt;/code>（生成&lt;code>id_rsa&lt;/code>私钥和&lt;code>id_rsa.pub&lt;/code>公钥）。&lt;/li>
+&lt;li>&lt;strong>上传公钥&lt;/strong>：&lt;code>ssh-copy-id username@server_ip&lt;/code>（将公钥添加到服务器的&lt;code>~/.ssh/authorized_keys&lt;/code>）。&lt;/li>
+&lt;li>&lt;strong>原理&lt;/strong>：客户端用私钥签名，服务器用公钥验证签名。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="五ssh服务端配置以linux为例">&lt;strong>五、SSH服务端配置（以Linux为例）&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>修改默认端口&lt;/strong>&lt;br>
+编辑&lt;code>/etc/ssh/sshd_config&lt;/code>，设置&lt;code>Port 2222&lt;/code>（避免扫描攻击）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>禁用密码登录&lt;/strong>&lt;br>
+设置&lt;code>PasswordAuthentication no&lt;/code>，强制使用密钥登录。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>限制访问IP&lt;/strong>&lt;br>
+添加&lt;code>AllowUsers user@192.168.1.*&lt;/code>，仅允许特定IP段连接。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>重启服务&lt;/strong>&lt;br>
+&lt;code>sudo systemctl restart sshd&lt;/code>（Ubuntu/Debian）或&lt;code>sudo service ssh restart&lt;/code>（CentOS）。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="六ssh的优缺点">&lt;strong>六、SSH的优缺点&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>优点&lt;/th>
+&lt;th>缺点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>数据加密，防止窃听和篡改&lt;/td>
+&lt;td>密钥管理复杂（尤其多服务器场景）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>支持多种协议（SFTP/SCP等）&lt;/td>
+&lt;td>配置不当可能导致连接失败。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>跨平台兼容（Windows/Linux/macOS）&lt;/td>
+&lt;td>对新手不够友好（需理解公钥/私钥）。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="七实际应用场景">&lt;strong>七、实际应用场景&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>服务器运维&lt;/strong>&lt;br>
+开发者通过SSH登录云服务器部署代码或调试。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>自动化脚本&lt;/strong>&lt;br>
+在CI/CD流程中，用SSH执行远程命令（如Ansible工具）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>安全访问内网服务&lt;/strong>&lt;br>
+通过SSH隧道访问家中NAS或公司内部系统（如&lt;code>ssh -L 8080:localhost:3306 user@server&lt;/code>）。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="八总结">&lt;strong>八、总结&lt;/strong>
+&lt;/h3>&lt;p>SSH是远程管理的基石，通过加密和身份验证保障数据传输安全。掌握密钥登录、端口转发等高级功能，能显著提升效率和安全性。对于服务器管理员，SSH是日常工作中不可或缺的工具。&lt;/p></description></item><item><title>DeepSeek-V3学习</title><link>https://crownjoker07.github.io/p/aillm-1/</link><pubDate>Sat, 19 Apr 2025 14:37:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/aillm-1/</guid><description>&lt;blockquote>
+&lt;p>最近AI大模型非常流行、中国也产生了许多属于自己的AI大模型，例如DeepSeek-V3等，作为程序员，我也打算了解一下AI大模型究竟是什么原理，居然可以通过对话的形式告诉你答案。&lt;/p>&lt;/blockquote>
+&lt;h3 id="源码拉取">源码拉取
+&lt;/h3>&lt;p>源码地址：&lt;a class="link" href="https://github.com/deepseek-ai/DeepSeek-V3.git" target="_blank" rel="noopener"
+>https://github.com/deepseek-ai/DeepSeek-V3.git&lt;/a>&lt;/p>
+&lt;h3 id="官方论文">官方论文
+&lt;/h3>&lt;p>地址：&lt;a class="link" href="https://arxiv.org/pdf/2412.19437" target="_blank" rel="noopener"
+>https://arxiv.org/pdf/2412.19437&lt;/a>&lt;/p>
+&lt;h3 id="项目布局分析">项目布局分析
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl"># 项目目录结构
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── README.md # 核心说明文档
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── 模型架构说明（MLA注意力/负载均衡策略）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── 多框架支持（SGLang/LMDeploy/vLLM等）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── 性能基准（代码/数学/中英文任务）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── 商用许可（MIT License）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── inference/ # 推理核心模块
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── convert.py # 权重格式转换工具
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── 参数: --n-experts 256 --model-parallel 16
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ └── 关键技术：MoE分片/参数名映射
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── fp8_cast_bf16.py # 精度转换工具
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── 功能: FP8→BF16转换
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ └── 特性: 动态缩放因子管理/内存优化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── generate.py # 分布式推理入口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── 交互式聊天接口（&amp;gt;&amp;gt;&amp;gt; 提示符）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── 批量处理（--input-file参数）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ └── 多节点通信（torchrun启动）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── kernel.py # 高性能计算核
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── FP8矩阵乘法（Triton实现）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── 权重反量化核（block_size=128）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ └── 激活量化函数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── model.py # 模型架构定义
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── Transformer主类（片段25）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├── MLA注意力（分离式位置编码）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ └── MoE门控（专家分组选择）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └── configs/ # 模型配置目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── config_16B.json # 轻量级配置（RTX 4090等）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── config_236B.json # 中规模配置（企业级单机）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └── config_671B.json # 全量配置（多节点分布式）
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="readme阅读">README阅读
+&lt;/h3>&lt;h4 id="introduction">Introduction
+&lt;/h4>&lt;blockquote>
+&lt;p>We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA) and DeepSeekMoE architectures, which were thoroughly validated in DeepSeek-V2. Furthermore, DeepSeek-V3 pioneers an auxiliary-loss-free strategy for load balancing and sets a multi-token prediction training objective for stronger performance. We pre-train DeepSeek-V3 on 14.8 trillion diverse and high-quality tokens, followed by Supervised Fine-Tuning and Reinforcement Learning stages to fully harness its capabilities. Comprehensive evaluations reveal that DeepSeek-V3 outperforms other open-source models and achieves performance comparable to leading closed-source models. Despite its excellent performance, DeepSeek-V3 requires only 2.788M H800 GPU hours for its full training. In addition, its training process is remarkably stable. Throughout the entire training process, we did not experience any irrecoverable loss spikes or perform any rollbacks.&lt;/p>&lt;/blockquote>
+&lt;p>关键点：Mixture-of-Experts (MoE)、Multi-head Latent Attention (MLA) 、auxiliary-loss-free strategy、multi-token prediction&lt;/p>
+&lt;p>评测基准：&lt;/p>
+&lt;ul>
+&lt;li>MMLU（Massive Multitask Language Understanding，大规模多任务语言理解）：&lt;br>
+一个涵盖 57 个主题的多项选择题基准，用于评估大规模语言模型的知识和推理能力。包括基本数学、美国历史、计算机科学、法律等多个领域。&lt;/li>
+&lt;li>MMLU Pro：&lt;br>
+MMLU 的专业级别版本，包含更具挑战性的问题，旨在评估模型在专业领域的理解和推理能力。&lt;/li>
+&lt;li>GPQA-Diamond（Grade-Level Problems in Question Answering）：&lt;br>
+旨在提供一个全面的框架，能够测试模型在多种推理场景下的能力，并推动大模型在更加复杂任务上的改进。&lt;/li>
+&lt;li>MATH-500：&lt;br>
+OpenAI从MATH评测数据集中精选的500个更具代表性的数学评测基准&lt;/li>
+&lt;li>AIME 2024（American Invitational Mathematics Examination）：&lt;br>
+美国数学邀请赛，是美国面向中学生的邀请式竞赛，3个小时完成15道题，难度很高。&lt;/li>
+&lt;li>SWE-bench（Software Engineering Bench）：&lt;br>
+一个从GitHub上提炼的真实世界的Python代码仓的任务评测数据集&lt;/li>
+&lt;li>SWE-bench Verified：&lt;br>
+OpenAI基于SWE-Bench提炼的更加准确和更具代表性的大模型代码工程任务解决能力评测&lt;/li>
+&lt;/ul>
+&lt;h4 id="model-summary">Model Summary
+&lt;/h4>&lt;hr>
+&lt;p>Architecture: Innovative Load Balancing Strategy and Training Objective&lt;/p>
+&lt;p>On top of the efficient architecture of DeepSeek-V2, we pioneer an auxiliary-loss-free strategy for load balancing, which minimizes the performance degradation that arises from encouraging load balancing.
+We investigate a Multi-Token Prediction (MTP) objective and prove it beneficial to model performance. It can also be used for speculative decoding for inference acceleration.&lt;/p></description></item><item><title>为什么使用Linux?</title><link>https://crownjoker07.github.io/p/linux-1/</link><pubDate>Thu, 17 Apr 2025 21:58:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/linux-1/</guid><description>&lt;blockquote>
+&lt;p>明明有Windows系统、却还是会要使用Linux，是为什么呢？&lt;/p>&lt;/blockquote>
+&lt;p>以下是去除引用来源后的Windows与Linux系统对比表格：&lt;/p>
+&lt;hr>
+&lt;h3 id="一系统架构与开源性">&lt;strong>一、系统架构与开源性&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Windows&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Linux&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>内核设计&lt;/strong>&lt;/td>
+&lt;td>混合内核（集成驱动、服务）&lt;/td>
+&lt;td>微内核（模块化设计，驱动作为独立模块加载）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>开源性&lt;/strong>&lt;/td>
+&lt;td>闭源，仅微软可修改内核&lt;/td>
+&lt;td>完全开源，用户可自定义内核及系统组件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>授权模式&lt;/strong>&lt;/td>
+&lt;td>需购买商业许可证（如Windows 11家庭版约199美元）&lt;/td>
+&lt;td>免费（社区版）或付费企业支持（如Red Hat Enterprise Linux）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="二安全性对比">&lt;strong>二、安全性对比&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Windows&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Linux&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>漏洞风险&lt;/strong>&lt;/td>
+&lt;td>高（全球40%恶意软件针对Windows）&lt;/td>
+&lt;td>低（开源审查机制快速修复漏洞）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>权限管理&lt;/strong>&lt;/td>
+&lt;td>ACL（访问控制列表），依赖用户组策略&lt;/td>
+&lt;td>基于用户/组的权限位控制，支持更细粒度（如文件读写执行权限分离）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>安全工具&lt;/strong>&lt;/td>
+&lt;td>依赖第三方杀毒软件（如卡巴斯基）&lt;/td>
+&lt;td>内置SELinux、AppArmor等强制访问控制框架&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="三软件生态与兼容性">&lt;strong>三、软件生态与兼容性&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Windows&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Linux&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>商业软件支持&lt;/strong>&lt;/td>
+&lt;td>全面（如Adobe全家桶、AutoCAD、Microsoft Office）&lt;/td>
+&lt;td>有限（主要依赖开源替代品如LibreOffice、GIMP）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>游戏支持&lt;/strong>&lt;/td>
+&lt;td>主流游戏平台（Steam、Epic），兼容DirectX&lt;/td>
+&lt;td>依赖Proton兼容层（约70%游戏可运行），原生支持Vulkan API&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>硬件驱动&lt;/strong>&lt;/td>
+&lt;td>自动安装驱动，覆盖99%商用硬件&lt;/td>
+&lt;td>需手动配置（部分新硬件无驱动，如部分打印机）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="四用户体验与操作逻辑">&lt;strong>四、用户体验与操作逻辑&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Windows&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Linux&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>图形界面&lt;/strong>&lt;/td>
+&lt;td>统一UI设计（Fluent Design），操作直观&lt;/td>
+&lt;td>多桌面环境（GNOME/KDE/XFCE），需适应不同发行版&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>命令行工具&lt;/strong>&lt;/td>
+&lt;td>CMD/PowerShell（功能有限，依赖GUI）&lt;/td>
+&lt;td>Bash/Zsh（管道、正则表达式强大，脚本自动化高效）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>学习曲线&lt;/strong>&lt;/td>
+&lt;td>低（适合非技术用户）&lt;/td>
+&lt;td>高（需掌握命令行、权限管理等）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="五性能与资源占用">&lt;strong>五、性能与资源占用&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Windows&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Linux&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>系统资源&lt;/strong>&lt;/td>
+&lt;td>默认占用高（后台服务多，如OneDrive、更新服务）&lt;/td>
+&lt;td>轻量级（Ubuntu桌面版内存占用约2GB，CentOS服务器版可低至512MB）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>多任务处理&lt;/strong>&lt;/td>
+&lt;td>适合桌面多任务（如同时运行浏览器、Office、设计软件）&lt;/td>
+&lt;td>优化服务器并发（如Nginx处理10万级并发连接）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>虚拟化支持&lt;/strong>&lt;/td>
+&lt;td>Hyper-V（需企业版），性能损耗约15%&lt;/td>
+&lt;td>KVM/Docker（原生支持，性能损耗&amp;lt;5%）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="六开发与运维场景对比">&lt;strong>六、开发与运维场景对比&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Windows&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Linux&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>开发工具链&lt;/strong>&lt;/td>
+&lt;td>Visual Studio（.NET/C++）、Visual Studio Code（跨平台）&lt;/td>
+&lt;td>GCC/Clang、Vim/Emacs、Docker/Kubernetes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>服务器市场&lt;/strong>&lt;/td>
+&lt;td>占比约28%（2024年数据），主要用于中小企业&lt;/td>
+&lt;td>占比超70%（Apache/Nginx/Tomcat等服务器软件首选）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>自动化运维&lt;/strong>&lt;/td>
+&lt;td>依赖批处理脚本（.bat）或PowerShell&lt;/td>
+&lt;td>Shell/Python脚本+Ansible/Puppet自动化工具&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="七适用场景总结">&lt;strong>七、适用场景总结&lt;/strong>
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>场景&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>推荐系统&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>原因&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>个人桌面办公&lt;/strong>&lt;/td>
+&lt;td>Windows&lt;/td>
+&lt;td>软件兼容性高，游戏支持完善，操作直观&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>服务器/云计算&lt;/strong>&lt;/td>
+&lt;td>Linux&lt;/td>
+&lt;td>稳定性高、资源占用低、安全加固成熟&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>嵌入式开发&lt;/strong>&lt;/td>
+&lt;td>Linux&lt;/td>
+&lt;td>资源占用低（如树莓派）、支持实时内核&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>软件开发&lt;/strong>&lt;/td>
+&lt;td>Linux&lt;/td>
+&lt;td>原生支持Git、Docker，命令行工具链完善&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>企业级应用&lt;/strong>&lt;/td>
+&lt;td>混合部署&lt;/td>
+&lt;td>关键业务用Windows（如ERP系统），后台服务用Linux（如数据库集群）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="关键结论">&lt;strong>关键结论&lt;/strong>
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>选择Windows&lt;/strong>：需商业软件支持、游戏娱乐、非技术用户场景。&lt;/li>
+&lt;li>&lt;strong>选择Linux&lt;/strong>：追求安全稳定、开发运维效率、定制化需求。&lt;/li>
+&lt;li>&lt;strong>混合方案&lt;/strong>：企业常采用Windows桌面+Linux服务器架构，兼顾灵活性与成本。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>最近想学习Deepseek-V1的源代码，了解一下AI大模型，看看原理是什么，能否应用在游戏开发中，提高开发效率。&lt;br>
+拉取源码运行后发现，Deepseek-v1所需要的Python依赖只有Linux系统环境有，因此顺便学习一下Linux。&lt;/p></description></item><item><title>国内为什么不能直接访问谷歌？</title><link>https://crownjoker07.github.io/p/%E5%9B%BD%E5%86%85%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E8%B0%B7%E6%AD%8C/</link><pubDate>Sun, 13 Apr 2025 10:30:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E5%9B%BD%E5%86%85%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E8%B0%B7%E6%AD%8C/</guid><description>&lt;blockquote>
+&lt;p>记得小的时候好像可以正常访问谷歌来着，但是当了程序员之后，需要去外网获取一些学习资料，借助一些特殊手段才能获取，想了解一下为什么？&lt;/p>&lt;/blockquote>
+&lt;p>中国大陆无法直接访问谷歌（Google）服务的主要原因涉及政策法规、市场环境及技术限制等多方面因素。以下是综合分析：&lt;/p>
+&lt;hr>
+&lt;h3 id="一互联网审查与网络安全政策">一、互联网审查与网络安全政策
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>防火墙（GFW）限制&lt;/strong>&lt;br>
+中国自2000年代初实施严格的互联网内容审查制度，即“防火长城”（Great Firewall）。该系统通过技术手段屏蔽境外敏感网站，包括谷歌搜索、Gmail、YouTube等。谷歌的部分搜索结果可能涉及与中国法律法规或意识形态不符的内容，因此被纳入屏蔽范围。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>《网络安全法》与《数据安全法》&lt;/strong>&lt;br>
+根据中国《网络安全法》（2017年）和《数据安全法》（2021年），关键信息基础设施运营者需确保数据本地化存储，并禁止未经审查的境外服务接入。谷歌未完全遵守这些规定，例如未将中国用户数据存储于境内服务器，导致其服务无法合规运营。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="二市场环境与商业竞争">二、市场环境与商业竞争
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>本土搜索引擎的垄断地位&lt;/strong>&lt;br>
+百度等本土搜索引擎早在谷歌退出前已占据中国市场的主导地位（2010年谷歌退出时市场份额超70%）。百度更贴合中文用户习惯，且符合监管要求，导致谷歌重新进入的难度极大。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>商业模式冲突&lt;/strong>&lt;br>
+谷歌依赖广告收入和用户数据驱动的商业模式，与中国对数据隐私保护的严格规定存在冲突。例如，中国要求企业明确告知用户数据用途并获得同意，而谷歌的广告系统难以完全适配这一要求。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="三技术合规与服务器限制">三、技术合规与服务器限制
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>服务器本地化要求&lt;/strong>&lt;br>
+中国要求外资企业将服务器部署于境内，以确保数据主权。谷歌未在中国建立数据中心，且其全球服务器架构难以满足本地化合规要求，因此无法直接提供服务。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>网络服务稳定性问题&lt;/strong>&lt;br>
+由于谷歌服务器位于境外，中国用户访问时可能面临网络延迟高、服务不稳定等问题。即使部分服务（如Google Play）曾通过合作进入中国市场，也因政策调整逐步退出（如华为事件）。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="四国际政治与经济因素">四、国际政治与经济因素
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>中美关系影响&lt;/strong>&lt;br>
+近年来中美在科技领域的竞争加剧，美国对华为等中国企业的制裁间接影响了谷歌在中国的业务。例如，华为被列入实体清单后，谷歌暂停与其GMS（谷歌移动服务）合作，进一步限制了谷歌服务在中国的使用。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>意识形态差异&lt;/strong>&lt;br>
+中国强调网络空间主权与意识形态安全，而谷歌倡导的“信息自由流通”与中国监管方向存在根本性分歧。这种矛盾导致双方难以达成妥协。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="总结">总结
+&lt;/h3>&lt;p>中国大陆无法访问谷歌是政策监管、市场竞争、技术合规与国际关系共同作用的结果。未来若谷歌希望重新进入中国市场，需在数据合规、内容审查及本土化服务等方面与中国法规深度适配，但目前尚未有明确进展。&lt;/p>
+&lt;hr>
+&lt;p>身为程序员的我，肯定想了解一下“长城防火墙”是如何通过技术手段屏蔽访问Google的。&lt;/p>
+&lt;p>从技术实现角度看，防火长城（GFW）的屏蔽机制融合了网络协议栈的多层控制、流量特征分析和动态防御策略。以下从程序员视角解析其核心技术手段：&lt;/p>
+&lt;hr>
+&lt;h3 id="一网络层与传输层控制">一、网络层与传输层控制
+&lt;/h3>&lt;h4 id="1-ip地址封锁">1. &lt;strong>IP地址封锁&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>实现原理&lt;/strong>：在国际出口路由器的ACL（访问控制列表）中配置被屏蔽IP段，通过&lt;code>iptables&lt;/code>或专用防火墙设备直接丢弃相关数据包。&lt;/li>
+&lt;li>&lt;strong>程序员视角&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 示例：在Linux防火墙中屏蔽特定IP段&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -A INPUT -s 8.8.8.8/24 -j DROP
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>&lt;strong>绕过难点&lt;/strong>：IP段动态更新（日均新增数百条），需结合DNS解析和CDN动态IP规避。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-tcp连接重置rst-injection">2. &lt;strong>TCP连接重置（RST Injection）&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>实现原理&lt;/strong>：当检测到敏感关键词（如&amp;quot;VPN&amp;quot;、&amp;ldquo;Tor&amp;rdquo;）时，GFW会伪造TCP RST包终止连接，使客户端误判为服务器异常。&lt;/li>
+&lt;li>&lt;strong>技术细节&lt;/strong>：
+&lt;ul>
+&lt;li>通过中间人攻击（MITM）伪造源IP为通信双方地址，确保RST包被信任。&lt;/li>
+&lt;li>利用TCP协议栈的&lt;code>TTL&lt;/code>（生存时间）差异隐藏探测节点。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>防御尝试&lt;/strong>：开发者可通过多路径TCP（MPTCP）或自定义协议混淆握手过程。&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-dns劫持与污染">3. &lt;strong>DNS劫持与污染&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>实现方式&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;strong>DNS缓存投毒&lt;/strong>：在递归解析服务器中注入错误IP（如将&lt;code>google.com&lt;/code>解析为无效地址）。&lt;/li>
+&lt;li>&lt;strong>DNS over HTTPS（DoH）拦截&lt;/strong>：通过深度包检测（DPI）识别加密DNS流量并阻断。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>代码级对抗&lt;/strong>：开发者可使用DNSSEC验证或硬编码IP直连（如&lt;code>8.8.8.8&lt;/code>）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="二应用层内容过滤">二、应用层内容过滤
+&lt;/h3>&lt;h4 id="1-深度包检测dpi">1. &lt;strong>深度包检测（DPI）&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>技术架构&lt;/strong>：
+&lt;ul>
+&lt;li>基于正则表达式匹配HTTP头部（如&lt;code>User-Agent: TorBrowser&lt;/code>）。&lt;/li>
+&lt;li>解析SSL/TLS握手过程中的&lt;code>SNI&lt;/code>（Server Name Indication）字段，直接屏蔽目标域名（如屏蔽&lt;code>youtube.com&lt;/code>的TLS握手）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>代码示例&lt;/strong>（简化版DPI逻辑）：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">inspect_tls_handshake&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s2">&amp;#34;ClientHello&amp;#34;&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">data&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sni&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">extract_sni&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 提取SNI字段&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">sni&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">blocked_domains&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">send_rst_packet&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 触发TCP重置&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-https加密流量识别">2. &lt;strong>HTTPS加密流量识别&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>ESNI封锁&lt;/strong>：针对TLS 1.3的加密SNI扩展（ESNI），GFW通过流量指纹分析阻断相关连接。&lt;/li>
+&lt;li>&lt;strong>证书指纹匹配&lt;/strong>：记录合法网站的SSL证书哈希值，拦截异常证书的HTTPS连接。&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-http协议级过滤">3. &lt;strong>HTTP协议级过滤&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>关键词过滤&lt;/strong>：在反向代理服务器（如Nginx）中配置敏感词正则表达式：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-nginx" data-lang="nginx">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="s">(&lt;/span>&lt;span class="nv">$request_uri&lt;/span> &lt;span class="p">~&lt;/span>&lt;span class="sr">*&lt;/span> &lt;span class="s">&amp;#34;翻墙|VPN|Tor&amp;#34;)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">return&lt;/span> &lt;span class="mi">403&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>&lt;strong>响应内容篡改&lt;/strong>：注入JavaScript脚本重定向或显示&amp;quot;页面无法访问&amp;quot;提示。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="三动态防御与主动探测">三、动态防御与主动探测
+&lt;/h3>&lt;h4 id="1-协议指纹识别">1. &lt;strong>协议指纹识别&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>VPN/代理检测&lt;/strong>：通过TLS握手特征（如TLS版本、密码套件顺序）识别常见翻墙工具（如Shadowsocks、WireGuard）。&lt;/li>
+&lt;li>&lt;strong>示例检测逻辑&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">detect_vpn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ssl_handshake&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">ssl_handshake&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cipher_suites&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mh">0x1301&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mh">0x1302&lt;/span>&lt;span class="p">]:&lt;/span> &lt;span class="c1"># TLS_AES_128_GCM_SHA256&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">ssl_handshake&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">extensions&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mh">0x0023&lt;/span>&lt;span class="p">]:&lt;/span> &lt;span class="c1"># SNI扩展&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">block_ip&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 封禁IP&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-主动探测active-probing">2. &lt;strong>主动探测（Active Probing）&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>实现方式&lt;/strong>：
+&lt;ul>
+&lt;li>模拟客户端向目标服务器发送探测请求（如HTTPS的&lt;code>ClientHello&lt;/code>包）。&lt;/li>
+&lt;li>分析响应特征（如TLS指纹、HTTP状态码）判断是否为翻墙服务。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>防御挑战&lt;/strong>：需设计抗探测协议（如混淆TLS握手过程）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="四网络架构层面的协同">四、网络架构层面的协同
+&lt;/h3>&lt;h4 id="1-分布式节点协作">1. &lt;strong>分布式节点协作&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>多级过滤架构&lt;/strong>：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">用户 → 省级接入节点（初步过滤） → 国际出口网关（深度检测） → 国际互联网
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>&lt;strong>数据同步&lt;/strong>：通过内网实时同步黑名单和规则库（如使用Kafka消息队列）。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-流量调度干扰">2. &lt;strong>流量调度干扰&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>BGP路由劫持&lt;/strong>：通过修改AS路径信息，将用户流量导向审查节点。&lt;/li>
+&lt;li>&lt;strong>QoS降级&lt;/strong>：对可疑流量实施带宽限制，导致服务不可用。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="五程序员应对策略">五、程序员应对策略
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>协议层规避&lt;/strong>：
+&lt;ul>
+&lt;li>使用非标准端口（如将HTTPS服务运行在4443端口）。&lt;/li>
+&lt;li>采用QUIC协议（基于UDP）绕过TCP层检测。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>混淆技术&lt;/strong>：
+&lt;ul>
+&lt;li>伪装TLS握手为合法网站（如嵌入合法网站的SNI）。&lt;/li>
+&lt;li>使用自定义加密协议（如将HTTP流量封装为MQTT协议）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>分布式部署&lt;/strong>：
+&lt;ul>
+&lt;li>通过区块链网络分发代理节点信息，避免单点失效。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="总结-1">总结
+&lt;/h3>&lt;p>GFW的技术体系是动态演进的复合型审查系统，其核心在于&lt;strong>多层协议栈控制&lt;/strong>与&lt;strong>行为模式分析&lt;/strong>。开发者需结合加密技术、协议混淆和分布式架构设计突破方案，但需注意法律风险。从技术对抗角度看，GFW的防御强度远超传统防火墙，体现了国家层面的网络安全战略布局。&lt;/p>
+&lt;hr>
+&lt;p>VPN或数据代理等技术可以访问Google，那具体的原理是什么？区别又是什么？&lt;/p>
+&lt;p>VPN和代理能够绕过长城防火墙（GFW）的核心原理在于&lt;strong>加密隧道&lt;/strong>和&lt;strong>流量伪装&lt;/strong>，但两者的技术实现和功能范围存在显著差异。以下从技术对抗角度解析其机制，并对比两者的区别：&lt;/p>
+&lt;hr>
+&lt;h3 id="一vpn与代理绕过gfw的技术原理">一、VPN与代理绕过GFW的技术原理
+&lt;/h3>&lt;h4 id="1-vpn的加密隧道突破">1. &lt;strong>VPN的加密隧道突破&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>协议伪装&lt;/strong>：VPN通过封装原始流量为加密协议（如IPSec、WireGuard），使GFW无法识别真实应用类型。例如：
+&lt;ul>
+&lt;li>&lt;strong>IPSec隧道模式&lt;/strong>：将原始IP包重新封装为新的IPSec包，GFW只能看到隧道端点IP，无法解析内部流量。&lt;/li>
+&lt;li>&lt;strong>SSL/TLS加密&lt;/strong>：使用HTTPS端口（443）传输数据，与正常加密流量无异，规避DPI检测。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>混淆技术&lt;/strong>：部分VPN采用&lt;strong>协议伪装&lt;/strong>（如伪装成HTTP/HTTPS流量）或&lt;strong>动态端口切换&lt;/strong>，干扰GFW的流量特征分析。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-代理的流量中转">2. &lt;strong>代理的流量中转&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>HTTP/SOCKS代理&lt;/strong>：代理服务器作为中间节点转发请求，GFW仅能看到用户与代理的连接，无法追踪到目标服务器：
+&lt;ul>
+&lt;li>&lt;strong>HTTP代理&lt;/strong>：仅处理HTTP/HTTPS流量，需配置浏览器代理设置。&lt;/li>
+&lt;li>&lt;strong>SOCKS代理&lt;/strong>：支持TCP/UDP协议，适用于更广泛的应用（如游戏、P2P）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>加密代理&lt;/strong>：部分代理（如Shadowsocks）使用自定义加密协议，规避关键词过滤和协议识别。&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-对抗gfw的核心策略">3. &lt;strong>对抗GFW的核心策略&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>隐藏元数据&lt;/strong>：VPN/代理通过加密隐藏目标IP、域名和协议类型，使GFW无法触发关键词过滤或IP封锁。&lt;/li>
+&lt;li>&lt;strong>动态路由&lt;/strong>：通过多个代理节点或VPN服务器跳转，分散流量路径，降低被追踪风险。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="二vpn与代理的核心区别">二、VPN与代理的核心区别
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>VPN&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>代理&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>工作层级&lt;/strong>&lt;/td>
+&lt;td>操作系统级，全局流量加密（所有应用）&lt;/td>
+&lt;td>应用层或传输层，仅代理特定应用流量（如浏览器、游戏）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>加密强度&lt;/strong>&lt;/td>
+&lt;td>强制端到端加密（如IPSec、OpenVPN）&lt;/td>
+&lt;td>可选加密（如HTTPS代理加密，HTTP代理明文）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>性能影响&lt;/strong>&lt;/td>
+&lt;td>加密开销较大，可能降低带宽和延迟&lt;/td>
+&lt;td>代理服务器性能决定速度，HTTP代理通常较快&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>部署复杂度&lt;/strong>&lt;/td>
+&lt;td>需安装客户端软件，配置协议和证书&lt;/td>
+&lt;td>部分代理无需安装软件（如浏览器插件），配置简单&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>隐私保护&lt;/strong>&lt;/td>
+&lt;td>隐藏真实IP，加密所有流量，防止ISP监控&lt;/td>
+&lt;td>仅隐藏目标IP，代理服务器可能记录用户数据（免费代理风险更高）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>功能范围&lt;/strong>&lt;/td>
+&lt;td>支持全局翻墙、企业内网访问、安全远程连接&lt;/td>
+&lt;td>仅解决特定场景的IP限制（如访问地理封锁内容）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="三技术对抗中的局限性">三、技术对抗中的局限性
+&lt;/h3>&lt;h4 id="1-vpn的弱点">1. &lt;strong>VPN的弱点&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>协议指纹识别&lt;/strong>：GFW通过分析TLS握手特征（如SNI字段、证书哈希）识别VPN流量。&lt;/li>
+&lt;li>&lt;strong>流量模式分析&lt;/strong>：长期稳定的加密流量可能被标记为可疑行为，触发QoS限速或阻断。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-代理的局限性">2. &lt;strong>代理的局限性&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>明文传输风险&lt;/strong>：非加密代理（如HTTP代理）易被中间人攻击窃取数据。&lt;/li>
+&lt;li>&lt;strong>单点失效&lt;/strong>：代理服务器被封锁后，需频繁更换IP或切换节点。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="四实际应用场景对比">四、实际应用场景对比
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>场景&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>VPN适用性&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>代理适用性&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>企业内网访问&lt;/td>
+&lt;td>✅ 支持，通过IPSec或SSL-VPN建立安全隧道&lt;/td>
+&lt;td>❌ 仅能代理HTTP/HTTPS流量，无法访问内网资源&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>访问地理限制内容&lt;/td>
+&lt;td>✅ 全局生效，所有应用均可绕过区域限制&lt;/td>
+&lt;td>✅ 仅需配置浏览器代理即可访问特定网站&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>公共Wi-Fi安全&lt;/td>
+&lt;td>✅ 强制加密，防止数据窃听&lt;/td>
+&lt;td>❌ 未加密代理存在中间人攻击风险&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>P2P下载/游戏加速&lt;/td>
+&lt;td>✅ 支持UDP协议（如WireGuard），低延迟&lt;/td>
+&lt;td>❌ SOCKS5代理可能因协议限制导致速度下降&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="五总结">五、总结
+&lt;/h3>&lt;p>VPN和代理绕过GFW的本质是&lt;strong>打破流量可识别性&lt;/strong>，但技术路径不同：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>VPN&lt;/strong>通过全局加密和协议伪装实现深度穿透，适合长期、多场景需求。&lt;/li>
+&lt;li>&lt;strong>代理&lt;/strong>侧重灵活部署和低成本，但需权衡安全性和稳定性。&lt;/li>
+&lt;/ul>
+&lt;p>从技术对抗角度看，GFW通过动态更新规则库（如新增IP黑名单、优化DPI算法）持续升级封锁能力，而VPN/代理开发者则需不断改进混淆技术（如协议伪装、流量分片）以维持有效性。这种攻防博弈体现了网络自由与安全审查之间的复杂平衡。&lt;/p>
+&lt;hr>
+&lt;p>Clash Verge 等工具的技术实现本质上是&lt;strong>代理技术&lt;/strong>，但其通过特定模式（如Tun模式）可达到与VPN类似的全局流量控制效果。以下是具体分析：&lt;/p>
+&lt;hr>
+&lt;h3 id="一核心定位基于代理协议的流量管理">一、核心定位：基于代理协议的流量管理
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>协议层本质&lt;/strong>&lt;br>
+Clash Verge 的核心是基于代理协议（如 Shadowsocks、V2Ray、Trojan 等）实现流量转发，而非传统VPN的隧道协议（如IPSec、WireGuard）。其工作流程为：&lt;/p>
+&lt;ul>
+&lt;li>用户配置代理规则 → Clash Verge 将流量封装为代理协议格式 → 通过代理服务器中转至目标网站。&lt;/li>
+&lt;li>这一过程符合代理技术的定义：&lt;strong>中间节点接收请求并转发至目标服务器&lt;/strong>，而非直接建立端到端加密隧道。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>与VPN的关键区别&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>协议差异&lt;/strong>：VPN 依赖标准隧道协议（如OpenVPN），而 Clash Verge 使用自定义代理协议（如VMess、VLESS）。&lt;/li>
+&lt;li>&lt;strong>加密方式&lt;/strong>：VPN 通常内置强加密（如AES-256），Clash Verge 的加密强度取决于所选代理协议（如VLESS支持TLS 1.3）。&lt;/li>
+&lt;li>&lt;strong>部署层级&lt;/strong>：VPN 通常需要系统级驱动支持，Clash Verge 作为用户态应用运行。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="二tun模式模拟vpn的全局流量控制">二、Tun模式：模拟VPN的全局流量控制
+&lt;/h3>&lt;p>Clash Verge 提供 &lt;strong>Tun模式&lt;/strong>，通过虚拟网卡实现类似VPN的流量接管能力：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>技术实现&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>创建虚拟网卡（如 &lt;code>clash0&lt;/code>），通过操作系统路由表将所有流量重定向到该网卡。&lt;/li>
+&lt;li>代理程序从虚拟网卡读取流量，按规则处理后转发至代理服务器。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>与VPN的相似性&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>全局流量接管&lt;/strong>：无需应用单独配置代理，所有流量自动通过虚拟网卡处理。&lt;/li>
+&lt;li>&lt;strong>协议伪装&lt;/strong>：虚拟网卡可伪装为正常网络接口，规避部分网络监控。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>局限性&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>依赖系统权限&lt;/strong>：需管理员权限安装虚拟网卡驱动（Windows需安装TAP驱动）。&lt;/li>
+&lt;li>&lt;strong>性能损耗&lt;/strong>：虚拟网卡层引入额外处理延迟，可能影响速度。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="三代理模式灵活的分流控制">三、代理模式：灵活的分流控制
+&lt;/h3>&lt;p>在 &lt;strong>系统代理模式&lt;/strong> 下，Clash Verge 表现为典型代理工具：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>应用层代理&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>仅代理支持代理配置的应用（如浏览器需手动设置SOCKS5代理）。&lt;/li>
+&lt;li>通过规则引擎（如ACL规则）实现域名/URL级分流，例如：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">rules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DOMAIN-SUFFIX,example.com,PROXY&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DOMAIN-KEYWORD,netflix.com,DIRECT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>适用于需要精细化控制的场景。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>与VPN的对比&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Clash Verge（代理模式）&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>VPN&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>流量范围&lt;/td>
+&lt;td>仅代理配置的应用&lt;/td>
+&lt;td>全局流量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>加密范围&lt;/td>
+&lt;td>代理协议加密（如TLS）&lt;/td>
+&lt;td>全链路加密&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>性能&lt;/td>
+&lt;td>低延迟（无隧道协议开销）&lt;/td>
+&lt;td>较高延迟（隧道协议+加密）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>部署复杂度&lt;/td>
+&lt;td>低（无需系统权限）&lt;/td>
+&lt;td>高（需安装客户端/驱动）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="四技术演进从代理到混合方案">四、技术演进：从代理到混合方案
+&lt;/h3>&lt;p>近年Clash生态逐渐融合VPN特性：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>协议伪装&lt;/strong>：部分代理协议（如VLESS Reality）通过混淆技术模拟VPN流量特征，规避深度检测。&lt;/li>
+&lt;li>&lt;strong>内核级集成&lt;/strong>：Clash Meta内核支持与系统网络栈深度整合，接近VPN的全局控制能力。&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="总结-2">总结
+&lt;/h3>&lt;p>Clash Verge &lt;strong>本质是代理工具&lt;/strong>，但通过Tun模式和协议伪装实现了部分VPN功能。其技术路线体现了：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>代理技术&lt;/strong>：核心流量转发逻辑基于代理协议。&lt;/li>
+&lt;li>&lt;strong>VPN特性&lt;/strong>：Tun模式提供全局流量接管能力，协议混淆增强隐蔽性。&lt;/li>
+&lt;/ul>
+&lt;p>用户可根据需求选择模式：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>精细化控制&lt;/strong> → 代理模式 + 规则分流。&lt;/li>
+&lt;li>&lt;strong>全局翻墙&lt;/strong> → Tun模式 + 混淆协议。&lt;/li>
+&lt;/ul></description></item><item><title>文件整理及备份流程研究</title><link>https://crownjoker07.github.io/p/wemedia-3/</link><pubDate>Mon, 07 Apr 2025 19:47:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/wemedia-3/</guid><description>&lt;blockquote>
+&lt;p>互联网人肯定会产生许多的文件，例如视频、图片、文档等，数据是最重要的，记录着一切，因此如何整理及备份好是及其重要的。&lt;/p>&lt;/blockquote>
+&lt;h3 id="文件类型">文件类型
+&lt;/h3>&lt;ul>
+&lt;li>视频：A-Roll、B-Roll、日常视频&lt;/li>
+&lt;li>图片：素材图片、封面图、缩略图、日常图片&lt;/li>
+&lt;li>音频：BGM、SFX&lt;/li>
+&lt;li>其他：工程文件、字幕文件、特效模板等&lt;/li>
+&lt;/ul>
+&lt;h3 id="树状分类体系">树状分类体系
+&lt;/h3>&lt;ul>
+&lt;li>原始素材
+&lt;ul>
+&lt;li>视频
+&lt;ul>
+&lt;li>原始视频&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>图片
+&lt;ul>
+&lt;li>原始图片&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>字体&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>加工素材（特效模板、字母文件）&lt;/li>
+&lt;li>工程目录（例如PR、AE）&lt;/li>
+&lt;li>成品输出（发布的视频版本）&lt;/li>
+&lt;li>辅助资料（文案脚本、参考案例、版权证明等）&lt;/li>
+&lt;/ul>
+&lt;h3 id="标准化命名规则">标准化命名规则
+&lt;/h3>&lt;p>根据文件类型的主要参数或内容进行命名&lt;/p>
+&lt;h3 id="素材库">素材库
+&lt;/h3>&lt;p>用来存放共同的视频素材、图片素材、音频素材等，使用Billfish进行管理&lt;/p>
+&lt;h3 id="备份">备份
+&lt;/h3>&lt;p>使用Raid2阵列进行备份，再使用网盘备份一份&lt;/p></description></item><item><title>视频格式全解析</title><link>https://crownjoker07.github.io/p/wemedia-2/</link><pubDate>Sat, 05 Apr 2025 21:54:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/wemedia-2/</guid><description>&lt;p>视频格式是指用于存储、传输和播放视频数据的标准化规范，包含编码格式​（压缩算法）和容器格式​（封装方式）两大部分。其核心目的是在保证画质的前提下，通过压缩技术减少文件体积，并适配不同设备和场景的播放需求。&lt;/p>
+&lt;h3 id="容器格式container">​容器格式（Container）
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>MKV：Matroska Video，开放标准的多媒体容器格式，由俄罗斯开发者Steve Lhomme于2002年提出。它并非视频编码格式，而是通过“容器”形式将多种编码的视频、音频、字幕等数据封装到单一文件中。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WMV（Windows Media Video）：微软公司开发的视频编解码技术，属于Windows媒体框架的核心组件&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>AVI（Audio Video Interleaved）：微软于1992年推出的多媒体容器格式，采用RIFF（资源交换文件格式）结构，将音频和视频数据交错存储以实现同步播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG1 System（Moving Picture Experts Group）：MPEG-1标准的核心组成部分，负责将压缩后的视频、音频及辅助数据进行多路复用和同步控制，确保音视频数据在播放时保持时间一致性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG1 Video CD：基于MPEG-1编码标准的光盘存储格式，诞生于1993年，由飞利浦、索尼等公司联合推广。它利用MPEG-1压缩技术将视频和音频数据存储于CD光盘中，实现了家庭影音数字化，成为20世纪90年代至21世纪初主流的视频传播媒介.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 VOB（Video Object）​：MPEG-2​是国际通用的视频压缩标准，支持高清分辨率和多声道音频编码，​VOB​是DVD专用的多媒体容器格式，基于MPEG-2标准封装视频、音频、字幕及导航数据&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 SVCD（Super Video CD）：​VCD的升级版，由中国主导研发并于1998年成为国家标准。它基于MPEG-2编码技术，旨在提供比VCD更高的画质和功能，同时避免依赖DVD的专利技术。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 DVD：数字多功能光盘（Digital Versatile Disc）的核心技术组合，通过MPEG-2编码标准实现视频压缩与存储，结合VOB（Video Object）容器格式管理音视频数据。MPEG-2为DVD提供广播级画质（最高720×576分辨率）和高效压缩能力，支持动态码率（3-15 Mbps），同时兼容多声道音频与交互功能。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG2 TS（Transport Stream）：基于MPEG-2标准的容器格式，专为数字电视广播和不可靠传输介质​（如卫星、地面信号）设计。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 MP4：​MPEG-4是国际标准化组织（ISO/IEC）制定的多媒体压缩标准，涵盖音视频编码、交互式媒体、数字版权管理（DRM）等综合功能。其核心目标是实现高效压缩与内容交互性，支持从低带宽通信到高清视频的广泛场景。​MP4​（MPEG-4 Part 14）则是MPEG-4标准中定义的容器格式，负责封装视频、音频、字幕等数据流，并管理多媒体的同步与复用。简言之，MPEG-4是技术标准，而MP4是该标准下的一种文件存储与传输形式。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 MOV（QuickTime Movie）：苹果公司开发的容器格式，最初用于QuickTime播放器，支持封装视频、音频、文本、图像等多媒体数据。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 3GP1：为移动通信设备设计的简化版MP4容器，专为低带宽、小存储的移动设备优化。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 3GP2：核心目标是为CDMA网络（如CDMA2000）提供低带宽、高兼容性的音视频传输方案。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 PSP：索尼PlayStation Portable（PSP）掌机支持的基于MPEG-4标准的视频格式，主要包含普通MP4和MP4-AVC两种规格
+。其核心目标是适配PSP硬件性能与屏幕分辨率（480×272），同时通过高效压缩实现视频内容的便携播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 IPOD：便携设备的高效视频播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG4 Fragment：MPEG-4标准（ISO/IEC 14496-12）中定义的流式容器格式，专为动态传输和自适应流媒体设计。其核心特性在于将媒体数据分割为多个独立的片段（Fragment）​，每个片段包含元数据（moof）和媒体数据（mdat），从而实现高效的分发与灵活播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>OGV（Ogg Video）：基于Ogg容器的开源视频文件格式，由Xiph.Org基金会开发，旨在提供免专利限制、高质量的多媒体解决方案。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Flash FLV：Adobe Systems开发的流媒体视频容器格式，专为网络传输设计，早期与Macromedia Flash Player深度绑定。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Flash SWF（Shock Wave Flash）：矢量动画格式&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>DPG（Nintendo）：由日本开发者moonlight为任天堂NDS掌机设计的非官方视频格式，需配合Moonshell等软件播放。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WebM：由 Google 主导开发的开源视频容器格式，旨在为网络提供高质量、免版税的视频压缩方案。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Real Media：由 RealNetworks 公司于 20 世纪 90 年代开发的流媒体容器格式，主要服务于早期互联网环境下的音视频传输。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WTV（Windows Recorded TV Show）：微软为 ​Windows Media Center​ 开发的 ​电视录制容器格式，主要用于存储电视节目内容，包含音视频流、元数据及数字版权管理（DRM）信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MXF（素材交换格式）：由 ​SMPTE（美国电影与电视工程师学会）​​ 主导开发的专业音视频容器格式，旨在解决影视制作、存储和交换中的兼容性问题。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>WEBP：由 Google 于 2010 年推出的开源图像格式，旨在通过更高效的压缩算法减少网络传输中的图片体积，同时保持视觉质量。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>GIF（Graphics Interchange Format，图形交换格式）：由 ​CompuServe 公司于 1987 年开发的位图图像格式，旨在解决早期互联网环境下跨平台图像交换的需求。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Raw（原始图像格式）：数码相机、扫描仪等设备直接记录的未经处理的传感器数据，保留了拍摄场景的完整光学信息。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="编码格式">编码格式
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>MPEG-1（1992年）：首个国际标准，用于VCD制作，支持352×240@30fps分辨率，码率1.5 Mbps，采用YCbCr 4:2:0采样和DCT压缩。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG-2（1994年）：提升至高清支持（1920×1080），码率3-10 Mbps，应用于DVD和数字电视广播，支持隔行扫描和5.1声道音频。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>MPEG-4（1998年）：引入基于对象的编码技术，支持流媒体和交互式内容，压缩效率比MPEG-2提升30%以上，扩展了H.264（MPEG-4 Part 10）标准。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>H.264（AVC）（2003年）：采用运动补偿、DCT变换和CABAC熵编码，压缩效率比MPEG-2提升50%，支持蓝光、视频会议和流媒体，兼容性极广。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>H.265 （HEVC）（2013年）：引入更精细的块划分（最大64×64）、多角度预测和并行处理，压缩效率比H.264高40%-50%，适配4K/8K视频，但专利费用较高。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>H.266 (VVC) (2020年)：支持360°全景视频和动态分辨率切换，压缩效率比HEVC再提升40%-50%，但解码复杂度大幅增加。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="视频码率">视频码率
+&lt;/h3>&lt;p>视频码率（Bitrate）指单位时间内传输的视频数据量，单位为 ​kbps（千比特每秒）​，表示每秒传输的二进制位数。码率越高，视频数据的“取样率”越高，画质越接近原始素材，但文件体积也会随之增大。&lt;/p>
+&lt;h3 id="音频编码">音频编码
+&lt;/h3>&lt;p>音频编码是将声音的模拟信号转换为数字信号的过程，核心目标是通过压缩减少数据冗余，同时尽可能保留听觉质量。&lt;/p>
+&lt;ul>
+&lt;li>AAC：优化频率划分和预测算法，相同码率下音质优于MP3，流媒体首选。&lt;/li>
+&lt;li>ALAC：苹果设备专用，兼容性与FLAC相当。&lt;/li>
+&lt;li>FLAC：开源无损格式，压缩率约50%，适合音乐存档。&lt;/li>
+&lt;li>Opus:开源、免专利费的现代音频编码格式，由国际互联网工程任务组（IETF）标准化，专为满足从语音通话到高保真音乐流媒体的多样化需求设计。&lt;/li>
+&lt;li>PCM（脉冲编码调制）：未经压缩的原始音频格式，直接记录模拟信号的采样值，属于无损编码。&lt;/li>
+&lt;/ul>
+&lt;h3 id="比特率控制">比特率控制
+&lt;/h3>&lt;ul>
+&lt;li>CBR（恒定比特率）：全程保持固定码率，通过调整量化参数（如压缩强度）维持稳定传输。&lt;/li>
+&lt;li>VBR（可变比特率）：根据内容复杂度动态调整码率，高动态画面分配更高码率，静态场景降低码率。&lt;/li>
+&lt;/ul></description></item><item><title>自媒体攻略书</title><link>https://crownjoker07.github.io/p/wemedia-1/</link><pubDate>Mon, 31 Mar 2025 20:55:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/wemedia-1/</guid><description>&lt;blockquote>
+&lt;p>身为一名专业的程序员（自称），肯定要在互联网留下我的痕迹，想要自由，因此开始走上自媒体的道路&lt;/p>&lt;/blockquote>
+&lt;p>和我的好朋友DeepSeek深度讨论了之后，在琳琅满目的平台中选择适合自己的平台，本来打算是广撒网（就是一篇文章全平台发），但是一个人确实分不出这么多精力，而且我是真想在这个浮躁的社会，静下心来做成一件事，所以选择GitHubPage和Bilibili。&lt;br>
+基本流程：技术类的深度文章发布在博客中，有趣的技术内容发布B站，然后互相引流。&lt;/p>
+&lt;p>主要分几个步骤&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>文件归纳、备份流程&lt;/strong>。【视频、图片、游戏资源、各种工程文件等】&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>自媒体肯定会有非常多的视频、图片资源，如何合理归纳提高效率，及时备份避免文件丢失，导致工作功亏一篑。&lt;/p>&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>&lt;strong>完善个人博客&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>将之前记录下来的研究成果搬运到博客上，并完善简历（将人生当成一场游戏，时刻记录自己变强的时间点）&lt;/p>&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>&lt;strong>学习新技术并分享&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>自媒体主要走技术分享这条赛道，满足自身的求知欲，想以透过本质看问题，通俗易懂的形式分享技术，提高自身的技术壁垒和自媒体水平&lt;/p>&lt;/blockquote>
+&lt;ol start="4">
+&lt;li>&lt;strong>制作一款属于自己的游戏&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>既然是游戏开发，那就得有游戏开发的样子，那就是制作自己的游戏&lt;/p>&lt;/blockquote>
+&lt;p>初心：不为了挣钱而挣钱，把自媒体或游戏制作当作一件服务大家的事&lt;/p></description></item><item><title>正则表达式说明书</title><link>https://crownjoker07.github.io/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%B4%E6%98%8E%E4%B9%A6/</link><pubDate>Sun, 09 Mar 2025 20:48:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%B4%E6%98%8E%E4%B9%A6/</guid><description>&lt;blockquote>
+&lt;p>正则表达式是一种用于匹配和操作文本的强大工具，它是由一系列字符和特殊字符组成的模式，用于描述要匹配的文本模式。&lt;/p>&lt;/blockquote>
+&lt;h2 id="正则表达式的模式">正则表达式的模式
+&lt;/h2>&lt;p>正则表达式的模式可以包括以下内容：&lt;/p>
+&lt;ul>
+&lt;li>字面值字符：例如字母、数字、空格等，可以直接匹配它们自身。&lt;/li>
+&lt;li>特殊字符：例如点号 .、星号 *、加号 +、问号 ? 等，它们具有特殊的含义和功能。&lt;/li>
+&lt;li>字符类：用方括号 [ ] 包围的字符集合，用于匹配方括号内的任意一个字符。&lt;/li>
+&lt;li>元字符：例如 \d、\w、\s 等，用于匹配特定类型的字符，如数字、字母、空白字符等。&lt;/li>
+&lt;li>量词：例如 {n}、{n,}、{n,m} 等，用于指定匹配的次数或范围。&lt;/li>
+&lt;li>边界符号：例如 ^、$、\b、\B 等，用于匹配字符串的开头、结尾或单词边界位置。&lt;/li>
+&lt;/ul>
+&lt;h2 id="简介">简介
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">^[a-zA-Z0-9_-]{3,15}$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>^ 表示匹配字符串的开头。&lt;/li>
+&lt;li>[a-zA-Z0-9_-] 表示字符集，包含小写字母、大写字母、数字、下划线和连接字符 -。&lt;/li>
+&lt;li>{3,15} 表示前面的字符集最少出现 3 次，最多出现 15 次，从而限制了用户名的长度在 3 到 15 个字符之间。&lt;/li>
+&lt;li>$ 表示匹配字符串的结尾。&lt;/li>
+&lt;/ul>
+&lt;h2 id="语法">语法
+&lt;/h2>&lt;ul>
+&lt;li>[abc] 匹配所有a、b、c字符&lt;/li>
+&lt;li>[^abc] 匹配所有非a、b、c 字符&lt;/li>
+&lt;li>[A-Z] 匹配所有A-Z字符&lt;/li>
+&lt;li>. 相当于 [^\n\r]&lt;/li>
+&lt;li>[\s\S] 匹配所有。\s 是匹配所有空白符，包括换行，\S 非空白符，不包括换行。&lt;/li>
+&lt;li>\w 等价于 [A-Za-z0-9_]&lt;/li>
+&lt;li>\d 等价于 [0-9]&lt;/li>
+&lt;/ul></description></item><item><title>git中subtree和submodule的区别</title><link>https://crownjoker07.github.io/p/git-3/</link><pubDate>Sun, 09 Mar 2025 16:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/git-3/</guid><description>&lt;blockquote>
+&lt;p>最近在公司的项目中有一部分的代码需要多个项目共用（其实这部分代码就是我所写的一些工具代码），简单调查了一下发现有 subtree（子树）和 submodule（子模块）这两种方式，于是乎就有了这一篇文章&lt;/p>&lt;/blockquote>
+&lt;p>以下是 Git 子树（Subtree）与子模块（Submodule）的详细对比，涵盖核心概念、使用场景及操作差异，并附对比表格：&lt;/p>
+&lt;hr>
+&lt;h3 id="一核心区别">一、核心区别
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>对比维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Git 子模块（Submodule）&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Git 子树（Subtree）&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>存储方式&lt;/strong>&lt;/td>
+&lt;td>子模块是主仓库中的一个&lt;strong>引用&lt;/strong>，指向子仓库的特定提交，子仓库独立存在。&lt;/td>
+&lt;td>子树是主仓库中的一个&lt;strong>完整副本&lt;/strong>，子仓库的代码和历史直接合并到主仓库中。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>版本控制&lt;/strong>&lt;/td>
+&lt;td>子模块的提交历史独立于主仓库，主仓库仅记录子模块的提交 ID。&lt;/td>
+&lt;td>子树的提交历史与主仓库共享，子仓库的修改会体现在主仓库的提交记录中。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>依赖管理&lt;/strong>&lt;/td>
+&lt;td>需要显式维护子模块的版本，主仓库与子模块的更新需分别操作。&lt;/td>
+&lt;td>子树的代码与主仓库代码统一管理，更新和修改可直接通过主仓库完成。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>工作流程&lt;/strong>&lt;/td>
+&lt;td>克隆主仓库后需额外执行 &lt;code>git submodule init&lt;/code> 和 &lt;code>git update&lt;/code> 初始化子模块。&lt;/td>
+&lt;td>开发者无需特殊操作，子树被视为普通目录，工作流程与常规 Git 操作一致。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>文件结构&lt;/strong>&lt;/td>
+&lt;td>生成 &lt;code>.gitmodules&lt;/code> 文件记录子模块信息，子模块代码存放在独立目录中。&lt;/td>
+&lt;td>无额外配置文件，子树的代码完全嵌入主仓库目录结构。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>更新与同步&lt;/strong>&lt;/td>
+&lt;td>需手动执行 &lt;code>git submodule update --remote&lt;/code> 拉取子模块更新，并提交主仓库中的子模块引用变更。&lt;/td>
+&lt;td>通过 &lt;code>git subtree pull&lt;/code> 合并子仓库更新到主仓库，或直接提交子树的修改到主仓库。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>适用场景&lt;/strong>&lt;/td>
+&lt;td>适合需要独立维护的组件库（如公共依赖库），且需与主仓库版本解耦的场景。&lt;/td>
+&lt;td>适合紧密集成的子项目，或希望将子项目代码与主项目统一管理的场景。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="二详细解析">二、详细解析
+&lt;/h3>&lt;h4 id="1-存储与版本管理">1. &lt;strong>存储与版本管理&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块&lt;/strong>&lt;br>
+子模块通过 &lt;code>.gitmodules&lt;/code> 文件记录子仓库的 URL 和路径，主仓库仅存储子模块的提交 ID。子模块的代码独立维护，开发者需分别管理主仓库和子模块的提交。例如，更新子模块需进入子模块目录执行 &lt;code>git pull&lt;/code>，再提交主仓库中的子模块引用变更。&lt;/li>
+&lt;li>&lt;strong>子树&lt;/strong>&lt;br>
+子树将子仓库的代码和历史直接合并到主仓库中，无独立配置文件。子树的修改会反映在主仓库的提交记录中，且更新通过 &lt;code>git subtree pull&lt;/code> 或 &lt;code>git subtree push&lt;/code> 完成，无需切换目录。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-协作与维护">2. &lt;strong>协作与维护&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>优点&lt;/strong>：子模块的独立性适合需要多团队协作的场景，例如多个父项目共用同一子模块时，可确保子模块的版本一致性。&lt;/li>
+&lt;li>&lt;strong>缺点&lt;/strong>：克隆主仓库后需手动初始化子模块（&lt;code>git submodule update --init&lt;/code>），且删除子模块步骤繁琐（需清理 &lt;code>.gitmodules&lt;/code> 和缓存）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>子树&lt;/strong>
+&lt;ul>
+&lt;li>&lt;strong>优点&lt;/strong>：对开发者透明，适合不希望暴露子项目独立性的场景。例如，将第三方库嵌入主项目时，子树可简化依赖管理。&lt;/li>
+&lt;li>&lt;strong>缺点&lt;/strong>：历史记录混杂，难以单独追踪子仓库的修改。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-更新与冲突处理">3. &lt;strong>更新与冲突处理&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块&lt;/strong>&lt;br>
+子模块的更新需显式操作，若子仓库有更新，需在主仓库中提交新的子模块提交 ID。若多个开发者同时修改子模块，可能因版本不一致导致冲突。&lt;/li>
+&lt;li>&lt;strong>子树&lt;/strong>&lt;br>
+子树的更新通过合并完成，类似常规分支合并。若子仓库和主仓库同时修改同一文件，需手动解决冲突，但整体流程更接近标准 Git 操作。&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-典型场景">4. &lt;strong>典型场景&lt;/strong>
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>子模块适用场景&lt;/strong>
+&lt;ul>
+&lt;li>公共工具库（如通用组件、SDK）需要被多个主项目引用。&lt;/li>
+&lt;li>子项目需独立版本控制，且主项目需灵活切换子项目版本。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>子树适用场景&lt;/strong>
+&lt;ul>
+&lt;li>第三方库的直接嵌入（如开源项目依赖的代码片段）。&lt;/li>
+&lt;li>子项目与主项目高度耦合，无需独立维护。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="三总结建议">三、总结建议
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>选择子模块&lt;/strong>：若需子项目独立维护、版本解耦，或需要跨项目共享同一子仓库。&lt;/li>
+&lt;li>&lt;strong>选择子树&lt;/strong>：若希望简化依赖管理、减少协作复杂度，或子项目无需独立存在。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>提示&lt;/strong>：Git 官方自 1.7.11 版本起推荐优先使用子树，因其操作更直观且与常规 Git 流程兼容性更好。&lt;/p>&lt;/blockquote>
+&lt;p>由于子树推送时，无法直观的看出推送了哪些文件，我还是选择 git 仓库里面嵌入 git 仓库，虽然要提交两次，但是至少清晰直观&lt;/p></description></item><item><title>Github如何一键部署</title><link>https://crownjoker07.github.io/p/git-2/</link><pubDate>Mon, 03 Mar 2025 00:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/git-2/</guid><description>&lt;blockquote>
+&lt;p>由于最近一直更新博客（小骄傲），但是发现每次部署，都要博客仓库打包后，手动复制到网页仓库发布，很麻烦，所以研究一下有没有什么自动化部署的工具&lt;/p>&lt;/blockquote>
+&lt;p>需要在源码仓库根目录创建.github/workflows/deploy.yml文件，然后配置&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy Hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">main] &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 触发分支（源码分支）&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">build-deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">拉取代码&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v4&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">submodules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 如果用了主题子模块必加&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">安装 Hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">sudo snap install hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">生成静态文件&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo --minify&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">部署到 GitHub Pages&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 从默认的 GITHUB_TOKEN 改为自己的 Personal Token&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">personal_token&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.PERSONAL_TOKEN }} &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 指定目标仓库（格式：用户名/仓库名）&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">external_repository&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">CrownJoker07/CrownJoker07.github.io&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 强制目标分支为 main&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">main&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 添加以下参数解决历史提交冲突&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">force_orphan&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">true构建目录&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>secrets.PERSONAL_TOKEN&lt;/strong>需要在源码仓库的&lt;strong>Settings/Secrets and Variables/Actions&lt;/strong>创建Secrets，名字叫PERSONAL_TOKEN，内容是 GitHub账号**Settings/Developer Settings/Personal access tokens (classic)**的具有工作流权限的密令&lt;/p>
+&lt;p>配置好后，试试推送，就会发现已经触发Github Action.&lt;/p></description></item><item><title>git如何删除历史大文件</title><link>https://crownjoker07.github.io/p/git-1/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/git-1/</guid><description>&lt;blockquote>
+&lt;p>刚刚写第一篇“终于拥有自己的博客啦！！！”的时候，不小心上传了个 10M 左右的 gif 图，即使我已经删掉了，.git文件夹里面还是保留（意味着历史记录也保留了），问题来了应该如何删除历史大文件呢？&lt;/p>&lt;/blockquote>
+&lt;p>&lt;strong>概要：&lt;/strong>&lt;br>
+找到大文件，删除即可，发现其实本质上就是克隆了个新项目，删除了指定文件，需要强制推送到远程仓库。所以是有可能导致原仓库数据丢失，因此尽量少传大文件，不到必不可以不要使用以下命令！！！&lt;/p>
+&lt;h2 id="第一步找到大文件">第一步：找到大文件
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Shell" data-lang="Shell">&lt;span class="line">&lt;span class="cl">git rev-list --objects --all &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git cat-file --batch-check&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;%(objectname) %(objecttype) %(objectsize) %(rest)&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sort -k3 -n &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tail -5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以下是该命令的详细解析，分步骤解释其作用及实现原理：&lt;/p>
+&lt;p>&lt;strong>1. &lt;code>git rev-list --objects --all&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>功能&lt;/strong>：列出 Git 仓库中所有对象（包括提交、树、blob 等）的哈希值和路径。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>--objects&lt;/code>：输出所有对象的哈希值及关联路径（如文件路径）。&lt;/li>
+&lt;li>&lt;code>--all&lt;/code>：覆盖所有引用（分支、标签等），确保包含整个仓库历史。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>输出示例&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c7a9d8... blob path/to/file.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8a4d2... commit HEAD
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>2. &lt;code>git cat-file --batch-check='%(objectname) %(objecttype) %(objectsize) %(rest)'&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>功能&lt;/strong>：批量检查对象信息，提取哈希、类型、大小和路径。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>--batch-check&lt;/code>：以批处理模式解析输入行，按格式输出信息。&lt;/li>
+&lt;li>&lt;strong>格式说明&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;code>%(objectname)&lt;/code>：对象哈希值。&lt;/li>
+&lt;li>&lt;code>%(objecttype)&lt;/code>：对象类型（&lt;code>blob&lt;/code>、&lt;code>tree&lt;/code>、&lt;code>commit&lt;/code>）。&lt;/li>
+&lt;li>&lt;code>%(objectsize)&lt;/code>：对象占用存储空间（字节）。&lt;/li>
+&lt;li>&lt;code>%(rest)&lt;/code>：对象关联路径（仅对 &lt;code>blob&lt;/code> 类型有效，其他类型为空）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>输出示例&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c7a9d8... blob 120000 path/to/large-file.jpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8a4d2... tree 4096 (空)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>3. &lt;code>sort -k3 -n&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>功能&lt;/strong>：按第三列（对象大小）进行数字排序。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-k3&lt;/code>：指定以第三列为排序键。&lt;/li>
+&lt;li>&lt;code>-n&lt;/code>：按数值大小排序（默认按字符串排序会导致 &lt;code>100&lt;/code> &amp;lt; &lt;code>20&lt;/code>）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>结果示例&lt;/strong>（排序后）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d3f4a... blob 500 path/to/small.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c7a9d... blob 120000 path/to/large.jpg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;strong>4. &lt;code>tail -5&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>功能&lt;/strong>：取排序结果的最后 5 行，即最大的 5 个对象。&lt;/p>
+&lt;ul>
+&lt;li>因 &lt;code>sort&lt;/code> 是升序排列，末尾行对应最大文件。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>最终输出示例&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">c7a9d... blob 120000 path/to/large.jpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9b2e4... blob 95000 path/to/video.mp4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="适用场景">适用场景
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>定位大文件&lt;/strong>：快速找出仓库中占用空间最大的文件（如误提交的二进制文件）。&lt;/li>
+&lt;li>&lt;strong>性能优化&lt;/strong>：清理历史大文件前进行验证，避免误删关键数据。&lt;/li>
+&lt;li>&lt;strong>兼容性&lt;/strong>：当 &lt;code>.git/objects/pack&lt;/code> 下无 &lt;code>.idx&lt;/code> 文件时（如新仓库），此命令仍可运行。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="注意事项">注意事项
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>路径显示限制&lt;/strong>：
+&lt;ul>
+&lt;li>仅 &lt;code>blob&lt;/code> 类型对象会显示路径，&lt;code>tree&lt;/code> 和 &lt;code>commit&lt;/code> 类型的 &lt;code>%(rest)&lt;/code> 列为空。&lt;/li>
+&lt;li>需结合 &lt;code>git log&lt;/code> 或 &lt;code>git rev-list&lt;/code> 追溯具体提交记录。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>对象类型区分&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;code>blob&lt;/code> 为文件内容，&lt;code>tree&lt;/code> 为目录结构，&lt;code>commit&lt;/code> 为提交信息。&lt;/li>
+&lt;li>大文件通常为 &lt;code>blob&lt;/code> 类型。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>性能影响&lt;/strong>：
+&lt;ul>
+&lt;li>对大型仓库（如数万提交），&lt;code>git rev-list&lt;/code> 可能耗时较长，建议在空闲时执行。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="第二步删除大文件">第二步：删除大文件
+&lt;/h2>&lt;blockquote>
+&lt;p>研究发现有两条命令：Git filter-branch 和 git filter-repo
+&lt;strong>Git filter-branch 与 git filter-repo 使用对比与选择指南&lt;/strong>&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;h3 id="一git-filter-repo-核心用法需要安装-pythonfilter-repo">一、git filter-repo 核心用法(需要安装 Python、filter-repo)
+&lt;/h3>&lt;h3 id="1-删除文件目录">1. 删除文件/目录
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git filter-repo --force --path &lt;span class="s2">&amp;#34;giphy-1.gif&amp;#34;&lt;/span> --invert-paths &lt;span class="c1">#删除指定文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git filter-repo --path-glob &lt;span class="s1">&amp;#39;*.log&amp;#39;&lt;/span> --invert-paths &lt;span class="c1"># 删除所有.log文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git filter-repo --path target/ --invert-paths &lt;span class="c1"># 删除target目录&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>优势&lt;/strong>：直接操作对象数据库，无需检出文件，速度提升数十倍 。&lt;/li>
+&lt;li>&lt;strong>附加功能&lt;/strong>：自动清理空提交，无需 &lt;code>--prune-empty&lt;/code> 参数。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="二git-filter-branch-的局限性与适用场景">二、git filter-branch 的局限性与适用场景
+&lt;/h3>&lt;h3 id="局限性">局限性
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>性能差&lt;/strong>：处理万级提交时耗时可能超过 &lt;code>filter-repo&lt;/code> 的 100 倍 。&lt;/li>
+&lt;li>&lt;strong>操作复杂&lt;/strong>：需手动处理引用残留（如 &lt;code>.git/refs/original&lt;/code>）和强制推送 。&lt;/li>
+&lt;li>&lt;strong>兼容性问题&lt;/strong>：可能破坏 &lt;code>git replace&lt;/code> 或 &lt;code>grafts&lt;/code> 机制 。&lt;/li>
+&lt;/ul>
+&lt;h3 id="仅推荐在以下场景使用">仅推荐在以下场景使用
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>无 Python 环境&lt;/strong>：&lt;code>filter-repo&lt;/code> 依赖 Python，若环境受限可临时用 &lt;code>filter-branch&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>简单单次操作&lt;/strong>：例如删除单个文件的少量历史记录，命令示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git filter-branch --index-filter &lt;span class="s1">&amp;#39;git rm --cached --ignore-unmatch secret.txt&amp;#39;&lt;/span> --prune-empty --tag-name-filter cat -- --all
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="三核心区别总结">三、核心区别总结
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>git filter-branch&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>git filter-repo&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>性能&lt;/strong>&lt;/td>
+&lt;td>极低（逐提交处理）&lt;/td>
+&lt;td>高（批量处理对象数据库）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>安全性&lt;/strong>&lt;/td>
+&lt;td>高风险（残留引用、破坏分支）&lt;/td>
+&lt;td>自动清理无效引用，结构稳定&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>操作复杂度&lt;/strong>&lt;/td>
+&lt;td>需手动处理参数和清理步骤&lt;/td>
+&lt;td>命令简洁，参数语义明确&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>功能扩展性&lt;/strong>&lt;/td>
+&lt;td>有限（依赖 Shell 脚本）&lt;/td>
+&lt;td>支持 Python 回调，灵活定制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>官方推荐度&lt;/strong>&lt;/td>
+&lt;td>已弃用，仅保留兼容性&lt;/td>
+&lt;td>官方推荐替代工具&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h3 id="四操作注意事项">四、操作注意事项
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>备份仓库&lt;/strong>：操作前务必通过 &lt;code>git clone --mirror&lt;/code> 备份。&lt;/li>
+&lt;li>&lt;strong>协作同步&lt;/strong>：强制推送后需通知协作者重新克隆仓库。&lt;/li>
+&lt;li>&lt;strong>验证结果&lt;/strong>：
+&lt;ul>
+&lt;li>检查文件是否彻底删除：&lt;code>git log -- &amp;lt;file-name&amp;gt;&lt;/code>&lt;/li>
+&lt;li>对比仓库体积：&lt;code>du -sh .git&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>清理远程仓库&lt;/strong>：GitHub/GitLab 需手动触发存储库清理或重新推送。&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="附命令替换对照表">附：命令替换对照表
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>filter-branch 场景&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>filter-repo 等效命令&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>删除文件&lt;/td>
+&lt;td>&lt;code>--path &amp;lt;file&amp;gt; --invert-paths&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>保留子目录&lt;/td>
+&lt;td>&lt;code>--subdirectory-filter &amp;lt;dir&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>修改提交邮箱&lt;/td>
+&lt;td>&lt;code>--email-callback&lt;/code> + Python 函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>清理空提交&lt;/td>
+&lt;td>自动处理，无需参数&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>通过以上对比，&lt;strong>&lt;code>git filter-repo&lt;/code> 在效率、安全性和易用性上全面胜出&lt;/strong>，建议优先使用。仅在对环境或兼容性有特殊需求时考虑 &lt;code>filter-branch&lt;/code>。&lt;/p>
+&lt;h2 id="第三步强制推送到远程仓库">第三步：强制推送到远程仓库
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git push --force origin main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>终于拥有自己的博客啦！！！</title><link>https://crownjoker07.github.io/p/daily-1/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/daily-1/</guid><description>&lt;p>终于搭建出自己的博客了!!!😄😄😄&lt;/p>
+&lt;p>原本想学习稚晖君什么都从零开始撸，想着自己从前后端一点点搭建出自己的博客，但是实在是太麻烦了，而且想把搭建过程给记录下来，如果博客没搭建好，也不太好记录（绝对不是找理由），就想从简单的入手先。&lt;/p>
+&lt;p>通过多个方案的尝试，一开始使用 jekyll + GithubPage，发现 jekyll 环境异常难搭建（我个人感觉应该是jekyll 已经有点老了，很多技术没有更新）&lt;/p>
+&lt;p>最终采用 Hugo + GithubPage，hugo 可以直接写 MarkDown 文章，正好适合我不会前端的人，而且方便迁移到知乎、CSDN 等地方，只能说非常适合我。&lt;/p>
+&lt;p>Hugo 还真是方便，我只是套了个主题，稍微配置了一下，就是很好看的页面了，剩下的我只管写文章就好，而且可以很好的分类文章。&lt;/p>
+&lt;p>终于可以开始写想写的文章啦，看起来真装13哈哈哈&lt;/p></description></item></channel></rss>
