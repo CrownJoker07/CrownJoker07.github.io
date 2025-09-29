@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 庄泽伟的博客</title><link>https://crownjoker07.github.io/page/</link><description>Recent content in Pages on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>ZhuangZewei</copyright><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crownjoker07.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>文章</title><link>https://crownjoker07.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/archives/</guid><description/></item><item><title>个人</title><link>https://crownjoker07.github.io/personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/personal/</guid><description>&lt;h2 id="自我评价"&gt;自我评价
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;不做重复的事&lt;br&gt;
+代码编写会解耦逻辑、内聚逻辑，做到可复用、可拓展。&lt;br&gt;
+存在重复机械操作时，会通过工具（自我实现或是寻找现成插件）进行流程优化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;透过本质看问题&lt;br&gt;
+一个bug的出现，底层问题有可能是对某部分框架或系统的错误使用或框架本身就有问题，应自下而上的修复。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不做多余的事&lt;br&gt;
+游戏画面只有手机屏幕的大小，屏幕看不见（屏幕外、屏幕背后）的对象或逻辑都不应该执行，节省资源消耗、提高游戏性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统学习技术&lt;br&gt;
+学习一门新技术，先学习底层思维，后构建树状学习体系，自下而上的学习。方便之后遇到问题，可以透过本质看问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据驱动&lt;br&gt;
+做性能优化、还是其他，都应该通过数据驱动，而不是盲目的使用技术进行实现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>搜索</title><link>https://crownjoker07.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/search/</guid><description/></item><item><title>项目</title><link>https://crownjoker07.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crownjoker07.github.io/links/</guid><description>&lt;p&gt;以下是个人项目&lt;/p&gt;</description></item></channel></rss>
