@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AILLM on 庄泽伟的博客</title><link>https://crownjoker07.github.io/categories/aillm/</link><description>Recent content in AILLM on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>ZhuangZewei</copyright><lastBuildDate>Sat, 19 Apr 2025 14:37:00 +0800</lastBuildDate><atom:link href="https://crownjoker07.github.io/categories/aillm/index.xml" rel="self" type="application/rss+xml"/><item><title>DeepSeek-V3学习</title><link>https://crownjoker07.github.io/p/deepseek-v3%E5%AD%A6%E4%B9%A0/</link><pubDate>Sat, 19 Apr 2025 14:37:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/deepseek-v3%E5%AD%A6%E4%B9%A0/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;最近AI大模型非常流行、中国也产生了许多属于自己的AI大模型，例如DeepSeek-V3等，作为程序员，我也打算了解一下AI大模型究竟是什么原理，居然可以通过对话的形式告诉你答案。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="源码拉取"&gt;源码拉取
+&lt;/h3&gt;&lt;p&gt;源码地址：&lt;a class="link" href="https://github.com/deepseek-ai/DeepSeek-V3.git" target="_blank" rel="noopener"
+&gt;https://github.com/deepseek-ai/DeepSeek-V3.git&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="官方论文"&gt;官方论文
+&lt;/h3&gt;&lt;p&gt;地址：&lt;a class="link" href="https://arxiv.org/pdf/2412.19437" target="_blank" rel="noopener"
+&gt;https://arxiv.org/pdf/2412.19437&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="项目布局分析"&gt;项目布局分析
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 项目目录结构
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── README.md # 核心说明文档
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── 模型架构说明（MLA注意力/负载均衡策略）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── 多框架支持（SGLang/LMDeploy/vLLM等）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── 性能基准（代码/数学/中英文任务）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── 商用许可（MIT License）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── inference/ # 推理核心模块
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── convert.py # 权重格式转换工具
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 参数: --n-experts 256 --model-parallel 16
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 关键技术：MoE分片/参数名映射
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── fp8_cast_bf16.py # 精度转换工具
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 功能: FP8→BF16转换
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 特性: 动态缩放因子管理/内存优化
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── generate.py # 分布式推理入口
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 交互式聊天接口（&amp;gt;&amp;gt;&amp;gt; 提示符）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 批量处理（--input-file参数）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 多节点通信（torchrun启动）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── kernel.py # 高性能计算核
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── FP8矩阵乘法（Triton实现）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 权重反量化核（block_size=128）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 激活量化函数
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── model.py # 模型架构定义
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── Transformer主类（片段25）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── MLA注意力（分离式位置编码）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── MoE门控（专家分组选择）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── configs/ # 模型配置目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── config_16B.json # 轻量级配置（RTX 4090等）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── config_236B.json # 中规模配置（企业级单机）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── config_671B.json # 全量配置（多节点分布式）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="readme阅读"&gt;README阅读
+&lt;/h3&gt;&lt;h4 id="introduction"&gt;Introduction
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA) and DeepSeekMoE architectures, which were thoroughly validated in DeepSeek-V2. Furthermore, DeepSeek-V3 pioneers an auxiliary-loss-free strategy for load balancing and sets a multi-token prediction training objective for stronger performance. We pre-train DeepSeek-V3 on 14.8 trillion diverse and high-quality tokens, followed by Supervised Fine-Tuning and Reinforcement Learning stages to fully harness its capabilities. Comprehensive evaluations reveal that DeepSeek-V3 outperforms other open-source models and achieves performance comparable to leading closed-source models. Despite its excellent performance, DeepSeek-V3 requires only 2.788M H800 GPU hours for its full training. In addition, its training process is remarkably stable. Throughout the entire training process, we did not experience any irrecoverable loss spikes or perform any rollbacks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关键点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixture-of-Experts (MoE):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="mermaid" align=center&gt;
+flowchart TD
+A[输入 Input&lt;br&gt;e.g. 文本Token序列] --&gt; B[门控网络 Gating Network]
+subgraph C [专家网络 Experts&lt;br&gt;并行计算池]
+C1[Expert 1]
+C2[Expert 2]
+C3[Expert 3]
+C4[Expert ...]
+end
+B -- Top-K选择&lt;br&gt;（e.g. K=2） --&gt; C1
+B -- Top-K选择&lt;br&gt;（e.g. K=2） --&gt; C2
+B --&gt; C3
+B --&gt; C4
+C1 -- 输出1 --&gt; D{组合函数&lt;br&gt;Combining Function}
+C2 -- 输出2 --&gt; D
+C3 --&gt; E[丢弃]
+C4 --&gt; E
+D -- 加权求和 --&gt; F[最终输出 Output]
+&lt;/div&gt;
+&lt;p&gt;神经网络架构设计，旨在构建更大规模的模型而不显著增加计算成本。它的核心思想是&amp;quot;专家分工&amp;quot;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Multi-head Latent Attention (MLA)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;auxiliary-loss-free strategy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;multi-token prediction&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;评测基准：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MMLU（Massive Multitask Language Understanding，大规模多任务语言理解）：&lt;br&gt;
+一个涵盖 57 个主题的多项选择题基准，用于评估大规模语言模型的知识和推理能力。包括基本数学、美国历史、计算机科学、法律等多个领域。&lt;/li&gt;
+&lt;li&gt;MMLU Pro：&lt;br&gt;
+MMLU 的专业级别版本，包含更具挑战性的问题，旨在评估模型在专业领域的理解和推理能力。&lt;/li&gt;
+&lt;li&gt;GPQA-Diamond（Grade-Level Problems in Question Answering）：&lt;br&gt;
+旨在提供一个全面的框架，能够测试模型在多种推理场景下的能力，并推动大模型在更加复杂任务上的改进。&lt;/li&gt;
+&lt;li&gt;MATH-500：&lt;br&gt;
+OpenAI从MATH评测数据集中精选的500个更具代表性的数学评测基准&lt;/li&gt;
+&lt;li&gt;AIME 2024（American Invitational Mathematics Examination）：&lt;br&gt;
+美国数学邀请赛，是美国面向中学生的邀请式竞赛，3个小时完成15道题，难度很高。&lt;/li&gt;
+&lt;li&gt;SWE-bench（Software Engineering Bench）：&lt;br&gt;
+一个从GitHub上提炼的真实世界的Python代码仓的任务评测数据集&lt;/li&gt;
+&lt;li&gt;SWE-bench Verified：&lt;br&gt;
+OpenAI基于SWE-Bench提炼的更加准确和更具代表性的大模型代码工程任务解决能力评测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="model-summary"&gt;Model Summary
+&lt;/h4&gt;&lt;hr&gt;
+&lt;p&gt;Architecture: Innovative Load Balancing Strategy and Training Objective&lt;/p&gt;
+&lt;p&gt;On top of the efficient architecture of DeepSeek-V2, we pioneer an auxiliary-loss-free strategy for load balancing, which minimizes the performance degradation that arises from encouraging load balancing.
+We investigate a Multi-Token Prediction (MTP) objective and prove it beneficial to model performance. It can also be used for speculative decoding for inference acceleration.&lt;/p&gt;</description></item></channel></rss>
