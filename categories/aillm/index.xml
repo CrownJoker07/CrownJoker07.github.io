@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AILLM on 庄泽伟的博客</title><link>https://crownjoker07.github.io/categories/aillm/</link><description>Recent content in AILLM on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>ZhuangZewei</copyright><lastBuildDate>Mon, 20 Jul 2026 10:09:24 +0800</lastBuildDate><atom:link href="https://crownjoker07.github.io/categories/aillm/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Agent 全透彻解析：Skill、Tool、MCP 与主流 Agent 的关系</title><link>https://crownjoker07.github.io/p/ai-agent-%E5%85%A8%E9%80%8F%E5%BD%BB%E8%A7%A3%E6%9E%90skilltoolmcp-%E4%B8%8E%E4%B8%BB%E6%B5%81-agent-%E7%9A%84%E5%85%B3%E7%B3%BB/</link><pubDate>Mon, 20 Jul 2026 10:09:24 +0800</pubDate><guid>https://crownjoker07.github.io/p/ai-agent-%E5%85%A8%E9%80%8F%E5%BD%BB%E8%A7%A3%E6%9E%90skilltoolmcp-%E4%B8%8E%E4%B8%BB%E6%B5%81-agent-%E7%9A%84%E5%85%B3%E7%B3%BB/</guid><description>
+ &lt;blockquote&gt;
+ &lt;p&gt;AI Agent 不是某一种模型，也不只是“能聊天的 AI”。本文以官方定义为准，解释 Agent、Tool、Skill、MCP 的边界，并对比 Claude Code、Codex、OpenCode、OpenClaw、Hermes Agent 与 Nanobot 的定位和关系。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;截至 2026 年 7 月，Agent 仍然没有唯一的行业定义。不同厂商强调的角度不同，但核心结构已经相当清楚：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;模型负责推理，Tool 负责行动，Skill 提供方法，MCP 负责连接；Agent Runtime 把它们组织成能够持续工作的执行循环。&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h2 id="一权威资料如何定义-agent"&gt;一、权威资料如何定义 Agent？
+&lt;/h2&gt;&lt;h3 id="11-openai-的定义"&gt;1.1 OpenAI 的定义
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://openai.github.io/openai-agents-python/agents/" target="_blank" rel="noopener"
+ &gt;OpenAI Agents SDK 官方文档&lt;/a&gt;将 Agent 定义为：配置了 &lt;strong&gt;Instructions（指令）&lt;/strong&gt;、&lt;strong&gt;Tools（工具）&lt;/strong&gt;，以及 Handoff、Guardrail、结构化输出等可选运行行为的大语言模型。&lt;/p&gt;
+&lt;p&gt;这个定义强调 Agent 的&lt;strong&gt;组成&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Agent = Model + Instructions + Tools + Runtime Behavior
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="12-anthropic-的定义"&gt;1.2 Anthropic 的定义
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener"
+ &gt;Anthropic《Building Effective Agents》&lt;/a&gt;区分了 Workflow 和 Agent：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Workflow&lt;/strong&gt;：大模型和工具按照预先定义的代码路径运行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent&lt;/strong&gt;：大模型动态决定自己的执行过程和工具使用方式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个定义强调 Agent 的&lt;strong&gt;决策权&lt;/strong&gt;。固定执行“检索→总结→发送”的系统，即使使用了大模型，也更接近 Workflow；能根据工具结果自行决定下一步的系统，才更接近 Agent。&lt;/p&gt;
+&lt;h3 id="13-两个定义为什么不冲突"&gt;1.3 两个定义为什么不冲突？
+&lt;/h3&gt;&lt;p&gt;OpenAI 描述 Agent“由什么组成”，Anthropic 描述 Agent“如何运行”。合在一起，可以得到一个更完整的理解：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;Agent 是以模型为决策核心，带有指令和工具，并能根据环境反馈持续选择下一步行动的系统。&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ U["用户目标"] --&gt; M["模型判断下一步"]
+ M --&gt; Q{"任务完成了吗？"}
+ Q --&gt;|否| T["调用 Tool"]
+ T --&gt; E["环境返回事实或错误"]
+ E --&gt; M
+ Q --&gt;|是| R["交付结果"]
+ G["权限／Guardrail／人工审批"] -.约束.-&gt; T
+
+&lt;/div&gt;
+
+&lt;p&gt;Agent 的关键不是“回答像人”，而是形成了 &lt;strong&gt;观察→决策→行动→验证&lt;/strong&gt; 的闭环。&lt;/p&gt;
+&lt;h2 id="二模型agent-和-agentic-harness-是什么关系"&gt;二、模型、Agent 和 Agentic Harness 是什么关系？
+&lt;/h2&gt;&lt;p&gt;这是理解各种产品关系的关键。&lt;/p&gt;
+&lt;h3 id="21-模型不是-agent"&gt;2.1 模型不是 Agent
+&lt;/h3&gt;&lt;p&gt;Claude、GPT、Gemini 等模型负责理解和生成内容。模型本身通常不直接读取你的磁盘、运行命令或修改代码。&lt;/p&gt;
+&lt;h3 id="22-agentic-harness-把模型变成可行动的-agent"&gt;2.2 Agentic Harness 把模型变成可行动的 Agent
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://code.claude.com/docs/en/glossary" target="_blank" rel="noopener"
+ &gt;Claude Code 官方术语表&lt;/a&gt;把 &lt;strong&gt;Agentic Harness&lt;/strong&gt; 定义为：围绕模型提供工具、上下文管理和执行环境，使模型成为 Agent 的运行框架。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://code.claude.com/docs/en/how-claude-code-works" target="_blank" rel="noopener"
+ &gt;Claude Code 工作原理&lt;/a&gt;进一步说明，Claude Code 是 Claude 模型外面的 Harness：模型负责推理，Harness 提供文件访问、Shell、权限、上下文管理和 Agent Loop。&lt;/p&gt;
+&lt;p&gt;可以类比为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;模型：大脑
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Agentic Harness：身体、工作台和管理制度
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Agent：两者组合后正在完成任务的系统
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;因此，Claude Code 与 Claude 不是同一个概念，Codex 与底层 GPT 模型也不是同一个概念。&lt;/p&gt;
+&lt;h3 id="23-agent这个词为什么经常指不同东西"&gt;2.3 “Agent”这个词为什么经常指不同东西？
+&lt;/h3&gt;&lt;p&gt;日常讨论中，“Agent”至少可能指三层：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;层次&lt;/th&gt;
+					&lt;th&gt;含义&lt;/th&gt;
+					&lt;th&gt;例子&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;产品／Harness&lt;/td&gt;
+					&lt;td&gt;提供完整 Agent 运行能力的软件&lt;/td&gt;
+					&lt;td&gt;Claude Code、Codex、OpenCode&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Agent 配置&lt;/td&gt;
+					&lt;td&gt;一组特定模型、指令、工具和权限&lt;/td&gt;
+					&lt;td&gt;Plan Agent、Review Agent&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;运行实例&lt;/td&gt;
+					&lt;td&gt;正在处理某个任务的一次会话&lt;/td&gt;
+					&lt;td&gt;当前修复 Bug 的 Agent Session&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;说“Codex 是一个 Agent”时，通常是在说产品层；说“创建一个安全审查 Agent”时，通常是在说配置或运行实例。&lt;/p&gt;
+&lt;h2 id="三toolskill-和-mcp-的权威定义"&gt;三、Tool、Skill 和 MCP 的权威定义
+&lt;/h2&gt;&lt;h3 id="31-tool可以执行的具体能力"&gt;3.1 Tool：可以执行的具体能力
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://openai.github.io/openai-agents-python/tools/" target="_blank" rel="noopener"
+ &gt;OpenAI Agents SDK Tool 文档&lt;/a&gt;将 Tool 描述为让 Agent 获取数据、运行代码、调用外部 API 或操作计算机的能力。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;read_file&lt;/code&gt;：读取文件；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;web_search&lt;/code&gt;：搜索网页；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;run_tests&lt;/code&gt;：执行测试；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;send_message&lt;/code&gt;：发送消息；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;create_order&lt;/code&gt;：创建订单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tool 应该具有明确的名称、描述、输入和输出。模型选择 Tool 并生成参数，真正的操作由 Agent Runtime 或外部服务执行。&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;Tool 回答的是：Agent 能做什么？&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="32-skill可复用的工作方法"&gt;3.2 Skill：可复用的工作方法
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://agentskills.io/home" target="_blank" rel="noopener"
+ &gt;Agent Skills 官方网站&lt;/a&gt;将 Skill 定义为扩展 Agent 专业知识和工作流程的开放格式。一个 Skill 通常是包含 &lt;code&gt;SKILL.md&lt;/code&gt; 的目录，也可以包含脚本、模板和参考资料。&lt;/p&gt;
+&lt;p&gt;Skill 采用渐进式加载：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Agent 先看到名称和描述。&lt;/li&gt;
+&lt;li&gt;任务匹配时加载完整 &lt;code&gt;SKILL.md&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;确有需要时再读取参考资料或执行脚本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;例如，“技术博客写作 Skill”会规定先确定读者、再核验资料、然后组织结构和校对全文。它不会自动赋予 Agent 搜索网络或修改文件的权限。&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;Skill 回答的是：这类任务应该怎么做？&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="33-mcp连接工具与上下文的标准协议"&gt;3.3 MCP：连接工具与上下文的标准协议
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://modelcontextprotocol.io/docs/learn/architecture" target="_blank" rel="noopener"
+ &gt;Model Context Protocol 官方架构文档&lt;/a&gt;说明，MCP 是 AI 应用交换工具与上下文的协议，不规定应用必须使用什么模型，也不规定 Agent 如何管理上下文。&lt;/p&gt;
+&lt;p&gt;MCP 采用三类角色：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt;：运行 Agent 的 AI 应用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt;：Host 中连接某个 Server 的组件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt;：提供能力或上下文的程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MCP Server 可以提供：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;MCP 原语&lt;/th&gt;
+					&lt;th&gt;作用&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Tools&lt;/td&gt;
+					&lt;td&gt;可执行的动作&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Resources&lt;/td&gt;
+					&lt;td&gt;可读取的数据和上下文&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Prompts&lt;/td&gt;
+					&lt;td&gt;可复用的提示模板&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ A["Agent／MCP Host"] --&gt; C["MCP Client"]
+ C &lt;--&gt;|"MCP 协议"| S["MCP Server"]
+ S --&gt; API["API／数据库／本地程序"]
+ S --&gt; T["Tools"]
+ S --&gt; R["Resources"]
+ S --&gt; P["Prompts"]
+
+&lt;/div&gt;
+
+&lt;p&gt;MCP 不是 Tool 本身。一个 MCP Server 可以暴露多个 Tool；同一个 Agent 也可以同时拥有内置 Tool、普通函数 Tool 和 MCP Tool。&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;MCP 回答的是：Agent 如何以标准方式连接外部能力？&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="34-三者的关系"&gt;3.4 三者的关系
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Skill：规定先查资料、再写作、最后校对
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tool：真正执行搜索、读文件和构建命令
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;MCP：把外部资料库或内容平台接入 Agent
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Agent：根据目标决定何时使用哪一个
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;需求&lt;/th&gt;
+					&lt;th&gt;应该使用&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;增加一个具体动作&lt;/td&gt;
+					&lt;td&gt;Tool&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;固化一套重复流程&lt;/td&gt;
+					&lt;td&gt;Skill&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;标准化连接外部服务&lt;/td&gt;
+					&lt;td&gt;MCP&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;根据现场反馈动态完成任务&lt;/td&gt;
+					&lt;td&gt;Agent&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="四promptcontextragmemory-又是什么"&gt;四、Prompt、Context、RAG、Memory 又是什么？
+&lt;/h2&gt;&lt;p&gt;这些概念负责的是“Agent 知道什么”，而 Tool 负责“Agent 能做什么”。&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;概念&lt;/th&gt;
+					&lt;th&gt;作用&lt;/th&gt;
+					&lt;th&gt;适用场景&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Prompt&lt;/td&gt;
+					&lt;td&gt;描述本次目标&lt;/td&gt;
+					&lt;td&gt;“分析这个 Bug”&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Instructions&lt;/td&gt;
+					&lt;td&gt;长期生效的行为规则&lt;/td&gt;
+					&lt;td&gt;代码规范、禁止修改的目录&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Context&lt;/td&gt;
+					&lt;td&gt;模型当前能够看到的信息总和&lt;/td&gt;
+					&lt;td&gt;对话、文件、Tool 结果&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;RAG&lt;/td&gt;
+					&lt;td&gt;从大型知识库按需取回相关内容&lt;/td&gt;
+					&lt;td&gt;企业文档、代码库、历史工单&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Memory&lt;/td&gt;
+					&lt;td&gt;跨会话保存有用信息&lt;/td&gt;
+					&lt;td&gt;用户偏好、历史决定、任务状态&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;RAG 不是 Memory。RAG 解决“这次应该查出什么”，Memory 解决“以后还应该记住什么”。Skill 也不是 Memory：Skill 保存的是可复用流程，而不是某次对话的历史。&lt;/p&gt;
+&lt;h2 id="五六种-agent-产品分别是什么"&gt;五、六种 Agent 产品分别是什么？
+&lt;/h2&gt;&lt;p&gt;先给出结论：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;Claude Code、Codex、OpenCode、OpenClaw、Hermes Agent 和 Nanobot 都属于 Agent 产品或 Agent Runtime，但它们服务的主要场景不同。&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;前三者以软件开发为中心；后三者更接近长期运行、连接聊天渠道和个人工作流的通用 Agent。&lt;/p&gt;
+&lt;h3 id="51-claude-code"&gt;5.1 Claude Code
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://www.anthropic.com/product/claude-code" target="_blank" rel="noopener"
+ &gt;Anthropic 官方介绍&lt;/a&gt;将 Claude Code 称为 Agentic Coding System。它能够读取代码库、跨文件修改、执行测试并交付代码。&lt;/p&gt;
+&lt;p&gt;它的定位是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;：编码 Agent／Agentic Harness；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心模型&lt;/strong&gt;：Claude 系列；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要环境&lt;/strong&gt;：终端、IDE、桌面端、Web 和云端执行环境；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展方式&lt;/strong&gt;：&lt;code&gt;CLAUDE.md&lt;/code&gt;、Skill、MCP、Hook、Subagent 和 Agent Team；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要用途&lt;/strong&gt;：理解代码、实现功能、排查 Bug、重构和测试。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Claude Code 是 Agent，不是 Claude 模型本身。Claude 是推理核心，Claude Code 是提供工具、上下文、权限和执行循环的 Harness。&lt;/p&gt;
+&lt;h3 id="52-codex"&gt;5.2 Codex
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://openai.com/codex/" target="_blank" rel="noopener"
+ &gt;OpenAI Codex 官方页面&lt;/a&gt;将 Codex 定位为可以端到端完成开发任务的 Coding Agent，覆盖功能开发、重构、迁移和 Pull Request 等工作。&lt;/p&gt;
+&lt;p&gt;它的定位是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;：编码 Agent／Agentic Harness；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心模型&lt;/strong&gt;：OpenAI 模型；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要环境&lt;/strong&gt;：CLI、IDE、桌面应用和云端任务；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展方式&lt;/strong&gt;：&lt;code&gt;AGENTS.md&lt;/code&gt;、Skill、MCP、Plugin、Hook 和 Subagent；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要用途&lt;/strong&gt;：本地仓库开发、代码审查、并行任务和云端委派。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Codex 也不是一个单独的模型名称。在当前产品语境中，Codex 更应理解为 OpenAI 的 Agent 产品和执行环境。&lt;/p&gt;
+&lt;h3 id="53-opencode"&gt;5.3 OpenCode
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://opencode.ai/docs" target="_blank" rel="noopener"
+ &gt;OpenCode 官方文档&lt;/a&gt;直接将其定义为开源 AI Coding Agent，可通过终端、桌面应用和 IDE 扩展使用。&lt;/p&gt;
+&lt;p&gt;它的定位是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;：开源编码 Agent／Harness；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心模型&lt;/strong&gt;：支持多个模型提供商；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要环境&lt;/strong&gt;：终端、桌面端和 IDE；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展方式&lt;/strong&gt;：自定义 Agent、Skill、MCP、Tool、Command 和 Plugin；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要用途&lt;/strong&gt;：以厂商中立的方式完成代码开发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="link" href="https://opencode.ai/docs/agents/" target="_blank" rel="noopener"
+ &gt;OpenCode Agent 文档&lt;/a&gt;区分 Primary Agent 和 Subagent，并允许每个 Agent 使用不同 Prompt、模型和工具权限。这也说明 OpenCode 既是一个 Agent 产品，又是可以承载多个 Agent 配置的 Runtime。&lt;/p&gt;
+&lt;h3 id="54-openclaw"&gt;5.4 OpenClaw
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener"
+ &gt;OpenClaw 官方仓库&lt;/a&gt;将其定义为运行在用户自己设备上的 Personal AI Assistant。它通过 Gateway 长期运行，并连接 WhatsApp、Telegram、Slack、Discord、飞书等消息渠道。&lt;/p&gt;
+&lt;p&gt;它的定位是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;：自托管个人 Agent 平台／Gateway；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心模型&lt;/strong&gt;：支持多个模型提供商；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要环境&lt;/strong&gt;：个人设备、服务进程和消息渠道；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展方式&lt;/strong&gt;：Tool、Skill、Plugin、Channel 和 Agent 配置；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要用途&lt;/strong&gt;：让个人 Agent 长期在线，通过常用聊天软件执行真实任务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OpenClaw 的重点不是代码仓库，而是“常驻、跨渠道、个人化”。它也能执行编码任务，但产品边界比编码 Agent 更广。&lt;/p&gt;
+&lt;h3 id="55-hermes-agent"&gt;5.5 Hermes Agent
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener"
+ &gt;Nous Research 官方文档&lt;/a&gt;将 Hermes Agent 定义为具有内置学习循环的 Self-improving AI Agent。它可以从经验创建和改进 Skill，并维护跨会话 Memory。&lt;/p&gt;
+&lt;p&gt;它的定位是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;：通用、自托管、强调自我改进的 Agent Runtime；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心模型&lt;/strong&gt;：支持 Nous Portal、OpenRouter、OpenAI 兼容接口等；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要环境&lt;/strong&gt;：本机、服务器、容器和多个消息平台；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展方式&lt;/strong&gt;：内置 Tool、Agent Skills、MCP、Memory 和 Subagent；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要用途&lt;/strong&gt;：个人助理、研究、自动化、远程任务和长期知识积累。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hermes Agent 的突出特点是把 Memory、Skill 创建和 Skill 改进组成显式学习闭环，而不只是加载人工编写的 Skill。&lt;/p&gt;
+&lt;h3 id="56-nanobot"&gt;5.6 Nanobot
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener"
+ &gt;HKUDS Nanobot 官方仓库&lt;/a&gt;将 Nanobot 定义为开源、超轻量、可自托管的 Personal AI Agent。它围绕一个小型 Agent Loop 提供聊天渠道、Tool、Memory、MCP、自动化和部署能力。&lt;/p&gt;
+&lt;p&gt;它的定位是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类型&lt;/strong&gt;：轻量级个人 Agent Runtime；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心模型&lt;/strong&gt;：支持 OpenAI 兼容接口和本地模型；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要环境&lt;/strong&gt;：CLI、WebUI、本地或服务器 Gateway、聊天平台；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展方式&lt;/strong&gt;：Tool、Skill、MCP、Channel、Automation 和 Subagent；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主要用途&lt;/strong&gt;：以较小、易读、可修改的运行时搭建个人 Agent。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nanobot 与 OpenClaw、Hermes Agent 的方向相近，但更强调核心轻量、源码可读和低复杂度部署。&lt;/p&gt;
+&lt;h2 id="六它们之间到底是什么关系"&gt;六、它们之间到底是什么关系？
+&lt;/h2&gt;&lt;h3 id="61-它们是同一层的产品不是-agent-的零件"&gt;6.1 它们是同一层的产品，不是 Agent 的零件
+&lt;/h3&gt;&lt;p&gt;六个项目都位于“Agent 产品／Harness”这一层。它们内部都可以包含模型、Tool、Skill、Memory、MCP 和一个或多个 Agent 实例。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TB
+ subgraph Coding ["编码 Agent／Agentic Harness"]
+ CC["Claude Code"]
+ CX["Codex"]
+ OC["OpenCode"]
+ end
+ subgraph Personal ["通用／个人 Agent Runtime"]
+ CL["OpenClaw"]
+ HA["Hermes Agent"]
+ NB["Nanobot"]
+ end
+ M["Model"] --&gt; Coding
+ M --&gt; Personal
+ T["Tool／Skill／MCP／Memory"] --&gt; Coding
+ T --&gt; Personal
+ Coding --&gt; ENV1["代码仓库与开发环境"]
+ Personal --&gt; ENV2["聊天渠道、个人设备与长期自动化"]
+
+&lt;/div&gt;
+
+&lt;p&gt;它们既不是 Tool，也不是 Skill，更不是 MCP Server。它们是使用这些组件来运行 Agent 的完整产品。&lt;/p&gt;
+&lt;h3 id="62-它们是不是互相竞争"&gt;6.2 它们是不是互相竞争？
+&lt;/h3&gt;&lt;p&gt;部分竞争，但不是完全同类竞争：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;产品&lt;/th&gt;
+					&lt;th&gt;核心方向&lt;/th&gt;
+					&lt;th&gt;最接近的对手&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Claude Code&lt;/td&gt;
+					&lt;td&gt;Claude 生态的专业编码 Agent&lt;/td&gt;
+					&lt;td&gt;Codex、OpenCode&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Codex&lt;/td&gt;
+					&lt;td&gt;OpenAI 生态的专业编码 Agent&lt;/td&gt;
+					&lt;td&gt;Claude Code、OpenCode&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenCode&lt;/td&gt;
+					&lt;td&gt;开源、多模型编码 Agent&lt;/td&gt;
+					&lt;td&gt;Claude Code、Codex&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenClaw&lt;/td&gt;
+					&lt;td&gt;常驻、多渠道个人 Agent 平台&lt;/td&gt;
+					&lt;td&gt;Hermes Agent、Nanobot&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Hermes Agent&lt;/td&gt;
+					&lt;td&gt;强调 Memory 与自我改进的通用 Agent&lt;/td&gt;
+					&lt;td&gt;OpenClaw、Nanobot&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Nanobot&lt;/td&gt;
+					&lt;td&gt;轻量、可读、可自托管的个人 Agent&lt;/td&gt;
+					&lt;td&gt;OpenClaw、Hermes Agent&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;编码 Agent 也可以写文档、搜索资料和运行普通命令；个人 Agent 也可以通过 Shell 或 Skill 修改代码。这里的分类表示产品的&lt;strong&gt;主要设计中心&lt;/strong&gt;，不是能力的绝对边界。&lt;/p&gt;
+&lt;h3 id="63-一个-agent-能不能调用另一个-agent"&gt;6.3 一个 Agent 能不能调用另一个 Agent？
+&lt;/h3&gt;&lt;p&gt;可以，但需要明确编排关系。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;OpenClaw 主 Agent
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └─ 通过命令、Plugin 或自定义 Tool 委派编码任务给 Codex
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └─ Codex 在代码仓库中修改并测试
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在这个具体系统里，OpenClaw 是 Orchestrator，Codex 被包装为 Tool 或 Worker Agent。但这不是它们天然的产品关系。换一个系统，Codex 也可以调用外部 Agent。&lt;/p&gt;
+&lt;p&gt;应当区分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;产品关系&lt;/strong&gt;：Claude Code、Codex 等是独立 Agent 产品。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;运行关系&lt;/strong&gt;：某次任务中，一个 Agent 可以成为另一个 Agent 的 Tool、Subagent 或 Handoff 目标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;协议关系&lt;/strong&gt;：独立 Agent 跨系统协作可以使用 &lt;a class="link" href="https://a2a-protocol.org/latest/" target="_blank" rel="noopener"
+ &gt;A2A&lt;/a&gt;；Agent 连接 Tool 和 Resource 通常使用 MCP。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="七应该如何选择"&gt;七、应该如何选择？
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;需求&lt;/th&gt;
+					&lt;th&gt;更适合的选择&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;深度使用 Claude 完成软件开发&lt;/td&gt;
+					&lt;td&gt;Claude Code&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;深度使用 OpenAI 生态并进行本地、桌面和云端编码&lt;/td&gt;
+					&lt;td&gt;Codex&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;希望开源、可配置并自由选择模型提供商&lt;/td&gt;
+					&lt;td&gt;OpenCode&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;希望个人 Agent 常驻设备并连接大量聊天渠道&lt;/td&gt;
+					&lt;td&gt;OpenClaw&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;重视长期 Memory、自动生成 Skill 和自我改进&lt;/td&gt;
+					&lt;td&gt;Hermes Agent&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;希望核心轻量、易读、易修改和自托管&lt;/td&gt;
+					&lt;td&gt;Nanobot&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;选择前还应考虑：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数据是留在本机，还是发送到云端模型？&lt;/li&gt;
+&lt;li&gt;Agent 获得了哪些文件、Shell、账号和消息权限？&lt;/li&gt;
+&lt;li&gt;写入、删除、发送和支付是否需要人工审批？&lt;/li&gt;
+&lt;li&gt;是否真的需要长期运行、跨渠道和 Memory？&lt;/li&gt;
+&lt;li&gt;是否能够查看完整 Tool 调用和失败记录？&lt;/li&gt;
+&lt;li&gt;单 Agent 已经足够时，是否仍然引入了复杂编排？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="八最终总结"&gt;八、最终总结
+&lt;/h2&gt;&lt;p&gt;理解 Agent 生态，可以从三个层次入手：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;第一层：模型
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Claude、GPT、Gemini 等，负责理解与推理。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;第二层：Agent 组件
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Prompt、Context、Tool、Skill、MCP、Memory、Guardrail 等。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;第三层：Agent 产品／Harness
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Claude Code、Codex、OpenCode、OpenClaw、Hermes Agent、Nanobot 等。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最后记住这些边界：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agent&lt;/strong&gt;：根据环境反馈持续决策和行动的系统。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tool&lt;/strong&gt;：一项可以真正执行的能力。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skill&lt;/strong&gt;：一套可复用的专业流程和知识。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP&lt;/strong&gt;：连接 Agent 与外部工具、资源的标准协议。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agentic Harness&lt;/strong&gt;：把模型、工具、上下文、权限和执行循环组合起来的运行框架。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code／Codex／OpenCode&lt;/strong&gt;：以软件开发为中心的 Agent 产品。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenClaw／Hermes Agent／Nanobot&lt;/strong&gt;：以长期运行、个人助理和跨渠道自动化为中心的 Agent Runtime。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;新的 Agent 产品还会不断出现，但判断方法不会频繁变化：先看它处于哪一层，再看它把决策权、工具、上下文和权限交给了谁。这样就能分清它是模型、组件、协议，还是一个真正运行 Agent 的完整系统。&lt;/p&gt;</description></item><item><title>把 Bug 修复接入飞书：多维表格、机器人与 Nanobot 的人机协同闭环</title><link>https://crownjoker07.github.io/p/%E6%8A%8A-bug-%E4%BF%AE%E5%A4%8D%E6%8E%A5%E5%85%A5%E9%A3%9E%E4%B9%A6%E5%A4%9A%E7%BB%B4%E8%A1%A8%E6%A0%BC%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E-nanobot-%E7%9A%84%E4%BA%BA%E6%9C%BA%E5%8D%8F%E5%90%8C%E9%97%AD%E7%8E%AF/</link><pubDate>Mon, 20 Jul 2026 06:40:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E6%8A%8A-bug-%E4%BF%AE%E5%A4%8D%E6%8E%A5%E5%85%A5%E9%A3%9E%E4%B9%A6%E5%A4%9A%E7%BB%B4%E8%A1%A8%E6%A0%BC%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E-nanobot-%E7%9A%84%E4%BA%BA%E6%9C%BA%E5%8D%8F%E5%90%8C%E9%97%AD%E7%8E%AF/</guid><description>
+ &lt;blockquote&gt;
+ &lt;p&gt;本文介绍一套运行在 Mac mini 上的 Bug 修复闭环：飞书多维表格负责记录和派单，Nanobot 负责分析、修复和推送分支，开发者负责最终 Review 与合并。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;这不是一条“全 AI 工作流”，而是一套 &lt;strong&gt;Human-in-the-loop（人工参与）&lt;/strong&gt; 的混合工作流。固定规则交给自动化，高变化任务交给 Agent，高风险决策仍然由人完成。&lt;/p&gt;
+&lt;h2 id="一先把每一步交给合适的执行者"&gt;一、先把每一步交给合适的执行者
+&lt;/h2&gt;&lt;p&gt;团队在飞书群中反馈的 Bug，通常只是一句对现象的描述：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;商店页兑换商品后没有扣除钻石。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;从这句话到修复代码，需要经过建单、派单、分析、修改和审核。它们并不都适合交给 Agent：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;阶段&lt;/th&gt;
+					&lt;th&gt;执行者&lt;/th&gt;
+					&lt;th&gt;具体动作&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;反馈问题&lt;/td&gt;
+					&lt;td&gt;人&lt;/td&gt;
+					&lt;td&gt;描述肉眼可见的异常，按需提供截图或录屏&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;创建工单&lt;/td&gt;
+					&lt;td&gt;多维表格机器人&lt;/td&gt;
+					&lt;td&gt;被 &lt;code&gt;@&lt;/code&gt; 后自动把群聊反馈写入多维表格&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;分发工单&lt;/td&gt;
+					&lt;td&gt;多维表格自动化&lt;/td&gt;
+					&lt;td&gt;新增记录后向机器人群发送卡片并 &lt;code&gt;@AIZZW&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;分析与修复&lt;/td&gt;
+					&lt;td&gt;Nanobot Agent&lt;/td&gt;
+					&lt;td&gt;读取材料、定位根因、修改代码、测试并推送分支&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;审核与关闭&lt;/td&gt;
+					&lt;td&gt;人&lt;/td&gt;
+					&lt;td&gt;Review 修复分支、合并 &lt;code&gt;main&lt;/code&gt; 并更新工单状态&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这里最重要的不是“用了多少 AI”，而是每一步的职责是否清楚。创建记录和发送消息都有确定的触发条件，不需要大模型参与；代码修复会随 Bug、仓库和上下文变化，才需要 Agent 动态决策；合并 &lt;code&gt;main&lt;/code&gt; 影响范围大，因此保留人工门禁。&lt;/p&gt;
+&lt;h2 id="二不要把整条流程都-ai-化"&gt;二、不要把整条流程都 AI 化
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener"
+ &gt;Anthropic 对 Agentic System 的划分&lt;/a&gt;提供了一个实用的判断框架：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Workflow（工作流）&lt;/strong&gt;：执行步骤由人提前编排好，大模型只能按照既定流程完成任务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent（智能体）&lt;/strong&gt;：人只给出目标，大模型根据当前结果自行决定下一步做什么、调用什么工具。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deterministic Automation（确定性自动化）&lt;/strong&gt;：不需要大模型判断，条件满足后就执行固定动作。例如，表格新增记录后发送 Webhook，收到消息后转发到指定群聊。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;端到端 AI 自动化看起来很理想，实际却会快速引入身份认证、上下文传递、状态管理、失败恢复、幂等性、可观测性和安全审计等问题。流程越长，模型的不确定性与外部系统的失败概率越容易叠加。&lt;/p&gt;
+&lt;p&gt;因此，没有必要一开始就把整个工作流 AI 化。更稳妥的方式是找到流程中真正需要理解和推理的局部瓶颈：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;strong&gt;把一张自然语言 Bug 工单，转化为经过验证的代码修复分支。&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;工单创建与任务分发继续使用飞书已有的确定性自动化，只有代码分析和修复交给 Agent。这种方式可以称为 &lt;strong&gt;Bounded Autonomy（有边界的自主性）&lt;/strong&gt;：Agent 能够在限定仓库和 worktree 中自主执行，但不能直接合并 &lt;code&gt;main&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;NIST AI 风险管理框架同样强调，应明确人机协作中的职责，并根据应用场景设计&lt;a class="link" href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" target="_blank" rel="noopener"
+ &gt;人工监督机制&lt;/a&gt;。AI 化的目标不是移除所有人，而是把人放在最需要判断和承担责任的位置。&lt;/p&gt;
+&lt;h2 id="三为什么选择-nanobot"&gt;三、为什么选择 Nanobot
+&lt;/h2&gt;&lt;p&gt;既然目标只是先打通一个局部 AI 环节，就没有必要从复杂的多 Agent 编排平台开始。&lt;/p&gt;
+&lt;p&gt;我选择 &lt;a class="link" href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener"
+ &gt;Nanobot&lt;/a&gt;，主要基于三点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;足够轻量&lt;/strong&gt;：可以直接运行在 Mac mini 上，不需要额外搭建一套复杂的调度和状态服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原生接入飞书&lt;/strong&gt;：支持飞书长连接，不要求 Mac mini 暴露公网 HTTP 地址。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持 Skill 扩展&lt;/strong&gt;：可以把“读取飞书卡片”和“修复代码仓库”拆成独立能力，并明确各自边界。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;轻量并不意味着功能越少越好，而是让系统复杂度与当前目标匹配。先让一个 Agent 稳定完成“工单到修复分支”，验证价值后再决定是否扩展其他环节。&lt;/p&gt;
+&lt;p&gt;整套闭环如下：&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ U["人&lt;br/&gt;反馈可见问题"] --&gt; G["飞书群&lt;br/&gt;提交反馈"]
+ G --&gt; B["自动化机器人&lt;br/&gt;创建工单"]
+ B --&gt; D["多维表格自动化&lt;br/&gt;派发卡片"]
+ D --&gt; N["Nanobot Agent&lt;br/&gt;分析与修复"]
+ N --&gt; W["Git Worktree&lt;br/&gt;测试并推送分支"]
+ W --&gt; H["人&lt;br/&gt;Review 与验证"]
+ H --&gt; M["main 分支&lt;br/&gt;人工合并"]
+ H --&gt; B
+
+&lt;/div&gt;
+
+&lt;p&gt;多维表格是工单的事实来源，飞书话题保存处理过程，Git 修复分支是 Agent 的技术交付物。&lt;/p&gt;
+&lt;h2 id="四最小化部署"&gt;四、最小化部署
+&lt;/h2&gt;&lt;h3 id="41-在-mac-mini-上运行-nanobot"&gt;4.1 在 Mac mini 上运行 Nanobot
+&lt;/h3&gt;&lt;p&gt;Nanobot 需要 Python 3.11 或更高版本。按照&lt;a class="link" href="https://github.com/HKUDS/nanobot/blob/main/docs/quick-start.md" target="_blank" rel="noopener"
+ &gt;官方快速开始&lt;/a&gt;完成安装和模型配置：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://raw.githubusercontent.com/HKUDS/nanobot/main/scripts/install.sh &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nanobot onboard --wizard
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nanobot status
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nanobot agent -m &lt;span class="s2"&gt;&amp;#34;Hello!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;命令行对话正常后，再启动连接飞书的 Gateway：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nanobot gateway
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;验证稳定后，可以参考官方的 &lt;a class="link" href="https://github.com/HKUDS/nanobot/blob/main/docs/deployment.md" target="_blank" rel="noopener"
+ &gt;macOS 部署说明&lt;/a&gt;，通过后台 Gateway 或 LaunchAgent 让它随 Mac mini 登录启动。&lt;/p&gt;
+&lt;h3 id="42-接入飞书"&gt;4.2 接入飞书
+&lt;/h3&gt;&lt;p&gt;在飞书开放平台创建自建应用并启用机器人能力，然后完成以下配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开通消息收发权限和 &lt;code&gt;im.message.receive_v1&lt;/code&gt; 事件。&lt;/li&gt;
+&lt;li&gt;事件订阅使用长连接模式。&lt;/li&gt;
+&lt;li&gt;Nanobot 的 &lt;code&gt;groupPolicy&lt;/code&gt; 使用 &lt;code&gt;mention&lt;/code&gt;，只在被 &lt;code&gt;@&lt;/code&gt; 时响应。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;allowFrom&lt;/code&gt; 限制可以触发 Agent 的成员。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;feishu-card-thread&lt;/code&gt; 还需要飞书官方 &lt;a class="link" href="https://github.com/larksuite/cli" target="_blank" rel="noopener"
+ &gt;lark-cli&lt;/a&gt; 读取卡片、下载附件和回复原话题：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx @larksuite/cli@latest install
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;lark-cli config init
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;lark-cli auth login --recommend
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;lark-cli auth status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="43-安装修复-skill"&gt;4.3 安装修复 Skill
+&lt;/h3&gt;&lt;p&gt;本流程使用的 Skill 位于 &lt;a class="link" href="https://github.com/CrownJoker07/AgentSkills" target="_blank" rel="noopener"
+ &gt;CrownJoker07/AgentSkills&lt;/a&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone https://github.com/CrownJoker07/AgentSkills.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; AgentSkills
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;./install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其中两个 Skill 各司其职：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Skill&lt;/th&gt;
+					&lt;th&gt;职责&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;feishu-card-thread&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;读取卡片和附件，在原卡片话题中提问、报告进度与交付结果&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;repo-bugfix&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;诊断 Bug，在独立 worktree 中修复、Review、测试、提交并推送分支&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;飞书 Skill 不修改代码，修复 Skill 也不直接操作飞书。通道和业务分离后，权限与故障边界都会更清楚。&lt;/p&gt;
+&lt;h2 id="五一张工单如何变成修复分支"&gt;五、一张工单如何变成修复分支
+&lt;/h2&gt;&lt;p&gt;多维表格机器人创建工单时，卡片至少需要包含 Bug 标题、当前表现、预期表现、复现步骤、目标仓库在 Mac mini 上的绝对路径，以及已有截图或录屏。没有提供的日志和报错不能由 Agent 猜测。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+sequenceDiagram
+ participant U as 反馈人
+ participant B as 飞书自动化
+ participant N as Nanobot
+ participant F as 飞书卡片 Skill
+ participant R as 仓库修复 Skill
+ participant G as Git 仓库
+ participant H as 开发者
+
+ U-&gt;&gt;B: 反馈 Bug，自动创建并派发工单
+ B-&gt;&gt;N: 发送卡片并提醒 AIZZW
+ N-&gt;&gt;F: 读取卡片、上下文和附件
+ F-&gt;&gt;R: 传递脱敏后的任务材料
+ R-&gt;&gt;R: 定位根因并判断是否可修复
+ alt 材料不足或无法修复
+ R--&gt;&gt;F: 返回最小补充问题或阻断原因
+ F--&gt;&gt;U: 在原话题回复
+ else 可以修复
+ R-&gt;&gt;R: 创建 worktree，修改、Review 和测试
+ R-&gt;&gt;G: 提交并推送修复分支
+ R--&gt;&gt;F: 返回根因、变更和测试结果
+ F--&gt;&gt;H: 在原话题交付修复报告
+ H-&gt;&gt;G: 人工验证并合并 main
+ H-&gt;&gt;B: 人工更新工单状态
+ end
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;repo-bugfix&lt;/code&gt; 不会收到卡片后立即修改代码。它先确认问题是否成立、根因是否位于指定仓库、现有证据是否足以支持修改。证据不足时只追问阻断当前步骤的最小信息。&lt;/p&gt;
+&lt;p&gt;确认可以修复后，Skill 创建独立 worktree 和 &lt;code&gt;fix/&amp;lt;bug-name&amp;gt;&lt;/code&gt; 分支。所有修改、Review 和测试都在 worktree 内完成，只有验证通过才提交并推送。它不会自动创建 PR、强制推送或合并 &lt;code&gt;main&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id="六简单也是一种扩展能力"&gt;六、简单也是一种扩展能力
+&lt;/h2&gt;&lt;p&gt;当前方案可以看作一个 &lt;strong&gt;Minimum Viable Workflow（最小可行工作流）&lt;/strong&gt;：先用最少的组件跑通闭环，再根据真实瓶颈增加能力。因为各环节职责独立，后续优化不需要推翻整条链路，只需在合适的位置插入新的 Agent 或自动化节点。&lt;/p&gt;
+&lt;p&gt;例如，反馈人可能只写一句“商店页兑换商品后没有扣除钻石”。这足以说明可见现象，却没有商品类型、复现条件和相关功能规则。此时可以在“自动建单”和“代码修复”之间增加一个 &lt;strong&gt;Bug Triage Agent（缺陷分诊 Agent）&lt;/strong&gt;，专门负责 &lt;strong&gt;Context Enrichment（上下文增强）&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;原始反馈 → 自动创建工单 → 缺陷分诊 Agent → 仓库修复 Agent
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;缺陷分诊 Agent 需要建立在对项目的真实理解之上，例如读取项目文档、模块说明、相关代码和历史工单。它的输出不是凭空补全一个看似完整的故事，而是明确区分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已经确认的事实；&lt;/li&gt;
+&lt;li&gt;根据项目知识得到的候选模块和排查方向；&lt;/li&gt;
+&lt;li&gt;仍然缺失的信息，以及需要向反馈人提出的最小问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;经过分诊后，粗略描述会变成结构更清楚、证据边界更明确的工单，再交给 &lt;code&gt;repo-bugfix&lt;/code&gt;。如果原始材料已经足够，则可以直接进入修复流程，不必强制增加一次模型调用。&lt;/p&gt;
+&lt;p&gt;这体现了 &lt;strong&gt;Composable Architecture（可组合架构）&lt;/strong&gt; 和 &lt;strong&gt;Progressive Enhancement（渐进式增强）&lt;/strong&gt; 的思路：保持主干简单，只在实际瓶颈处增加智能，而不是预先搭建一套庞大却尚未被验证的多 Agent 系统。&lt;/p&gt;
+&lt;h2 id="七把人工留在高风险节点"&gt;七、把人工留在高风险节点
+&lt;/h2&gt;&lt;p&gt;Agent 推送分支不等于 Bug 已经完成。模型可能误解业务规则，测试也不一定覆盖真实场景，因此开发者仍需完成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;核对根因与工单描述是否一致。&lt;/li&gt;
+&lt;li&gt;查看完整 Diff，排除无关修改和敏感信息。&lt;/li&gt;
+&lt;li&gt;重新执行相关测试并验证原始问题。&lt;/li&gt;
+&lt;li&gt;合并 &lt;code&gt;main&lt;/code&gt;，再把工单更新为“已完成”。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;同时遵循最小权限原则：飞书机器人只读取必要的消息和附件，Git 凭据只授权目标仓库，Nanobot 只操作工单明确指定的目录，凭据和内部日志不得出现在卡片或提交记录中。&lt;/p&gt;
+&lt;h2 id="八总结"&gt;八、总结
+&lt;/h2&gt;&lt;p&gt;这套方案不是用 AI 替换所有工具，而是把不同任务交给最合适的执行者：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;人反馈问题 → 自动化建单和派单 → Agent 分析并推送修复分支
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → 人工 Review 和合并 → 关闭工单
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;完整的 AI 自动化工作流很难一次搭好，也未必有必要。先选择一个边界明确、结果可验证的局部流程进行 AI 化，再用确定性自动化和人工门禁包住它，通常更容易落地，也更容易保持可控。&lt;/p&gt;
+&lt;p&gt;当粗略反馈、测试覆盖或任务分流成为新的瓶颈时，再加入对应的 Agent。这种从最小闭环逐步演进的方式，比一开始追求“全流程 AI 化”更务实。&lt;/p&gt;</description></item><item><title>BMAD：AI 驱动敏捷开发的突破性方法论与框架全解析</title><link>https://crownjoker07.github.io/p/bmadai-%E9%A9%B1%E5%8A%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E7%9A%84%E7%AA%81%E7%A0%B4%E6%80%A7%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%A1%86%E6%9E%B6%E5%85%A8%E8%A7%A3%E6%9E%90/</link><pubDate>Fri, 13 Mar 2026 07:45:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/bmadai-%E9%A9%B1%E5%8A%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E7%9A%84%E7%AA%81%E7%A0%B4%E6%80%A7%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%A1%86%E6%9E%B6%E5%85%A8%E8%A7%A3%E6%9E%90/</guid><description>
+ &lt;blockquote&gt;
+ &lt;p&gt;在讨论 BMAD 之前，需要先理解一个根本性问题：AI 到底是&amp;quot;怎么工作&amp;quot;的。这个问题的答案直接影响我们如何正确使用 AI 进行开发。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h2 id="一ai-的本质预测下一个-token"&gt;一、AI 的本质：预测下一个 token
+&lt;/h2&gt;&lt;p&gt;理解 AI 的能力边界，先要理解 AI 的工作原理。&lt;/p&gt;
+&lt;p&gt;大语言模型的核心机制非常简单：&lt;strong&gt;根据已有的文本序列，预测下一个最可能出现的 token（词/子词）&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ A[输入序列 今天天气] --&gt; B[Transformer 神经网络]
+ B --&gt; |计算概率分布| C[预测下一个token]
+ C --&gt; |好| D[输出 今天天气好]
+ D --&gt; |作为下一轮输入| A
+
+&lt;/div&gt;
+
+&lt;p&gt;这个过程可以形式化为：&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ subgraph Input
+ I1(token1)
+ I2(token2)
+ I3(...)
+ In(tokenN)
+ end
+
+ subgraph Model
+ M{计算下一个token的概率}
+ end
+
+ subgraph Output
+ O1(token1)
+ O2(token2)
+ O3(token3)
+ end
+
+ Input --&gt; Model --&gt; Output
+
+&lt;/div&gt;
+
+&lt;p&gt;AI 本身并不&amp;quot;理解&amp;quot;代码，它只是在&lt;strong&gt;模仿&lt;/strong&gt;训练数据中见过的模式。这带来两个关键结论：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;AI 擅长&lt;/th&gt;
+					&lt;th&gt;AI 不擅长&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;按已有模式生成内容&lt;/td&gt;
+					&lt;td&gt;真正理解业务目标&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;处理大量信息&lt;/td&gt;
+					&lt;td&gt;处理模糊、歧义的需求&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;执行明确指令&lt;/td&gt;
+					&lt;td&gt;做全新的推理&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;AI 见过海量代码，所以能写出看起来正确的代码，但它不知道这段代码为什么要这样写。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="各-ai-大模型为什么不一样"&gt;各 AI 大模型为什么不一样
+&lt;/h3&gt;&lt;p&gt;虽然所有大语言模型都基于&amp;quot;预测下一个 token&amp;quot;的工作机制，但不同模型之间存在差异：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;差异维度&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;训练数据&lt;/td&gt;
+					&lt;td&gt;代码占比、质量不同&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;上下文窗口&lt;/td&gt;
+					&lt;td&gt;影响长项目处理能力&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;对齐技术&lt;/td&gt;
+					&lt;td&gt;RLHF/DPO&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;影响指令遵循能力&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="二ai-编程的三大崩溃"&gt;二、AI 编程的三大崩溃
+&lt;/h2&gt;&lt;p&gt;当用 AI 进行软件开发时，会遇到三个核心问题，统称为&amp;quot;三大崩溃&amp;quot;。&lt;/p&gt;
+&lt;h3 id="21-上下文崩溃context-collapse"&gt;2.1 上下文崩溃（Context Collapse）
+&lt;/h3&gt;&lt;p&gt;AI 的上下文窗口（Context Window）有上限。即使模型支持 100K token，真实项目可能涉及数百万 token 的代码和文档。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ subgraph Problem [上下文崩溃]
+ P1[项目规模] --&gt; |50+ 文件| P2[代码量爆炸]
+ P2 --&gt; P3[AI 无法全部理解]
+ P3 --&gt; R1[AI 忘记之前代码]
+ P3 --&gt; R2[AI 重复实现功能]
+ P3 --&gt; R3[AI 破坏已有逻辑]
+ end
+
+ style P1 fill:#ffcccc
+ style P3 fill:#ffcccc
+ style R1 fill:#ffeeaa
+ style R2 fill:#ffeeaa
+ style R3 fill:#ffeeaa
+
+&lt;/div&gt;
+
+&lt;p&gt;典型表现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让 AI 修改一个函数，它忘记了同文件中另一个相关函数&lt;/li&gt;
+&lt;li&gt;让 AI 实现登录功能，它重新写了一个已有的用户模块&lt;/li&gt;
+&lt;li&gt;让 AI 添加新功能，它改动了不相关的代码导致 bug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="22-任务崩溃task-collapse"&gt;2.2 任务崩溃（Task Collapse）
+&lt;/h3&gt;&lt;p&gt;如果不给 AI 明确的任务边界，它会&amp;quot;放飞自我&amp;quot;。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ subgraph Problem [任务崩溃]
+ Input[需求： 做一个商城系统] --&gt; AI[AI 自主发挥]
+ AI --&gt; A[写一点登录]
+ AI --&gt; B[写一点购物车]
+ AI --&gt; C[写一点支付]
+ A &amp; B &amp; C --&gt; Chaos((代码混乱))
+ end
+
+ style Input fill:#e1f5fe
+ style Chaos fill:#ffcccc
+
+&lt;/div&gt;
+
+&lt;p&gt;你说&amp;quot;做个商城&amp;quot;，AI 可能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个功能都写一点&lt;/li&gt;
+&lt;li&gt;没有统一的架构&lt;/li&gt;
+&lt;li&gt;代码风格不一致&lt;/li&gt;
+&lt;li&gt;最后变成无法维护的&amp;quot;屎山&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="23-质量崩溃quality-collapse"&gt;2.3 质量崩溃（Quality Collapse）
+&lt;/h3&gt;&lt;p&gt;AI 生成的代码 bug 率远高于人类程序员。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ subgraph Problem [质量崩溃]
+ Code[AI 生成代码] --&gt; Check{检查结果}
+ Check --&gt;|有bug| Fix[AI 修复]
+ Fix --&gt; Check
+ Check --&gt;|修复中引入新bug| Worse[更差的代码]
+ end
+
+ style Code fill:#e1f5fe
+ style Worse fill:#ffcccc
+
+&lt;/div&gt;
+
+&lt;p&gt;常见问题：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;问题类型&lt;/th&gt;
+					&lt;th&gt;典型表现&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;幻觉&lt;/td&gt;
+					&lt;td&gt;调用不存在的 API、使用不存在的库&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;安全风险&lt;/td&gt;
+					&lt;td&gt;硬编码密码、SQL 注入漏洞&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;逻辑错误&lt;/td&gt;
+					&lt;td&gt;边界条件未处理、异常未捕获&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;风格问题&lt;/td&gt;
+					&lt;td&gt;命名不一致、格式混乱&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="24-判断力退化容易被忽视的问题"&gt;2.4 判断力退化（容易被忽视的问题）
+&lt;/h3&gt;&lt;p&gt;除了技术问题，Vibe Coding 还有一个容易被忽视的危害：&lt;strong&gt;人的判断力在退化&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;当你习惯了&amp;quot;出错 → 贴报错 → 让AI再改&amp;quot;这个循环，你会逐渐失去对代码的深度理解。你可能说不清某个模块到底是怎么工作的，只是知道&amp;quot;让AI改改能跑&amp;quot;。&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;以前&lt;/th&gt;
+					&lt;th&gt;Vibe Coding 后&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;理解代码为什么这样写&lt;/td&gt;
+					&lt;td&gt;只知道&amp;quot;能跑&amp;quot;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;能定位 bug 在哪&lt;/td&gt;
+					&lt;td&gt;只会贴报错给 AI&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;知道技术选型的理由&lt;/td&gt;
+					&lt;td&gt;依赖 AI 做决定&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;AI 时代，最稀缺的不是能写代码的人，而是能判断代码好坏的人。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="三ai-编程的演进"&gt;三、AI 编程的演进
+&lt;/h2&gt;&lt;h3 id="31-进化历程"&gt;3.1 进化历程
+&lt;/h3&gt;&lt;div class="mermaid" align="center"&gt;
+ 
+timeline
+ title AI 编程进化史
+ section 2013-2018
+ 语法补全 : Tabnine、Kite
+ section 2018-2021
+ 智能补全 : GitHub Copilot
+ section 2021-2023
+ 对话编程 : ChatGPT、Claude
+ section 2023-2024
+ IDE 集成 : Cursor、Windsurf
+ section 2024-2025
+ Vibe Coding : Andrej Karpathy 提出
+ section 2025-未来
+ Agent 主导 : Claude Code、BMAD
+
+&lt;/div&gt;
+
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;阶段&lt;/th&gt;
+					&lt;th&gt;时间&lt;/th&gt;
+					&lt;th&gt;特点&lt;/th&gt;
+					&lt;th&gt;程序员角色&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;语法补全&lt;/td&gt;
+					&lt;td&gt;2013-2018&lt;/td&gt;
+					&lt;td&gt;预测下一个词&lt;/td&gt;
+					&lt;td&gt;代码工人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;智能补全&lt;/td&gt;
+					&lt;td&gt;2018-2021&lt;/td&gt;
+					&lt;td&gt;代码片段建议&lt;/td&gt;
+					&lt;td&gt;副驾驶&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;对话编程&lt;/td&gt;
+					&lt;td&gt;2021-2023&lt;/td&gt;
+					&lt;td&gt;自然语言生成代码&lt;/td&gt;
+					&lt;td&gt;需求描述者&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IDE 集成&lt;/td&gt;
+					&lt;td&gt;2023-2024&lt;/td&gt;
+					&lt;td&gt;多文件操作&lt;/td&gt;
+					&lt;td&gt;协作者&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Vibe Coding&lt;/td&gt;
+					&lt;td&gt;2024-2025&lt;/td&gt;
+					&lt;td&gt;AI 主导实现&lt;/td&gt;
+					&lt;td&gt;审核者&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Agent 主导&lt;/td&gt;
+					&lt;td&gt;2025-未来&lt;/td&gt;
+					&lt;td&gt;全流程自主执行&lt;/td&gt;
+					&lt;td&gt;架构师&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="32-vibe-coding-的困境"&gt;3.2 Vibe Coding 的困境
+&lt;/h3&gt;&lt;p&gt;Vibe Coding（凭感觉编程）由 Andrej Karpathy 提出，核心理念是&amp;quot;用自然语言描述需求，AI 直接生成整个应用&amp;quot;。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ subgraph Old [Vibe Coding 模式]
+ U[你：描述需求] --&gt; AI[AI：生成代码]
+ AI --&gt; R[你：运行测试]
+ R --&gt; |报错| AI
+ end
+
+ style U fill:#e8f5e9
+ style AI fill:#fff3e0
+ style R fill:#ffebee
+
+&lt;/div&gt;
+
+&lt;p&gt;问题在于：这种模式缺乏系统化的工程管理，代码质量完全不可控。&lt;/p&gt;
+&lt;h3 id="33-agentic-engineering-的提出"&gt;3.3 Agentic Engineering 的提出
+&lt;/h3&gt;&lt;p&gt;Andrej Karpathy 进一步提出了 &lt;strong&gt;Agentic Engineering&lt;/strong&gt;（智能体工程化）的概念：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;AI 时代的软件开发是一门需要学习的专业技术。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ subgraph Change [角色转变]
+ Old1[程序员 = 代码工人] --&gt; New1[程序员 = AI 架构师]
+ Old2[写代码] --&gt; New2[指挥 AI]
+ Old3[Debug] --&gt; New3[Review]
+ end
+
+&lt;/div&gt;
+
+&lt;p&gt;核心变化：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以前：人写代码，AI 辅助&lt;/li&gt;
+&lt;li&gt;现在：人定义目标和架构，AI 执行具体任务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="sdd给ai立规矩"&gt;SDD：给AI立规矩
+&lt;/h2&gt;&lt;p&gt;面对 Vibe Coding 的问题，社区提出了 &lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt; 思路：先写规格，再让 AI 干活。&lt;/p&gt;
+&lt;p&gt;主流三个框架对比：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;框架&lt;/th&gt;
+					&lt;th&gt;核心理念&lt;/th&gt;
+					&lt;th&gt;适用场景&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Spec Kit&lt;/td&gt;
+					&lt;td&gt;宪法+七阶段门禁&lt;/td&gt;
+					&lt;td&gt;0→1 新项目&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenSpec&lt;/td&gt;
+					&lt;td&gt;增量 Delta&lt;/td&gt;
+					&lt;td&gt;日常迭代改功能&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;BMAD&lt;/td&gt;
+					&lt;td&gt;多 Agent 模拟团队&lt;/td&gt;
+					&lt;td&gt;复杂项目 / 学习&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Spec Kit&lt;/strong&gt;：GitHub 官方出品，适合需要严格流程管控的场景&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSpec&lt;/strong&gt;：轻量级，适合在已有项目上做增量开发&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BMAD&lt;/strong&gt;：覆盖最全面，适合想系统学习 AI 开发全流程的团队&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="四bmad-是什么"&gt;四、BMAD 是什么
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;BMAD&lt;/strong&gt; 全称 &lt;strong&gt;Breakthrough Method of Agile AI Driven Development&lt;/strong&gt;（敏捷 AI 驱动开发的突破性方法），是一个 AI 驱动的敏捷开发框架。&lt;/p&gt;
+&lt;p&gt;官方定义：帮助完成从构思规划到智能体实现的完整软件开发过程。&lt;/p&gt;
+&lt;h3 id="41-核心思路"&gt;4.1 核心思路
+&lt;/h3&gt;&lt;p&gt;BMAD 让 AI 模拟一个完整的软件团队：&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ subgraph Team [BMAD AI 团队]
+ BA[Business Analyst] --&gt; PM[Product Manager]
+ PM --&gt; Arch[Architect]
+ Arch --&gt; SM[Scrum Master]
+ SM --&gt; Dev[Developer]
+ SM --&gt; QA[QA]
+ end
+
+ Human[人类] --&gt; |定义目标| Team
+
+ style Human fill:#e8f5e9
+ style Team fill:#e3f2fd
+
+&lt;/div&gt;
+
+&lt;p&gt;内置 12+ 领域专家智能体，覆盖产品、设计、开发、测试全流程。&lt;/p&gt;
+&lt;h3 id="42-解决三大崩溃"&gt;4.2 解决三大崩溃
+&lt;/h3&gt;&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ subgraph Solution [BMAD 解决方案]
+ C1[上下文崩溃] --&gt; S1[文档分片 Epic Sharding]
+ C2[任务崩溃] --&gt; S2[任务分层 Epic→Story→Task]
+ C3[质量崩溃] --&gt; S3[三模式循环 Create→Validate→Edit]
+ end
+
+ style C1 fill:#ffebee
+ style C2 fill:#ffebee
+ style C3 fill:#ffebee
+ style S1 fill:#e8f5e9
+ style S2 fill:#e8f5e9
+ style S3 fill:#e8f5e9
+
+&lt;/div&gt;
+
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;崩溃&lt;/th&gt;
+					&lt;th&gt;BMAD 方案&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;上下文崩溃&lt;/td&gt;
+					&lt;td&gt;文档分片 + Epic Sharding&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;任务崩溃&lt;/td&gt;
+					&lt;td&gt;Epic → Story → Task 层级&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;质量崩溃&lt;/td&gt;
+					&lt;td&gt;Create → Validate → Edit 循环&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="五bmad-核心机制"&gt;五、BMAD 核心机制
+&lt;/h2&gt;&lt;h3 id="51-步骤文件架构"&gt;5.1 步骤文件架构
+&lt;/h3&gt;&lt;p&gt;每个步骤都重新加载上下文，避免 AI &amp;ldquo;中间迷失&amp;rdquo;：&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ subgraph Steps [BMAD 步骤文件]
+ S1[Step 1 需求分析] --&gt; S2[Step 2 PRD 输出]
+ S2 --&gt; S3[Step 3 架构设计]
+ S3 --&gt; S4[Step 4 Epic 拆分]
+ S4 --&gt; S5[Step 5 Story 开发]
+ end
+
+ S1 --&gt; |加载上下文| C1[Context1]
+ S2 --&gt; |加载上下文| C2[Context2]
+ S3 --&gt; |加载上下文| C3[Context3]
+ S4 --&gt; |加载上下文| C4[Context4]
+ S5 --&gt; |加载上下文| C5[Context5]
+
+&lt;/div&gt;
+
+&lt;h3 id="52-任务分层"&gt;5.2 任务分层
+&lt;/h3&gt;&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ Epic[Epic 大功能] --&gt; Story[Story 用户故事]
+ Story --&gt; Task[Task 具体任务]
+ Task --&gt; Code[Code 代码实现]
+
+ Epic --&gt; |拆分| Epic1[Epic1]
+ Epic --&gt; |拆分| Epic2[Epic2]
+ Epic --&gt; |拆分| Epic3[Epic3]
+
+ style Epic fill:#e3f2fd
+ style Story fill:#e8f5e9
+ style Task fill:#fff3e0
+ style Code fill:#f3e5f5
+
+&lt;/div&gt;
+
+&lt;h3 id="53-三模式循环"&gt;5.3 三模式循环
+&lt;/h3&gt;&lt;p&gt;每个工作流都具备三种能力：&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ Create[Create 创建] --&gt; Validate[Validate 验证]
+ Validate --&gt;|不通过| Edit[Edit 编辑]
+ Edit --&gt; Validate
+ Validate --&gt;|通过| Done[完成]
+
+ style Create fill:#e8f5e9
+ style Validate fill:#fff3e0
+ style Edit fill:#e3f2fd
+ style Done fill:#f3e5f5
+
+&lt;/div&gt;
+
+&lt;h3 id="54-完整工作流"&gt;5.4 完整工作流
+&lt;/h3&gt;&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ Start[需求] --&gt; PRD[PRD 文档]
+ PRD --&gt; Arch[架构设计]
+ Arch --&gt; Epic[Epic 拆分]
+ Epic --&gt; Story1[Story1]
+ Epic --&gt; Story2[Story2]
+ Epic --&gt; Story3[StoryN]
+ Story1 --&gt; Task1[Task1]
+ Story2 --&gt; Task2[Task2]
+ Story3 --&gt; Task3[TaskN]
+ Task1 --&gt; Code1[代码]
+ Task2 --&gt; Code2[代码]
+ Task3 --&gt; Code3[代码]
+ Code1 &amp; Code2 &amp; Code3 --&gt; Test[测试]
+ Test --&gt; Review[Review]
+
+ style Start fill:#e8f5e9
+ style PRD fill:#e3f2fd
+ style Arch fill:#fff3e0
+ style Epic fill:#f3e5f5
+ style Review fill:#ffcdd2
+
+&lt;/div&gt;
+
+&lt;h3 id="bmad-背后的原理context-engineering"&gt;BMAD 背后的原理：Context Engineering
+&lt;/h3&gt;&lt;p&gt;BMAD 的&amp;quot;步骤文件架构&amp;quot;本质上是在解决一个问题：&lt;strong&gt;如何管理 AI 的认知&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;AI 就像一个&amp;quot;失忆的强同事&amp;quot;——每次坐下来都需要准备好它需要的材料。材料不全，它干不好活；材料太多，它会迷失在信息海洋里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Context Engineering&lt;/strong&gt;（上下文工程）是 Anthropic 提出的概念，核心思路是系统性地管理 AI 在每次交互中能&amp;quot;看到&amp;quot;的信息：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;层级&lt;/th&gt;
+					&lt;th&gt;内容&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;System Context&lt;/td&gt;
+					&lt;td&gt;AI 规则、角色定义&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Project Context&lt;/td&gt;
+					&lt;td&gt;项目背景、架构、技术栈&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Task Context&lt;/td&gt;
+					&lt;td&gt;当前任务的需求和约束&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Local Context&lt;/td&gt;
+					&lt;td&gt;当前代码的具体实现&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;BMAD 通过每步重新加载上下文，让 AI 始终&amp;quot;记得&amp;quot;该记得的事——这正是 Context Engineering 的实践。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="六bmgd-模块游戏开发工作室"&gt;六、BMGD 模块：游戏开发工作室
+&lt;/h2&gt;&lt;p&gt;BMGD（Game Dev Studio）是 BMAD 的游戏开发模块，专注于游戏开发场景。&lt;/p&gt;
+&lt;h3 id="61-功能特性"&gt;6.1 功能特性
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多引擎支持&lt;/strong&gt;：Unity、Unreal、Godot、自定义引擎&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GDD 生成&lt;/strong&gt;：游戏设计文档自动生成&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quick Dev 模式&lt;/strong&gt;：快速原型制作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;叙事设计支持&lt;/strong&gt;：角色、对话、世界构建&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;21+ 种游戏类型&lt;/strong&gt;：包含特定引擎的架构指导&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="62-安装方式"&gt;6.2 安装方式
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx bmad-method install
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 选择 gds 模块&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或直接安装：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm install -g bmad-game-dev-studio
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="63-开发模式"&gt;6.3 开发模式
+&lt;/h3&gt;&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ A[开始] --&gt; B[选择引擎]
+ B --&gt; C[选择模式]
+
+ C --&gt;|快速原型| QuickDev[Quick Dev]
+ C --&gt;|完整生产| EpicFlow[Epic 驱动冲刺]
+
+ QuickDev --&gt; GDD1[GDD 生成]
+ EpicFlow --&gt; GDD2[GDD 生成]
+
+ GDD1 &amp; GDD2 --&gt; Dev[开发]
+ Dev --&gt; Test[测试]
+ Test --&gt; Deploy[部署]
+
+ style QuickDev fill:#e8f5e9
+ style EpicFlow fill:#e3f2fd
+
+&lt;/div&gt;
+
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;模式&lt;/th&gt;
+					&lt;th&gt;适用场景&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Quick Dev&lt;/td&gt;
+					&lt;td&gt;快速原型验证、概念验证&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Epic 冲刺&lt;/td&gt;
+					&lt;td&gt;完整生产开发周期&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="进阶让ai开发具有复利"&gt;进阶：让AI开发具有复利
+&lt;/h2&gt;&lt;p&gt;传统 SDD 有一个局限：&lt;strong&gt;每次任务都要从头组装上下文&lt;/strong&gt;。上次做类似功能积累的经验、踩过的坑、选的方案——下次做相似的事，AI 不记得。你得重新告诉它一遍。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Compound Engineering&lt;/strong&gt;（复利工程）想要解决的是这个问题：让 AI 开发系统具有&amp;quot;学习能力&amp;quot;。&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ Task1[第1次：45分钟] --&gt;|沉淀经验| Index[经验索引]
+ Index --&gt;|自动加载| Task2[第2次：15分钟]
+ Task2 --&gt; Index
+ Index --&gt;|持续优化| TaskN[第N次：5分钟]
+
+ style Index fill:#e8f5e9
+
+&lt;/div&gt;
+
+&lt;p&gt;核心思路：每次完成任务后，把方案、踩过的坑、决策理由抽取出来，写入经验索引。下次遇到类似场景，这些经验会被自动加载到 AI 的上下文里。&lt;/p&gt;
+&lt;p&gt;这就是从&amp;quot;人指挥 AI&amp;quot;到&amp;quot;AI 为人工作&amp;quot;的转变。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="七未来程序员的核心能力"&gt;七、未来程序员的核心能力
+&lt;/h2&gt;&lt;p&gt;AI 时代，程序员的核心能力发生转变：&lt;/p&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart LR
+ subgraph Old [以前]
+ O1[语法熟练]
+ O2[编码速度]
+ O3[框架掌握]
+ end
+
+ subgraph New [未来]
+ N1[架构设计]
+ N2[需求表达]
+ N3[代码审查]
+ end
+
+ Old --&gt;|时代变化| New
+
+&lt;/div&gt;
+
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;能力&lt;/th&gt;
+					&lt;th&gt;作用&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;架构能力&lt;/td&gt;
+					&lt;td&gt;告诉 AI 怎么拆分模块、选什么方案&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Prompt 能力&lt;/td&gt;
+					&lt;td&gt;把需求清晰、无歧义地表达给 AI&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Review 能力&lt;/td&gt;
+					&lt;td&gt;一眼看出 AI 生成代码的问题&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;产品思维&lt;/td&gt;
+					&lt;td&gt;知道该做什么，比知道怎么做更重要&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;AI 时代，最稀缺的不是能写代码的人，而是能定义好问题的人。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="八总结"&gt;八、总结
+&lt;/h2&gt;&lt;p&gt;BMAD 本质上是在回答一个问题：&lt;strong&gt;如何让 AI 开发变得可控&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;从 Vibe Coding 的&amp;quot;快速但混乱&amp;quot;，到 Agentic Engineering 的&amp;quot;工程化&amp;quot;，再到 BMAD 的&amp;quot;系统框架&amp;quot;，AI 编程正在从粗放走向精细。&lt;/p&gt;
+&lt;p&gt;关键认知：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;AI 的本质是&amp;quot;预测下一个 token&amp;quot;，是模仿而非思考&lt;/li&gt;
+&lt;li&gt;三大崩溃（上下文、任务、质量）是 AI 开发的根本挑战&lt;/li&gt;
+&lt;li&gt;BMAD 通过步骤文件、任务分层、三模式循环来解决这些问题&lt;/li&gt;
+&lt;li&gt;BMGD 模块为游戏开发提供了专业的工作流&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;未来，不会淘汰程序员，但会淘汰&amp;quot;只会在键盘上打字的人&amp;quot;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;参考资料：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[1] &lt;a class="link" href="https://docs.bmad-method.org/zh-cn/" target="_blank" rel="noopener"
+ &gt;欢迎使用 BMad 方法 | BMAD Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[2] &lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+ &gt;BMAD-METHOD GitHub 仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;RLHF (Reinforcement Learning from Human Feedback) 和 DPO (Direct Preference Optimization) 是训练时让模型更好地理解人类意图的技术&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>大模型检索增强系统（RAG）</title><link>https://crownjoker07.github.io/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9Frag/</link><pubDate>Tue, 21 Oct 2025 08:24:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9Frag/</guid><description>&lt;p&gt;大模型检索增强系统（RAG）是一种结合信息检索技术与大语言模型（LLM）的框架，旨在通过实时检索外部知识库来增强模型生成内容的准确性、时效性和专业性。其核心思想是让LLM在回答问题前先“查阅资料”，而非仅依赖内部训练数据，从而减少幻觉（虚构信息）、突破知识时效限制，并适配垂直领域需求。&lt;/p&gt;
+&lt;h3 id="-rag-的工作原理三步闭环"&gt;🔍 RAG 的工作原理：三步闭环
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;检索（Retrieve）​&lt;/strong&gt;​&lt;/p&gt;
+&lt;p&gt;将用户查询（如“如何重置密码？”）通过嵌入模型转换为向量，在向量数据库（如FAISS、Milvus）中快速匹配语义相似的文档片段。例如，检索企业知识库中最新操作指南。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;增强（Augment）​&lt;/strong&gt;​&lt;/p&gt;
+&lt;p&gt;将检索到的关键信息（如密码重置流程文本）与原始查询组合成增强提示词，例如：“基于以下上下文回答：{检索文本}。问题：{用户提问}”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;生成（Generate）​&lt;/strong&gt;​&lt;/p&gt;
+&lt;p&gt;大模型（如GPT、Llama）基于增强后的提示词生成最终答案，确保内容既依赖实时外部知识，又保持语言流畅性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="-核心组件与技术要素"&gt;🧩 核心组件与技术要素
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;知识库&lt;/strong&gt;​：存储多源数据（PDF、数据库等），需经过清洗、切块（如按500-800字/块）和向量化处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;嵌入模型&lt;/strong&gt;​（如Sentence-BERT）：将文本转化为向量，确保查询与知识库的语义对齐。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;向量数据库&lt;/strong&gt;​：支持高效相似度搜索，常用工具包括FAISS、Pinecone。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;生成模型&lt;/strong&gt;​：选择需匹配场景，如客服用GPT-3.5（低成本），专业分析用GPT-4（高精度）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-为何需要rag五大优势解析"&gt;💡 为何需要RAG？五大优势解析
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;降低幻觉&lt;/strong&gt;​：通过强制参考真实知识，将问答错误率从23%降至5%（如某车企知识库案例）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;实时更新&lt;/strong&gt;​：仅更新向量数据库即可同步新知识，成本比重新训练模型低90%。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;领域适配&lt;/strong&gt;​：结合专业知识库（如法律、医疗），解决通用模型“广而不精”的问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;可追溯性&lt;/strong&gt;​：答案可溯源至具体文档段落，满足法律、医疗等合规需求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;灵活性&lt;/strong&gt;​：支持多模态检索（文本、图像）和混合策略（向量+关键词检索），提升召回率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-典型应用场景"&gt;🚀 典型应用场景
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;智能客服&lt;/strong&gt;​：电商平台通过RAG实现个性化回复，问题解决率提升30%。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;医疗诊断&lt;/strong&gt;​：MedRAG系统结合症状库生成分步检查建议，辅助医生决策。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;内容创作&lt;/strong&gt;​：自动整合多份报告生成对比摘要，如学术研究辅助工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;代码生成&lt;/strong&gt;​：结合企业私有API文档，生成适配内部SDK的示例代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-挑战与演进方向"&gt;⚠️ 挑战与演进方向
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;当前挑战&lt;/strong&gt;​：检索噪声可能影响生成质量；实时检索增加系统延迟；长上下文处理易降低响应速度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;strong&gt;技术演进&lt;/strong&gt;​：从基础RAG向模块化RAG、智能体RAG（支持自主规划检索路径）发展，未来结合多模态数据（如X光片+病历）提升推理能力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RAG通过“检索+生成”的协同，将大模型变为可实时更新的“专家”，成为企业级AI应用的核心基础设施。如需进一步了解具体实现代码（如LangChain集成示例）或垂直领域案例，可提供更多细节以便深入探讨。&lt;/p&gt;</description></item><item><title>DeepSeek-V3学习</title><link>https://crownjoker07.github.io/p/deepseek-v3%E5%AD%A6%E4%B9%A0/</link><pubDate>Sat, 19 Apr 2025 14:37:00 +0800</pubDate><guid>https://crownjoker07.github.io/p/deepseek-v3%E5%AD%A6%E4%B9%A0/</guid><description>
+ &lt;blockquote&gt;
+ &lt;p&gt;最近AI大模型非常流行、中国也产生了许多属于自己的AI大模型，例如DeepSeek-V3等，作为程序员，我也打算了解一下AI大模型究竟是什么原理，居然可以通过对话的形式告诉你答案。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="源码拉取"&gt;源码拉取
+&lt;/h3&gt;&lt;p&gt;源码地址：&lt;a class="link" href="https://github.com/deepseek-ai/DeepSeek-V3.git" target="_blank" rel="noopener"
+ &gt;https://github.com/deepseek-ai/DeepSeek-V3.git&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="官方论文"&gt;官方论文
+&lt;/h3&gt;&lt;p&gt;地址：&lt;a class="link" href="https://arxiv.org/pdf/2412.19437" target="_blank" rel="noopener"
+ &gt;https://arxiv.org/pdf/2412.19437&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="项目布局分析"&gt;项目布局分析
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 项目目录结构
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── README.md # 核心说明文档
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── 模型架构说明（MLA注意力/负载均衡策略）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── 多框架支持（SGLang/LMDeploy/vLLM等）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── 性能基准（代码/数学/中英文任务）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── 商用许可（MIT License）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── inference/ # 推理核心模块
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── convert.py # 权重格式转换工具
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 参数: --n-experts 256 --model-parallel 16
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 关键技术：MoE分片/参数名映射
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── fp8_cast_bf16.py # 精度转换工具
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 功能: FP8→BF16转换
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 特性: 动态缩放因子管理/内存优化
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── generate.py # 分布式推理入口
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 交互式聊天接口（&amp;gt;&amp;gt;&amp;gt; 提示符）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 批量处理（--input-file参数）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 多节点通信（torchrun启动）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── kernel.py # 高性能计算核
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── FP8矩阵乘法（Triton实现）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── 权重反量化核（block_size=128）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── 激活量化函数
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── model.py # 模型架构定义
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── Transformer主类（片段25）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── MLA注意力（分离式位置编码）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── MoE门控（专家分组选择）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── configs/ # 模型配置目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── config_16B.json # 轻量级配置（RTX 4090等）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── config_236B.json # 中规模配置（企业级单机）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── config_671B.json # 全量配置（多节点分布式）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="readme阅读"&gt;README阅读
+&lt;/h3&gt;&lt;h4 id="introduction"&gt;Introduction
+&lt;/h4&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA) and DeepSeekMoE architectures, which were thoroughly validated in DeepSeek-V2. Furthermore, DeepSeek-V3 pioneers an auxiliary-loss-free strategy for load balancing and sets a multi-token prediction training objective for stronger performance. We pre-train DeepSeek-V3 on 14.8 trillion diverse and high-quality tokens, followed by Supervised Fine-Tuning and Reinforcement Learning stages to fully harness its capabilities. Comprehensive evaluations reveal that DeepSeek-V3 outperforms other open-source models and achieves performance comparable to leading closed-source models. Despite its excellent performance, DeepSeek-V3 requires only 2.788M H800 GPU hours for its full training. In addition, its training process is remarkably stable. Throughout the entire training process, we did not experience any irrecoverable loss spikes or perform any rollbacks.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关键点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixture-of-Experts (MoE):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="mermaid" align="center"&gt;
+ 
+flowchart TD
+ A[输入 Input&lt;br&gt;e.g. 文本Token序列] --&gt; B[门控网络 Gating Network]
+
+ subgraph C [专家网络 Experts&lt;br&gt;并行计算池]
+ C1[Expert 1]
+ C2[Expert 2]
+ C3[Expert 3]
+ C4[Expert ...]
+ end
+
+ B -- Top-K选择&lt;br&gt;（e.g. K=2） --&gt; C1
+ B -- Top-K选择&lt;br&gt;（e.g. K=2） --&gt; C2
+ B --&gt; C3
+ B --&gt; C4
+
+ C1 -- 输出1 --&gt; D{组合函数&lt;br&gt;Combining Function}
+ C2 -- 输出2 --&gt; D
+ C3 --&gt; E[丢弃]
+ C4 --&gt; E
+
+ D -- 加权求和 --&gt; F[最终输出 Output]
+
+&lt;/div&gt;
+
+&lt;p&gt;神经网络架构设计，旨在构建更大规模的模型而不显著增加计算成本。它的核心思想是&amp;quot;专家分工&amp;quot;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Multi-head Latent Attention (MLA)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;auxiliary-loss-free strategy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;multi-token prediction&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;评测基准：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MMLU（Massive Multitask Language Understanding，大规模多任务语言理解）：&lt;br&gt;
+一个涵盖 57 个主题的多项选择题基准，用于评估大规模语言模型的知识和推理能力。包括基本数学、美国历史、计算机科学、法律等多个领域。&lt;/li&gt;
+&lt;li&gt;MMLU Pro：&lt;br&gt;
+MMLU 的专业级别版本，包含更具挑战性的问题，旨在评估模型在专业领域的理解和推理能力。&lt;/li&gt;
+&lt;li&gt;GPQA-Diamond（Grade-Level Problems in Question Answering）：&lt;br&gt;
+旨在提供一个全面的框架，能够测试模型在多种推理场景下的能力，并推动大模型在更加复杂任务上的改进。&lt;/li&gt;
+&lt;li&gt;MATH-500：&lt;br&gt;
+OpenAI从MATH评测数据集中精选的500个更具代表性的数学评测基准&lt;/li&gt;
+&lt;li&gt;AIME 2024（American Invitational Mathematics Examination）：&lt;br&gt;
+美国数学邀请赛，是美国面向中学生的邀请式竞赛，3个小时完成15道题，难度很高。&lt;/li&gt;
+&lt;li&gt;SWE-bench（Software Engineering Bench）：&lt;br&gt;
+一个从GitHub上提炼的真实世界的Python代码仓的任务评测数据集&lt;/li&gt;
+&lt;li&gt;SWE-bench Verified：&lt;br&gt;
+OpenAI基于SWE-Bench提炼的更加准确和更具代表性的大模型代码工程任务解决能力评测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="model-summary"&gt;Model Summary
+&lt;/h4&gt;&lt;hr&gt;
+&lt;p&gt;Architecture: Innovative Load Balancing Strategy and Training Objective&lt;/p&gt;
+&lt;p&gt;On top of the efficient architecture of DeepSeek-V2, we pioneer an auxiliary-loss-free strategy for load balancing, which minimizes the performance degradation that arises from encouraging load balancing.
+We investigate a Multi-Token Prediction (MTP) objective and prove it beneficial to model performance. It can also be used for speculative decoding for inference acceleration.&lt;/p&gt;</description></item></channel></rss>

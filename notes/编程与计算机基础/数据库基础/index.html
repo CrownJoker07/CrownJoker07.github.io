@@ -1,0 +1,230 @@
+<!doctype html><html lang=zh-CN dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="数据库基础 本文整理数据库系统、关系模型、SQL、数据库设计与事务控制等基础知识。\n数据库概述 SQL 概述 SQL，一般发音为 sequel，SQL 的全称 (Structured Query Language)，SQL 用来和数据库打交道，完成和数据库的通信，SQL是一套标准。 "><title>数据库基础</title><link rel=canonical href=https://crownjoker07.github.io/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/scss/style.min.e62e09c60ba428a627e03568fa3df938f6a8224f815b5846f00816c17d4a0be4.css><meta property='og:title' content="数据库基础"><meta property='og:description' content="数据库基础 本文整理数据库系统、关系模型、SQL、数据库设计与事务控制等基础知识。\n数据库概述 SQL 概述 SQL，一般发音为 sequel，SQL 的全称 (Structured Query Language)，SQL 用来和数据库打交道，完成和数据库的通信，SQL是一套标准。 "><meta property='og:url' content='https://crownjoker07.github.io/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/'><meta property='og:site_name' content='庄泽伟的博客'><meta property='og:type' content='article'><meta property='article:section' content='Notes'><meta property='article:published_time' content='2025-02-16T15:15:16+08:00'><meta property='article:modified_time' content='2025-02-16T15:15:16+08:00'><meta name=twitter:title content="数据库基础"><meta name=twitter:description content="数据库基础 本文整理数据库系统、关系模型、SQL、数据库设计与事务控制等基础知识。\n数据库概述 SQL 概述 SQL，一般发音为 sequel，SQL 的全称 (Structured Query Language)，SQL 用来和数据库打交道，完成和数据库的通信，SQL是一套标准。 "><link rel="shortcut icon" href=/favicon/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar.png width=486 height=484 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>😄</span></figure><div class=site-meta><h1 class=site-name><a href=/>庄泽伟的博客</a></h1><h2 class=site-description>一只乌鸦的自白</h2></div></header><ol class=menu-social><li><a href=https://space.bilibili.com/106612965 title=Bilibili rel=me><svg class="icon icon-tabler icon-tabler-brand-twitter" width="800" height="800" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.223 3.086a1.25 1.25.0 010 1.768L17.08 5.996h1.17A3.75 3.75.0 0122 9.747v7.5a3.75 3.75.0 01-3.75 3.75H5.75A3.75 3.75.0 012 17.247v-7.5a3.75 3.75.0 013.75-3.75h1.166L5.775 4.855a1.25 1.25.0 111.767-1.768l2.652 2.652c.079.079.145.165.198.257h3.213c.053-.092.12-.18.199-.258l2.651-2.652a1.25 1.25.0 011.768.0zm.027 5.42H5.75A1.25 1.25.0 004.503 9.663l-.003.094v7.5c0 .659.51 1.199 1.157 1.246l.093.004h12.5a1.25 1.25.0 001.247-1.157l.003-.093v-7.5c0-.69-.56-1.25-1.25-1.25zm-10 2.5c.69.0 1.25.56 1.25 1.25v1.25a1.25 1.25.0 11-2.5.0v-1.25c0-.69.56-1.25 1.25-1.25zm7.5.0c.69.0 1.25.56 1.25 1.25v1.25a1.25 1.25.0 11-2.5.0v-1.25c0-.69.56-1.25 1.25-1.25z"/></svg></a></li><li><a href=https://github.com/CrownJoker07 title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>文章</span></a></li><li class=current><a href=/notes/><svg class="icon icon-tabler icon-tabler-notebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="12" y1="11" x2="16" y2="11"/><line x1="12" y1="15" x2="16" y2="15"/></svg>
+<span>笔记</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>项目</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/personal/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>个人</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ol><li><a href=#数据库概述>数据库概述</a><ol><li><a href=#sql-概述>SQL 概述</a></li><li><a href=#什么是数据库>什么是数据库</a></li><li><a href=#mysql-概述>MySQL 概述</a></li><li><a href=#数据库中的表>数据库中的表</a></li><li><a href=#sql-的分类>SQL 的分类</a></li></ol></li><li><a href=#连接查询>连接查询</a></li><li><a href=#mysql-常用数据类型>MySQL 常用数据类型</a></li><li><a href=#表约束>表约束</a></li><li><a href=#mysql-常用存储引擎>MySQL 常用存储引擎</a><ol><li><a href=#myisam-存储引擎>MyISAM 存储引擎</a></li><li><a href=#innodb-存储引擎>InnoDB 存储引擎</a></li><li><a href=#memory-存储引擎>MEMORY 存储引擎</a></li></ol></li><li><a href=#数据库系统结构>数据库系统结构</a><ol><li><a href=#三级模式与两级映像>三级模式与两级映像</a></li></ol></li><li><a href=#关系模型>关系模型</a><ol><li><a href=#候选键主键与外键>候选键、主键与外键</a></li><li><a href=#完整性约束>完整性约束</a></li></ol></li><li><a href=#常用-sql-操作>常用 SQL 操作</a><ol><li><a href=#创建表>创建表</a></li><li><a href=#创建视图>创建视图</a></li><li><a href=#新增删除与修改数据>新增、删除与修改数据</a></li></ol></li><li><a href=#数据库设计>数据库设计</a><ol><li><a href=#e-r-模型>E-R 模型</a></li><li><a href=#关系规范化>关系规范化</a></li></ol></li><li><a href=#事务与并发控制>事务与并发控制</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/>数据库基础</a></h2></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2025-02-16T15:15:16+08:00>2月 16, 2025</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 6 分钟</time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span>目录</span></div></summary><nav class=toc-nav><ol><li><a href=#数据库概述>数据库概述</a><ol><li><a href=#sql-概述>SQL 概述</a></li><li><a href=#什么是数据库>什么是数据库</a></li><li><a href=#mysql-概述>MySQL 概述</a></li><li><a href=#数据库中的表>数据库中的表</a></li><li><a href=#sql-的分类>SQL 的分类</a></li></ol></li><li><a href=#连接查询>连接查询</a></li><li><a href=#mysql-常用数据类型>MySQL 常用数据类型</a></li><li><a href=#表约束>表约束</a></li><li><a href=#mysql-常用存储引擎>MySQL 常用存储引擎</a><ol><li><a href=#myisam-存储引擎>MyISAM 存储引擎</a></li><li><a href=#innodb-存储引擎>InnoDB 存储引擎</a></li><li><a href=#memory-存储引擎>MEMORY 存储引擎</a></li></ol></li><li><a href=#数据库系统结构>数据库系统结构</a><ol><li><a href=#三级模式与两级映像>三级模式与两级映像</a></li></ol></li><li><a href=#关系模型>关系模型</a><ol><li><a href=#候选键主键与外键>候选键、主键与外键</a></li><li><a href=#完整性约束>完整性约束</a></li></ol></li><li><a href=#常用-sql-操作>常用 SQL 操作</a><ol><li><a href=#创建表>创建表</a></li><li><a href=#创建视图>创建视图</a></li><li><a href=#新增删除与修改数据>新增、删除与修改数据</a></li></ol></li><li><a href=#数据库设计>数据库设计</a><ol><li><a href=#e-r-模型>E-R 模型</a></li><li><a href=#关系规范化>关系规范化</a></li></ol></li><li><a href=#事务与并发控制>事务与并发控制</a></li></ol></nav></details></aside><section class=article-content><h1 id=数据库基础>数据库基础</h1><p>本文整理数据库系统、关系模型、SQL、数据库设计与事务控制等基础知识。</p><h2 id=数据库概述>数据库概述</h2><h3 id=sql-概述>SQL 概述</h3><blockquote><p> 
+<strong>SQL</strong>，一般发音为 sequel，SQL 的全称 (Structured Query Language)，SQL 用来和数据库打交道，完成和数据库的通信，SQL是一套标准。
+ </p></blockquote><h3 id=什么是数据库>什么是数据库</h3><blockquote><p> 
+<strong>数据库</strong>，通常是==一个或一组文件，保存了一些符合特定规格的数据==,数据库对应的英语单词是 DataBase,简称:DB。
+数据库软件称为<strong>数据库管理系统</strong>（DBMS），全称为 DataBase Management System，如：Oracle、SQL Server、MySql、Sybase、informix、DB2、interbase、PostgreSql。
+ </p></blockquote><h3 id=mysql-概述>MySQL 概述</h3><blockquote><p> 
+<strong>MySQL</strong> 最初是由“MySQL AB”公司开发的一套==关系型数据库管理系统==（RDBMS-Relational Database Mangerment System）。
+MySQL 不仅是最流行的开源数据库，而且是业界成长最快的数据库，每天有超过 7 万次的下载量，其应用范围从大型企业到专有的嵌入应用系统。
+ </p></blockquote><h3 id=数据库中的表>数据库中的表</h3><blockquote><p> 
+表(table)是一种结构化的文件，可以用来存储特定类型的数据，如：学生信息，课程信息，都可以放到表中。另外表都有特定的名称，而且不能重复。
+表中具有几个概念：列、行、主键。 ==列叫做字段(Column)==，==行叫做表中的记录==,每一个字段都有:字段名称/字段数据类型/字段约束/字段长度。
+表是数据库最基本的单元。
+<img class=gallery-image data-flex-basis=1782px data-flex-grow=742 height=124 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-001.png srcset="/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-001_hu_791966686efff318.png 800w, /notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-001.png 921w" width=921>
+ </p></blockquote><h3 id=sql-的分类>SQL 的分类</h3><blockquote><p> 
+数据查询语言(DQL-Data Query Language):<strong>select</strong>;</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>select</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=s1>&#39;字段&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>from</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=s1>&#39;表名&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>where</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=s1>&#39;条件方程式&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>group</span><span class=w> </span><span class=k>by</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=s1>&#39;字段&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>having</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=s1>&#39;条件方程式&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>order</span><span class=w> </span><span class=k>by</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=s1>&#39;字段&#39;</span><span class=w> </span><span class=k>desc</span><span class=o>/</span><span class=k>asc</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>limit</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=s1>&#39;起始下标&#39;</span><span class=p>,</span><span class=s1>&#39;长度&#39;</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p>数据操纵语言(DML-Data Manipulation Language):<strong>insert</strong>,<strong>delete</strong>,<strong>update</strong>;
+数据定义语言(DDL-Data Definition Language):<strong>create</strong> ,<strong>drop</strong>,<strong>alter</strong>;
+事务控制语言(TCL-Transactional Control Language):<strong>commit</strong> ,<strong>rollback</strong>;
+数据控制语言(DCL-Data Control Language):<strong>grant</strong>,<strong>revoke</strong>;
+ </p></blockquote><hr><h2 id=连接查询>连接查询</h2><blockquote><p> 
+<strong>各表数据</strong>
+<img alt=dept class=gallery-image data-flex-basis=395px data-flex-grow=164 height=191 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-002.png width=315>
+<img alt=emp class=gallery-image data-flex-basis=453px data-flex-grow=188 height=379 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-003.png width=716>
+<img alt=salgrade class=gallery-image data-flex-basis=318px data-flex-grow=132 height=208 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-004.png width=276></p><p> 
+<strong>内连接</strong>（无主次关系）：
+ </p><ul><li>等值连接</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>select</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>ename</span><span class=p>,</span><span class=n>d</span><span class=p>.</span><span class=n>dname</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=k>from</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>emp</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>e</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=k>inner</span><span class=w> </span><span class=k>join</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>dept</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>d</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=k>on</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>deptno</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>d</span><span class=p>.</span><span class=n>deptno</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><img class=gallery-image data-flex-basis=152px data-flex-grow=63 height=359 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-005.png width=228>
+ </p><ul><li>非等值连接</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>select</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>ename</span><span class=p>,</span><span class=n>e</span><span class=p>.</span><span class=n>sal</span><span class=p>,</span><span class=n>s</span><span class=p>.</span><span class=n>grade</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>from</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>emp</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>e</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>inner</span><span class=w> </span><span class=k>join</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>salgrade</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>s</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>on</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>sal</span><span class=w> </span><span class=k>between</span><span class=w> </span><span class=n>s</span><span class=p>.</span><span class=n>losal</span><span class=w> </span><span class=k>and</span><span class=w> </span><span class=n>s</span><span class=p>.</span><span class=n>hisal</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><img class=gallery-image data-flex-basis=172px data-flex-grow=71 height=361 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-006.png width=259>
+ </p><ul><li>自连接</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>select</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>a</span><span class=p>.</span><span class=n>ename</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=s1>&#39;员工名&#39;</span><span class=p>,</span><span class=n>b</span><span class=p>.</span><span class=n>ename</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=s1>&#39;领导名&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>from</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>emp</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>a</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>inner</span><span class=w> </span><span class=k>join</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>emp</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>b</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>on</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>a</span><span class=p>.</span><span class=n>mgr</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>b</span><span class=p>.</span><span class=n>empno</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><img class=gallery-image data-flex-basis=168px data-flex-grow=70 height=344 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-007.png width=241>
+ </p><p><strong>外连接</strong>（有主次关系）：
+ </p><ul><li>左外连接</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>select</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>ename</span><span class=p>,</span><span class=n>d</span><span class=p>.</span><span class=n>dname</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>from</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>dept</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>d</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>left</span><span class=w> </span><span class=k>outer</span><span class=w> </span><span class=k>join</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>emp</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>e</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>on</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>deptno</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>d</span><span class=p>.</span><span class=n>deptno</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p> </p><ul><li>右外连接</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>select</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>ename</span><span class=p>,</span><span class=n>d</span><span class=p>.</span><span class=n>dname</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>from</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>emp</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>e</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>right</span><span class=w> </span><span class=k>outer</span><span class=w> </span><span class=k>join</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>dept</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=n>d</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>on</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>e</span><span class=p>.</span><span class=n>deptno</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>d</span><span class=p>.</span><span class=n>deptno</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><img class=gallery-image data-flex-basis=150px data-flex-grow=62 height=384 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/basics-008.png width=240>
+ 
+<strong>全连接</strong>
+ </p></blockquote><p> </p><h2 id=mysql-常用数据类型>MySQL 常用数据类型</h2><div class=table-wrapper><table><thead><tr><th>类型</th><th>描述</th></tr></thead><tbody><tr><td><center>Char(长度)</td><td><center>定长字符串，存储空间大小固定，适合作为主键或外键</td></tr><tr><td><center>Varchar(长度)</td><td><center>变长字符串，存储空间等于实际数据空间</td></tr><tr><td><center>double(有效数字位数，小数位)</td><td><center>数值型</td></tr><tr><td><center>Float(有效数字位数，小数位)</td><td><center>数值型</td></tr><tr><td><center>Int(长度)</td><td><center>整型</td></tr><tr><td><center>bigint(长度)</td><td><center>长整型</td></tr><tr><td><center>Date</td><td><center>日期型</td></tr><tr><td><center>BLOB</td><td><center>Binary Large OBject（二进制大对象）</td></tr><tr><td><center>CLOB</td><td><center>Character Large OBject（字符大对象）</td></tr></tbody></table></div><p> </p><h2 id=表约束>表约束</h2><blockquote><p> 
+a) 非空约束：<strong>not null</strong>（数据不能为空）
+b) 唯一约束：<strong>unique</strong> （数据不能重复）</p><ul><li>列级约束(单一约束)</li><li>表级约束(联合约束) （unique（&lsquo;字段名&rsquo;,&lsquo;字段名&rsquo;））</li></ul><p>c) 主键约束：<strong>primary key</strong>(PK)（唯一标识）</p><ul><li>列级约束(单一主键)</li><li>表级约束(复合主键) （unique（&lsquo;字段名&rsquo;,&lsquo;字段名&rsquo;））</li></ul><p>d) 外键约束：<strong>foreign key</strong>(FK)
+ 指令：foreign key(&lsquo;字段名&rsquo;) references &lsquo;另一张表名&rsquo;(&lsquo;字段名&rsquo;)
+ </p></blockquote><p> </p><h2 id=mysql-常用存储引擎>MySQL 常用存储引擎</h2><blockquote><p> </p><h3 id=myisam-存储引擎>MyISAM 存储引擎</h3><p>MyISAM 存储引擎是 MySQL 最常用的引擎。
+它管理的表具有以下特征：
+– 使用三个文件表示每个表：</p><ul><li>格式文件 — 存储表结构的定义（mytable.frm）</li><li>数据文件 — 存储表行的内容（mytable.MYD）</li><li>索引文件 — 存储表上索引（mytable.MYI）</li></ul><p>– 灵活的 AUTO_INCREMENT 字段处理
+– 可被转换为压缩、只读表来节省空间
+ </p><h3 id=innodb-存储引擎>InnoDB 存储引擎</h3><p>InnoDB 存储引擎是 MySQL 的缺省引擎。
+它管理的表具有下列主要特征：
+– 每个 InnoDB 表在数据库目录中以.frm 格式文件表示
+– InnoDB 表空间 tablespace 被用于存储表的内容
+– 提供一组用来记录事务性活动的日志文件
+– 用 COMMIT(提交)、SAVEPOINT 及 ROLLBACK(回滚)支持事务处理
+– 提供全 ACID 兼容
+– 在 MySQL 服务器崩溃后提供自动恢复
+– 多版本（MVCC）和行级锁定
+– 支持外键及引用的完整性，包括级联删除和更新
+ </p><h3 id=memory-存储引擎>MEMORY 存储引擎</h3><p>使用 MEMORY 存储引擎的表，其数据存储在内存中，且行的长度固定，这两个特点使得 MEMORY 存储引擎非
+常快。
+MEMORY 存储引擎管理的表具有下列特征：
+– 在数据库目录内，每个表均以.frm 格式的文件表示。
+– 表数据及索引被存储在内存中。
+– 表级锁机制。
+– 不能包含 TEXT 或 BLOB 字段。
+MEMORY 存储引擎以前被称为 HEAP 引擎。
+ </p></blockquote><h2 id=数据库系统结构>数据库系统结构</h2><p>数据库管理系统主要负责以下工作：</p><ol><li>数据定义：定义外模式、模式、内模式以及相应约束。</li><li>数据操纵：提供数据检索和更新能力。</li><li>数据控制：负责安全性、完整性、并发控制和故障恢复。</li><li>数据维护：执行数据转储、恢复、重组和性能分析。</li><li>通信：协调应用程序、用户与数据库之间的交互。</li></ol><h3 id=三级模式与两级映像>三级模式与两级映像</h3><p><img class=gallery-image data-flex-basis=434px data-flex-grow=181 height=1389 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-001.png srcset="/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-001_hu_7cb3db4df4e531a9.png 800w, /notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-001_hu_9254436552e8344d.png 1600w, /notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-001_hu_3a666de46f090371.png 2400w, /notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-001.png 2516w" width=2516></p><p>数据库系统采用三级模式结构：</p><ol><li><strong>外模式</strong>：用户能够看到和使用的局部数据逻辑结构。</li><li><strong>模式</strong>：全体数据的逻辑结构及其关联约束，也称概念模式。</li><li><strong>内模式</strong>：数据存储结构的描述，包括存储方式和索引方式等。</li></ol><p>外模式与模式之间的映像保证逻辑独立性，模式与内模式之间的映像保证物理独立性。</p><h2 id=关系模型>关系模型</h2><h3 id=候选键主键与外键>候选键、主键与外键</h3><ul><li><strong>候选键</strong>：能够唯一标识关系中元组，并且不含多余属性的属性集合。</li><li><strong>主键</strong>：从候选键中选定、用于标识元组的键。</li><li><strong>外键</strong>：一个关系中引用另一个关系主键的属性或属性集合。</li></ul><h3 id=完整性约束>完整性约束</h3><ul><li><strong>实体完整性</strong>：每个元组的主键值必须非空且唯一。</li><li><strong>参照完整性</strong>：外键值必须为空，或者等于被参照关系中的某个主键值。</li></ul><h2 id=常用-sql-操作>常用 SQL 操作</h2><h3 id=创建表>创建表</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>create</span><span class=w> </span><span class=k>table</span><span class=w> </span><span class=err>表名</span><span class=w> </span><span class=p>(</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=err>字段名</span><span class=w> </span><span class=err>数据类型</span><span class=w> </span><span class=err>约束</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=err>字段名</span><span class=w> </span><span class=err>数据类型</span><span class=w> </span><span class=err>约束</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=创建视图>创建视图</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>create</span><span class=w> </span><span class=k>view</span><span class=w> </span><span class=err>视图名</span><span class=w> </span><span class=k>as</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>select</span><span class=w> </span><span class=err>字段名</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>from</span><span class=w> </span><span class=err>表名</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=新增删除与修改数据>新增、删除与修改数据</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>insert</span><span class=w> </span><span class=k>into</span><span class=w> </span><span class=err>表名</span><span class=w> </span><span class=p>(</span><span class=err>字段名</span><span class=p>)</span><span class=w> </span><span class=k>values</span><span class=w> </span><span class=p>(</span><span class=err>值</span><span class=p>);</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>delete</span><span class=w> </span><span class=k>from</span><span class=w> </span><span class=err>表名</span><span class=w> </span><span class=k>where</span><span class=w> </span><span class=err>条件</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>update</span><span class=w> </span><span class=err>表名</span><span class=w> </span><span class=k>set</span><span class=w> </span><span class=err>字段名</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=err>值</span><span class=w> </span><span class=k>where</span><span class=w> </span><span class=err>条件</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=数据库设计>数据库设计</h2><h3 id=e-r-模型>E-R 模型</h3><p>E-R 模型使用实体、属性和联系描述现实世界中的数据关系。</p><p><img class=gallery-image data-flex-basis=292px data-flex-grow=122 height=417 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-002.png width=509></p><p>将 E-R 模型转换为关系模型时，需要把实体集转换为关系，并根据联系的类型确定外键或中间关系。</p><h3 id=关系规范化>关系规范化</h3><ol><li><strong>第一范式</strong>：每个字段都具有原子性，不能继续拆分。</li><li><strong>第二范式</strong>：在第一范式基础上，非主属性完全依赖候选键，不能存在部分依赖。</li><li><strong>第三范式</strong>：在第二范式基础上，非主属性不能传递依赖候选键。</li></ol><p><img class=gallery-image data-flex-basis=278px data-flex-grow=116 height=582 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-003.png width=676></p><p>必要时可以通过模式分解消除不合理的依赖关系，将低级范式转换为高级范式。</p><p><img class=gallery-image data-flex-basis=451px data-flex-grow=188 height=439 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-004.png srcset="/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-004_hu_937c49cb3ea0575e.png 800w, /notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-004.png 826w" width=826></p><h2 id=事务与并发控制>事务与并发控制</h2><p>事务是数据库的逻辑工作单位，其中的一组操作要么全部完成，要么全部不执行。</p><p>常见并发问题包括：</p><ul><li>丢失修改；</li><li>脏读；</li><li>不可重复读。</li></ul><p>通过并发控制，可以保证事务的隔离性和数据一致性。基于封锁的三级协议分别解决不同问题：</p><ol><li>一级封锁协议：修改数据前加排他锁，直到事务结束，用于防止丢失修改。</li><li>二级封锁协议：在一级协议基础上，读取数据前加共享锁，读取完成后释放，用于防止脏读。</li><li>三级封锁协议：共享锁保持到事务结束，用于保证可重复读。</li></ol><p><img class=gallery-image data-flex-basis=1080px data-flex-grow=450 height=162 loading=lazy sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/assets/summary-005.png width=729></p><p>当事务长期等待资源时可能出现活锁，可以采用先来先服务的调度策略。多个事务相互等待对方持有的资源时会形成死锁，可以通过一次封锁、统一封锁顺序或撤销代价较小的事务进行预防或处理。</p><p> </p></section><footer class="article-meta article-footer"></footer></article><script src=https://utteranc.es/client.js repo=CrownJoker07/CrownJoker07.github.io issue-term=pathname label=Comment crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>let utterancesLoaded=!1;function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;utterancesLoaded=!0,setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{if(!utterancesLoaded)return;setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
+2025 -
+2026 ZhuangZewei</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=4.0.3>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.f856840516f7c2ad1769a8f5937e3d08d6cb386e2cd2dd025ae696e0ff207958.js defer></script></body></html>

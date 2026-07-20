@@ -1,0 +1,788 @@
+<!doctype html><html lang=zh-CN dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="一、基本概念 1. 数据结构分类 逻辑结构： 线性结构 集合 树形结构 图结构 物理结构： 顺序存储：把逻辑上相邻的元素存储在物理位置也相邻的存储单元中。 优点：支持随机存取、存储密度高 缺点：大片连续空间分配不方便，改变容量不方便\n"><title>数据结构</title><link rel=canonical href=https://crownjoker07.github.io/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/scss/style.min.e62e09c60ba428a627e03568fa3df938f6a8224f815b5846f00816c17d4a0be4.css><meta property='og:title' content="数据结构"><meta property='og:description' content="一、基本概念 1. 数据结构分类 逻辑结构： 线性结构 集合 树形结构 图结构 物理结构： 顺序存储：把逻辑上相邻的元素存储在物理位置也相邻的存储单元中。 优点：支持随机存取、存储密度高 缺点：大片连续空间分配不方便，改变容量不方便\n"><meta property='og:url' content='https://crownjoker07.github.io/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'><meta property='og:site_name' content='庄泽伟的博客'><meta property='og:type' content='article'><meta property='article:section' content='Notes'><meta property='article:published_time' content='2025-02-16T15:16:25+08:00'><meta property='article:modified_time' content='2025-02-16T15:16:25+08:00'><meta name=twitter:title content="数据结构"><meta name=twitter:description content="一、基本概念 1. 数据结构分类 逻辑结构： 线性结构 集合 树形结构 图结构 物理结构： 顺序存储：把逻辑上相邻的元素存储在物理位置也相邻的存储单元中。 优点：支持随机存取、存储密度高 缺点：大片连续空间分配不方便，改变容量不方便\n"><link rel="shortcut icon" href=/favicon/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar.png width=486 height=484 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>😄</span></figure><div class=site-meta><h1 class=site-name><a href=/>庄泽伟的博客</a></h1><h2 class=site-description>一只乌鸦的自白</h2></div></header><ol class=menu-social><li><a href=https://space.bilibili.com/106612965 title=Bilibili rel=me><svg class="icon icon-tabler icon-tabler-brand-twitter" width="800" height="800" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.223 3.086a1.25 1.25.0 010 1.768L17.08 5.996h1.17A3.75 3.75.0 0122 9.747v7.5a3.75 3.75.0 01-3.75 3.75H5.75A3.75 3.75.0 012 17.247v-7.5a3.75 3.75.0 013.75-3.75h1.166L5.775 4.855a1.25 1.25.0 111.767-1.768l2.652 2.652c.079.079.145.165.198.257h3.213c.053-.092.12-.18.199-.258l2.651-2.652a1.25 1.25.0 011.768.0zm.027 5.42H5.75A1.25 1.25.0 004.503 9.663l-.003.094v7.5c0 .659.51 1.199 1.157 1.246l.093.004h12.5a1.25 1.25.0 001.247-1.157l.003-.093v-7.5c0-.69-.56-1.25-1.25-1.25zm-10 2.5c.69.0 1.25.56 1.25 1.25v1.25a1.25 1.25.0 11-2.5.0v-1.25c0-.69.56-1.25 1.25-1.25zm7.5.0c.69.0 1.25.56 1.25 1.25v1.25a1.25 1.25.0 11-2.5.0v-1.25c0-.69.56-1.25 1.25-1.25z"/></svg></a></li><li><a href=https://github.com/CrownJoker07 title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>文章</span></a></li><li class=current><a href=/notes/><svg class="icon icon-tabler icon-tabler-notebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="12" y1="11" x2="16" y2="11"/><line x1="12" y1="15" x2="16" y2="15"/></svg>
+<span>笔记</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>项目</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/personal/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>个人</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ol><li><a href=#1-数据结构分类>1. 数据结构分类</a><ol><li><a href=#逻辑结构>逻辑结构：</a></li><li><a href=#物理结构>物理结构：</a></li></ol></li><li><a href=#2-算法效率>2. 算法效率</a></li></ol><ol><li><a href=#1-线性表>1. 线性表</a><ol><li><a href=#1-顺序表>1. 顺序表</a></li><li><a href=#2-单链表>2. 单链表</a></li><li><a href=#3--双链表>3. 双链表</a></li><li><a href=#4-循环单链表>4. 循环单链表</a></li><li><a href=#5-循环双链表>5. 循环双链表</a></li><li><a href=#6-静态链表数组实现链表>6. 静态链表（数组实现链表）</a></li><li><a href=#7--顺序栈>7. 顺序栈</a></li><li><a href=#8-链栈>8. 链栈</a></li><li><a href=#9-顺序队列>9. 顺序队列</a></li><li><a href=#10-链队>10. 链队</a></li><li><a href=#11-双端队列>11. 双端队列</a></li><li><a href=#12-串>12. 串</a></li></ol></li><li><a href=#2-树与图>2. 树与图</a><ol><li><a href=#1-树>1. 树</a></li><li><a href=#2-图>2. 图</a></li></ol></li></ol><ol><li><ol><li><a href=#排序算法的时间复杂度>排序算法的时间复杂度</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/notes/%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>数据结构</a></h2></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2025-02-16T15:16:25+08:00>2月 16, 2025</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 7 分钟</time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span>目录</span></div></summary><nav class=toc-nav><ol><li><a href=#1-数据结构分类>1. 数据结构分类</a><ol><li><a href=#逻辑结构>逻辑结构：</a></li><li><a href=#物理结构>物理结构：</a></li></ol></li><li><a href=#2-算法效率>2. 算法效率</a></li></ol><ol><li><a href=#1-线性表>1. 线性表</a><ol><li><a href=#1-顺序表>1. 顺序表</a></li><li><a href=#2-单链表>2. 单链表</a></li><li><a href=#3--双链表>3. 双链表</a></li><li><a href=#4-循环单链表>4. 循环单链表</a></li><li><a href=#5-循环双链表>5. 循环双链表</a></li><li><a href=#6-静态链表数组实现链表>6. 静态链表（数组实现链表）</a></li><li><a href=#7--顺序栈>7. 顺序栈</a></li><li><a href=#8-链栈>8. 链栈</a></li><li><a href=#9-顺序队列>9. 顺序队列</a></li><li><a href=#10-链队>10. 链队</a></li><li><a href=#11-双端队列>11. 双端队列</a></li><li><a href=#12-串>12. 串</a></li></ol></li><li><a href=#2-树与图>2. 树与图</a><ol><li><a href=#1-树>1. 树</a></li><li><a href=#2-图>2. 图</a></li></ol></li></ol><ol><li><ol><li><a href=#排序算法的时间复杂度>排序算法的时间复杂度</a></li></ol></li></ol></nav></details></aside><section class=article-content><h1 id=一基本概念>一、基本概念</h1><h2 id=1-数据结构分类>1. 数据结构分类</h2><h3 id=逻辑结构>逻辑结构：</h3><ol><li>线性结构</li><li>集合</li><li>树形结构</li><li>图结构</li></ol><h3 id=物理结构>物理结构：</h3><ol><li><p>顺序存储：把逻辑上相邻的元素存储在物理位置也相邻的存储单元中。
+优点：支持随机存取、存储密度高
+缺点：大片连续空间分配不方便，改变容量不方便</p></li><li><p>链式存储
+优点：离散的小空间分配方便，改变容量方便
+缺点：不可随机存取，存储密度低</p></li></ol><div class=table-wrapper><table><thead><tr><th style=text-align:center></th><th style=text-align:center>增</th><th style=text-align:center>删</th><th style=text-align:center>按位查找</th><th style=text-align:center>按值查找</th></tr></thead><tbody><tr><td style=text-align:center>顺序</td><td style=text-align:center>O(n)</td><td style=text-align:center>O(n)</td><td style=text-align:center>O(1)</td><td style=text-align:center>O(n)</td></tr><tr><td style=text-align:center>链式</td><td style=text-align:center>O(n)</td><td style=text-align:center>O(n)</td><td style=text-align:center>O(n)</td><td style=text-align:center>O(n)</td></tr></tbody></table></div><ol start=3><li>索引存储</li><li>散列存储</li></ol><h2 id=2-算法效率>2. 算法效率</h2><p>时间复杂度、空间复杂度</p><hr><h1 id=二数据结构>二、数据结构</h1><h2 id=1-线性表>1. 线性表</h2><p>具有相同数据类型的n（n>=0）个数据元素的有限序列</p><h3 id=1-顺序表>1. 顺序表</h3><p>特点：
+1. 随机访问：能在O(1)时间内找到第i个元素
+2. 存储密度高
+3. 拓展容量不方便
+4. 插入、删除数据元素不方便
+基本操作：</p><ol><li>插入：插入位置之后的元素都要往后移，时间复杂度：O(1)、O(n)、O(n)；</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-插入数据
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>ListInsert</span><span class=p>(</span><span class=n>Seqlist</span><span class=o>&amp;</span> <span class=n>L</span><span class=p>,</span> <span class=kt>int</span> <span class=n>i</span><span class=p>,</span> <span class=kt>int</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>i</span> <span class=o>&lt;=</span> <span class=mi>0</span> <span class=o>||</span> <span class=n>i</span> <span class=o>&gt;</span> <span class=n>L</span><span class=p>.</span><span class=n>length</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测是否有位置插入
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>L</span><span class=p>.</span><span class=n>MaxSize</span> <span class=o>&lt;=</span> <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>IncreaseSize</span><span class=p>(</span><span class=n>L</span><span class=p>,</span> <span class=n>L</span><span class=p>.</span><span class=n>MaxSize</span> <span class=o>*</span> <span class=mi>2</span><span class=p>);</span> <span class=c1>// 扩充两倍
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// 将i位后的所有数字往后移一位
+</span></span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=p>;</span> <span class=n>j</span> <span class=o>&gt;=</span> <span class=n>i</span><span class=p>;</span> <span class=n>j</span><span class=o>--</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>j</span> <span class=o>-</span> <span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=n>e</span><span class=p>;</span> <span class=c1>// 插入数据
+</span></span></span><span class=line><span class=cl>    <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=o>++</span><span class=p>;</span> <span class=c1>// 更新数组长度
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>删除：删除位置之后的元素都要往前移，时间复杂度：O(1)、O(n)、O(n)；</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-删除数据
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>ListDelete</span><span class=p>(</span><span class=n>Seqlist</span><span class=o>&amp;</span> <span class=n>L</span><span class=p>,</span> <span class=kt>int</span> <span class=n>i</span><span class=p>,</span> <span class=kt>int</span><span class=o>&amp;</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>i</span> <span class=o>&lt;=</span> <span class=mi>0</span> <span class=o>||</span> <span class=n>i</span> <span class=o>&gt;</span> <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>e</span> <span class=o>=</span> <span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>];</span> <span class=c1>// 获取被删除的值
+</span></span></span><span class=line><span class=cl>    <span class=c1>// 将i位后所有数字往前移
+</span></span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=n>i</span><span class=p>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=p>;</span> <span class=n>j</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>j</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>j</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=o>--</span><span class=p>;</span> <span class=c1>//更新数组长度
+</span></span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>按位查找：时间复杂度：O(1)、O(1)、O(1)；</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-按位查找
+</span></span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>ListGetElem</span><span class=p>(</span><span class=n>Seqlist</span><span class=o>&amp;</span> <span class=n>L</span><span class=p>,</span> <span class=kt>int</span> <span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>i</span> <span class=o>&lt;=</span> <span class=mi>0</span> <span class=o>||</span> <span class=n>i</span> <span class=o>&gt;</span> <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>INT_MIN</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>按值查找：时间复杂度：O(1)、O(n)、O(n)；</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-按值查找
+</span></span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>ListLocateElem</span><span class=p>(</span><span class=n>Seqlist</span><span class=o>&amp;</span> <span class=n>L</span><span class=p>,</span> <span class=kt>int</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>L</span><span class=p>.</span><span class=n>length</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=n>L</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>==</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=2-单链表>2. 单链表</h3><p>基本操作：</p><ol><li>插入：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-插入数据
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>ListInsert</span><span class=p>(</span><span class=n>LinkList</span> <span class=o>&amp;</span><span class=n>L</span><span class=p>,</span> <span class=kt>int</span> <span class=n>i</span><span class=p>,</span><span class=kt>int</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>i</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>p</span><span class=p>;</span>   <span class=c1>// 指针P指向当前扫描到的节点
+</span></span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>  <span class=c1>// 当前P指向的是第几个节点
+</span></span></span><span class=line><span class=cl>    <span class=n>p</span> <span class=o>=</span> <span class=n>L</span><span class=p>;</span>      <span class=c1>// P指向头节点
+</span></span></span><span class=line><span class=cl>    <span class=c1>// 循环寻找第i-1个节点
+</span></span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>p</span> <span class=o>!=</span> <span class=k>nullptr</span> <span class=o>&amp;&amp;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>j</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测p是否合法
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>p</span> <span class=o>==</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>s</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LNode</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=n>s</span><span class=o>-&gt;</span><span class=n>data</span> <span class=o>=</span> <span class=n>e</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 将新节点s插入i位置，并重新连接链表
+</span></span></span><span class=line><span class=cl>    <span class=n>s</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>删除：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-删除数据
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>ListDelete</span><span class=p>(</span><span class=n>LinkList</span> <span class=o>&amp;</span><span class=n>L</span><span class=p>,</span><span class=kt>int</span> <span class=n>i</span><span class=p>,</span><span class=kt>int</span> <span class=o>&amp;</span><span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>i</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>p</span> <span class=o>=</span> <span class=n>L</span><span class=p>;</span>   <span class=c1>// 指针P指向当前扫描到的节点
+</span></span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>      <span class=c1>// 当前p指向的是第几个节点
+</span></span></span><span class=line><span class=cl>    <span class=c1>// 循环找到第i-1个节点
+</span></span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>p</span> <span class=o>!=</span> <span class=k>nullptr</span> <span class=o>&amp;&amp;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>j</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测p以及p的下一个要被删除的数是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>p</span> <span class=o>==</span> <span class=k>nullptr</span> <span class=o>||</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>==</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>q</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span> <span class=c1>// 保存被删除的指针
+</span></span></span><span class=line><span class=cl>    <span class=n>e</span> <span class=o>=</span> <span class=n>q</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>;</span>        <span class=c1>// 返回删除的值
+</span></span></span><span class=line><span class=cl>    <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>q</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>  <span class=c1>// 重新链接
+</span></span></span><span class=line><span class=cl>    <span class=k>delete</span> <span class=n>q</span><span class=p>;</span>           <span class=c1>// 释放指针
+</span></span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>按位查找：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-按位查找
+</span></span></span><span class=line><span class=cl><span class=n>LNode</span><span class=o>*</span> <span class=nf>GetElem</span><span class=p>(</span><span class=n>LinkList</span> <span class=n>L</span><span class=p>,</span><span class=kt>int</span> <span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>i</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=k>nullptr</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span><span class=o>*</span> <span class=n>p</span> <span class=o>=</span> <span class=n>L</span><span class=p>;</span>   <span class=c1>// 指针p指向当前扫描到的节点
+</span></span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>      <span class=c1>// 当前p指向的是第几个节点
+</span></span></span><span class=line><span class=cl>    <span class=c1>// 循环寻找第i个节点
+</span></span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>p</span> <span class=o>!=</span> <span class=k>nullptr</span> <span class=o>&amp;&amp;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>j</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>按值查找：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-按值查找
+</span></span></span><span class=line><span class=cl><span class=n>LNode</span><span class=o>*</span> <span class=nf>LocateElem</span><span class=p>(</span><span class=n>LinkList</span> <span class=n>L</span><span class=p>,</span><span class=kt>int</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>p</span> <span class=o>=</span> <span class=n>L</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 循环查找
+</span></span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>p</span> <span class=o>!=</span> <span class=k>nullptr</span> <span class=o>&amp;&amp;</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>data</span> <span class=o>!=</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>p</span><span class=p>;</span>   <span class=c1>// 返回指针，不存在则返回nullptr
+</span></span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=5><li>求表长：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 求表长度
+</span></span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>Length</span><span class=p>(</span><span class=n>LinkList</span> <span class=n>L</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>len</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>    <span class=c1>// 统计表长
+</span></span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>p</span> <span class=o>=</span> <span class=n>L</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>p</span> <span class=o>!=</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>len</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>len</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=6><li>尾插法创建单链表：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 尾插法建立单链表
+</span></span></span><span class=line><span class=cl><span class=n>LinkList</span> <span class=nf>List_TailInsert</span><span class=p>(</span><span class=n>LinkList</span> <span class=o>&amp;</span><span class=n>L</span><span class=p>)</span>   <span class=c1>// 正向建立单链表
+</span></span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>L</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LNode</span><span class=p>();</span>    <span class=c1>// 建立头指针
+</span></span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>s</span> <span class=o>=</span> <span class=k>nullptr</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>r</span> <span class=o>=</span> <span class=n>L</span><span class=p>;</span>    <span class=c1>// r为表尾指针
+</span></span></span><span class=line><span class=cl>    <span class=n>std</span><span class=o>::</span><span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x</span><span class=p>;</span>      <span class=c1>// 输入节点的值
+</span></span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=p>(</span><span class=n>x</span> <span class=o>!=</span> <span class=mi>9999</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>s</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LNode</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=n>s</span><span class=o>-&gt;</span><span class=n>data</span> <span class=o>=</span> <span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>r</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>r</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>          <span class=c1>// r指向新的表尾节点
+</span></span></span><span class=line><span class=cl>        <span class=n>std</span><span class=o>::</span><span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>r</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=k>nullptr</span><span class=p>;</span>  <span class=c1>// 尾节点指针置空
+</span></span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>L</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=7><li>头插法创建单链表：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 头插法建立单链表
+</span></span></span><span class=line><span class=cl><span class=n>LinkList</span> <span class=nf>List_HeadInsert</span><span class=p>(</span><span class=n>LinkList</span> <span class=o>&amp;</span><span class=n>L</span><span class=p>)</span>   <span class=c1>// 逆向建立单链表
+</span></span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>LNode</span> <span class=o>*</span><span class=n>s</span> <span class=o>=</span> <span class=k>nullptr</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>x</span><span class=p>;</span>              <span class=c1>// 记录用户输入的值
+</span></span></span><span class=line><span class=cl>    <span class=n>L</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LNode</span><span class=p>();</span>    <span class=c1>// 创建头指针
+</span></span></span><span class=line><span class=cl>    <span class=n>L</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=k>nullptr</span><span class=p>;</span>  <span class=c1>// 初始化头指针
+</span></span></span><span class=line><span class=cl>    <span class=n>std</span><span class=o>::</span><span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x</span><span class=p>;</span>      <span class=c1>// 用户输入
+</span></span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=p>(</span><span class=n>x</span> <span class=o>!=</span> <span class=mi>9999</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>s</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LNode</span><span class=p>();</span><span class=c1>// 创建新节点
+</span></span></span><span class=line><span class=cl>        <span class=n>s</span><span class=o>-&gt;</span><span class=n>data</span> <span class=o>=</span> <span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>s</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>L</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>L</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>std</span><span class=o>::</span><span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>L</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=3--双链表>3. 双链表</h3><p>基本操作：</p><ol><li>插入：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>InsertNextDNode</span><span class=p>(</span><span class=n>DNode</span> <span class=o>*</span><span class=n>p</span><span class=p>,</span><span class=n>DNode</span> <span class=o>*</span><span class=n>s</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否为空
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>p</span> <span class=o>==</span> <span class=k>nullptr</span> <span class=o>||</span> <span class=n>s</span> <span class=o>==</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>s</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>!=</span> <span class=k>nullptr</span><span class=p>)</span>  <span class=c1>//判断是否存在需要更改前驱的节点
+</span></span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=o>-&gt;</span><span class=n>prior</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>s</span><span class=o>-&gt;</span><span class=n>prior</span> <span class=o>=</span> <span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>删除：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>DeleteNextDNode</span><span class=p>(</span><span class=n>DNode</span> <span class=o>*</span><span class=n>p</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测输入是否有效
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>p</span> <span class=o>==</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>DNode</span> <span class=o>*</span><span class=n>q</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span> <span class=c1>// 储存删除节点
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>q</span> <span class=o>==</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>   <span class=c1>// 无需要删除的节点
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>q</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>q</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>!=</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>q</span><span class=o>-&gt;</span><span class=n>next</span><span class=o>-&gt;</span><span class=n>prior</span> <span class=o>=</span> <span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>delete</span> <span class=n>q</span><span class=p>;</span>           <span class=c1>// 释放节点空间
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>清空：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 清空整个双向链表
+</span></span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>DestoryList</span><span class=p>(</span><span class=n>DLinklist</span> <span class=o>&amp;</span><span class=n>L</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 循环释放各个数据节点
+</span></span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>L</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>!=</span> <span class=k>nullptr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>DeleteNextDNode</span><span class=p>(</span><span class=n>L</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>delete</span> <span class=n>L</span><span class=p>;</span>       <span class=c1>// 释放头指针
+</span></span></span><span class=line><span class=cl>    <span class=n>L</span> <span class=o>=</span> <span class=k>nullptr</span><span class=p>;</span>    <span class=c1>// 初始化头指针
+</span></span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=4-循环单链表>4. 循环单链表</h3><h3 id=5-循环双链表>5. 循环双链表</h3><h3 id=6-静态链表数组实现链表>6. 静态链表（数组实现链表）</h3><p>优点：增、删操作不需要大量移动元素
+缺点：不能随机存取，只能从头节点开始依次往后查找；容量固定不可变。
+适用场景：</p><ol><li>不支持指针的低级语言；</li><li>数据元素数量固定不变：操作系统的文件分配表FAT</li></ol><h3 id=7--顺序栈>7. 顺序栈</h3><p>只允许在一端进行插入或删除操作的线性表
+基本操作：</p><ol><li>入栈：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-入栈
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>Push</span><span class=p>(</span><span class=n>SeqStack</span> <span class=o>&amp;</span><span class=n>S</span><span class=p>,</span><span class=kt>int</span> <span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 判断栈是否满
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>S</span><span class=p>.</span><span class=n>top</span> <span class=o>==</span> <span class=n>MaxSize</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>S</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=o>++</span><span class=n>S</span><span class=p>.</span><span class=n>top</span><span class=p>]</span> <span class=o>=</span> <span class=n>x</span><span class=p>;</span>    <span class=c1>//元素入栈
+</span></span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>出栈：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-出栈
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>Pop</span><span class=p>(</span><span class=n>SeqStack</span> <span class=o>&amp;</span><span class=n>S</span><span class=p>,</span><span class=kt>int</span> <span class=o>&amp;</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>S</span><span class=p>.</span><span class=n>top</span> <span class=o>==</span> <span class=o>-</span><span class=mi>1</span><span class=p>)</span>         <span class=c1>// 栈空，返回
+</span></span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>S</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>S</span><span class=p>.</span><span class=n>top</span><span class=o>--</span><span class=p>];</span>    <span class=c1>// 栈顶元素先出栈，指针再减一
+</span></span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>读取栈顶元素：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-读取栈顶元素
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>GetTop</span><span class=p>(</span><span class=n>SeqStack</span> <span class=n>S</span><span class=p>,</span><span class=kt>int</span> <span class=o>&amp;</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>S</span><span class=p>.</span><span class=n>top</span> <span class=o>==</span> <span class=o>-</span><span class=mi>1</span><span class=p>)</span>     <span class=c1>// 栈空，返回
+</span></span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>S</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>S</span><span class=p>.</span><span class=n>top</span><span class=p>];</span>  <span class=c1>//  返回栈顶元素
+</span></span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=8-链栈>8. 链栈</h3><p>与单链表无异</p><h3 id=9-顺序队列>9. 顺序队列</h3><p>只允许在一端进行插入，在另一端删除的线性表
+基本操作</p><ol><li>入队：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-入队
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>EnQueue</span><span class=p>(</span><span class=n>SeqQueue</span> <span class=o>&amp;</span><span class=n>Q</span><span class=p>,</span><span class=kt>int</span> <span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 判断是否队满
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>((</span><span class=n>Q</span><span class=p>.</span><span class=n>rear</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span><span class=o>%</span><span class=n>MaxSize</span> <span class=o>==</span> <span class=n>Q</span><span class=p>.</span><span class=n>front</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>Q</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>Q</span><span class=p>.</span><span class=n>rear</span><span class=p>]</span> <span class=o>=</span> <span class=n>x</span><span class=p>;</span>                 <span class=c1>// 新元素插入队尾
+</span></span></span><span class=line><span class=cl>    <span class=n>Q</span><span class=p>.</span><span class=n>rear</span> <span class=o>=</span> <span class=p>(</span><span class=n>Q</span><span class=p>.</span><span class=n>rear</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>%</span> <span class=n>MaxSize</span><span class=p>;</span>    <span class=c1>// 形成循环队列
+</span></span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>出队：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-出队
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>DeQueue</span><span class=p>(</span><span class=n>SeqQueue</span> <span class=o>&amp;</span><span class=n>Q</span><span class=p>,</span><span class=kt>int</span> <span class=o>&amp;</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 判断队列是否为空
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>QueueEmpty</span><span class=p>(</span><span class=n>Q</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>Q</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>Q</span><span class=p>.</span><span class=n>front</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=n>Q</span><span class=p>.</span><span class=n>front</span> <span class=o>=</span> <span class=p>(</span><span class=n>Q</span><span class=p>.</span><span class=n>front</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>%</span> <span class=n>MaxSize</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>获取头元素：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 获取队头元素
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>GetHead</span><span class=p>(</span><span class=n>SeqQueue</span> <span class=n>Q</span><span class=p>,</span><span class=kt>int</span> <span class=o>&amp;</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 判断队列是否为空
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>QueueEmpty</span><span class=p>(</span><span class=n>Q</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>Q</span><span class=p>.</span><span class=n>data</span><span class=p>[</span><span class=n>Q</span><span class=p>.</span><span class=n>front</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=10-链队>10. 链队</h3><p>基本操作</p><ol><li>入队</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-入队
+</span></span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>EnQueue</span><span class=p>(</span><span class=n>LinkQueue</span> <span class=o>&amp;</span><span class=n>Q</span><span class=p>,</span> <span class=kt>int</span> <span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>LinkNode</span> <span class=o>*</span><span class=n>s</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LinkNode</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=n>s</span><span class=o>-&gt;</span><span class=n>data</span> <span class=o>=</span> <span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>s</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=k>nullptr</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Q</span><span class=p>.</span><span class=n>rear</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>   <span class=c1>// 将新节点插入到尾部
+</span></span></span><span class=line><span class=cl>    <span class=n>Q</span><span class=p>.</span><span class=n>rear</span> <span class=o>=</span> <span class=n>s</span><span class=p>;</span>         <span class=c1>// 修改表尾指针
+</span></span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>出队</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-CPP data-lang=CPP><span class=line><span class=cl><span class=c1>// 基本操作-出队
+</span></span></span><span class=line><span class=cl><span class=kt>bool</span> <span class=nf>DeQueue</span><span class=p>(</span><span class=n>LinkQueue</span> <span class=o>&amp;</span><span class=n>Q</span><span class=p>,</span><span class=kt>int</span> <span class=o>&amp;</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 判断是否为空队列
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>Q</span><span class=p>.</span><span class=n>front</span> <span class=o>==</span> <span class=n>Q</span><span class=p>.</span><span class=n>rear</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>LinkNode</span> <span class=o>*</span><span class=n>p</span> <span class=o>=</span> <span class=n>Q</span><span class=p>.</span><span class=n>front</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>;</span>                <span class=c1>// 获取出队值
+</span></span></span><span class=line><span class=cl>    <span class=n>Q</span><span class=p>.</span><span class=n>front</span><span class=o>-&gt;</span><span class=n>next</span> <span class=o>=</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>next</span><span class=p>;</span>    <span class=c1>// 修改头指针
+</span></span></span><span class=line><span class=cl>    <span class=c1>// 检测是否为最后一个节点,需要修改rear指针指向
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>Q</span><span class=p>.</span><span class=n>rear</span> <span class=o>==</span> <span class=n>p</span><span class=p>)</span>             
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>Q</span><span class=p>.</span><span class=n>rear</span> <span class=o>=</span> <span class=n>Q</span><span class=p>.</span><span class=n>front</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>delete</span> <span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=11-双端队列>11. 双端队列</h3><p>只允许从两端插入、两端删除的线性表</p><h3 id=12-串>12. 串</h3><p>即字符串是由零个或多个字符组成的有限序列。
+KMP算法</p><h2 id=2-树与图>2. 树与图</h2><h3 id=1-树>1. 树</h3><ol><li>二叉树<ol><li>满二叉树：所有非叶子节点的节点都有两个子节点。</li><li>完全二叉树：在满二叉树的基础上，从最后面删除叶子节点</li><li>二叉排序树（BST）：<ul><li>左子树上所有结点的关键字均小于根节点的关键字，</li><li>右子树上所有结点的关键字均大于根结点的关键字，</li><li>左右子树又各是一颗二叉排序树。</li></ul></li><li>平衡二叉树（AVL）：树上任一结点的左子树和右子树的深度之差不超过1。
+优点：减少二叉树元素查找的深度，从而提升平均查找效率。</li><li>线索二叉树：将叶子结点和未满孩子的结点的孩子指针利用起来，按照某种遍历顺序串起来。</li><li>哈夫曼树：在含有n个带权叶结点的二叉树中，其中带权路径长度（WPL）最小的二叉树称为哈夫曼树，也称最优二叉树。</li></ol></li></ol><h3 id=2-图>2. 图</h3><p>存储方式：</p><ol><li>邻接矩阵法</li><li>邻接表法</li><li>十字链表（存储有向图）</li><li>邻接多重表（存储无向图）</li></ol><p>图遍历：</p><ol><li>BFS</li><li>DFS</li></ol><p>求最小生成树：</p><ol><li>Prim算法</li><li>Kruskal 算法</li></ol><p>最短路径：
+单源最短路径：</p><ol><li>BFS算法</li><li>Dijkstra算法
+各顶点间的最短路径：</li><li>Floyd算法</li></ol><p>有向无环图（DAG）：
+若一个有向图中不存在环，则称为有向无环图，简称DAG图；
+AOV网：
+用顶点表示活动网；
+拓扑排序</p><h1 id=三查找>三、查找</h1><ol><li>顺序查找</li><li>折半查找：仅适用于有序的顺序表</li><li>分块查找：</li><li>B树（多路平衡查找树）</li><li>B+树</li><li>散列查找（哈希表）
+解决冲突：</li><li>开放定址法：线性探测再散列、二次(平方)探测再散列、伪随机探测再散列</li><li>再哈希法</li><li>链地址法</li><li>建立公共溢出区</li></ol><h1 id=四排序>四、排序</h1><ol><li><p>插入排序</p></li><li><p>希尔排序</p></li><li><p>冒泡排序</p></li><li><p>快速排序
+快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。</p></li><li><p>简单选择排序</p></li><li><p>堆排序</p></li><li><p>归并排序</p></li><li><p>基数排序</p></li><li><p>外部排序</p></li><li><p>败者树</p></li><li><p>置换和选择排序</p></li><li><p>最佳归并树</p></li></ol><h3 id=排序算法的时间复杂度>排序算法的时间复杂度</h3><p><em>[图片未在原笔记仓库中找到]</em></p></section><footer class="article-meta article-footer"></footer></article><script src=https://utteranc.es/client.js repo=CrownJoker07/CrownJoker07.github.io issue-term=pathname label=Comment crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>let utterancesLoaded=!1;function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;utterancesLoaded=!0,setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{if(!utterancesLoaded)return;setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
+2025 -
+2026 ZhuangZewei</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=4.0.3>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.f856840516f7c2ad1769a8f5937e3d08d6cb386e2cd2dd025ae696e0ff207958.js defer></script></body></html>

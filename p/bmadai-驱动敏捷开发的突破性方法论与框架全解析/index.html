@@ -1,0 +1,218 @@
+<!doctype html><html lang=zh-CN dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content=' 在讨论 BMAD 之前，需要先理解一个根本性问题：AI 到底是"怎么工作"的。这个问题的答案直接影响我们如何正确使用 AI 进行开发。\n一、AI 的本质：预测下一个 token 理解 AI 的能力边界，先要理解 AI 的工作原理。\n'><title>BMAD：AI 驱动敏捷开发的突破性方法论与框架全解析</title><link rel=canonical href=https://crownjoker07.github.io/p/bmadai-%E9%A9%B1%E5%8A%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E7%9A%84%E7%AA%81%E7%A0%B4%E6%80%A7%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%A1%86%E6%9E%B6%E5%85%A8%E8%A7%A3%E6%9E%90/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/scss/style.min.e62e09c60ba428a627e03568fa3df938f6a8224f815b5846f00816c17d4a0be4.css><meta property='og:title' content="BMAD：AI 驱动敏捷开发的突破性方法论与框架全解析"><meta property='og:description' content=' 在讨论 BMAD 之前，需要先理解一个根本性问题：AI 到底是"怎么工作"的。这个问题的答案直接影响我们如何正确使用 AI 进行开发。\n一、AI 的本质：预测下一个 token 理解 AI 的能力边界，先要理解 AI 的工作原理。\n'><meta property='og:url' content='https://crownjoker07.github.io/p/bmadai-%E9%A9%B1%E5%8A%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E7%9A%84%E7%AA%81%E7%A0%B4%E6%80%A7%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%A1%86%E6%9E%B6%E5%85%A8%E8%A7%A3%E6%9E%90/'><meta property='og:site_name' content='庄泽伟的博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2026-03-13T07:45:00+08:00'><meta property='article:modified_time' content='2026-03-13T07:45:00+08:00'><meta name=twitter:title content="BMAD：AI 驱动敏捷开发的突破性方法论与框架全解析"><meta name=twitter:description content=' 在讨论 BMAD 之前，需要先理解一个根本性问题：AI 到底是"怎么工作"的。这个问题的答案直接影响我们如何正确使用 AI 进行开发。\n一、AI 的本质：预测下一个 token 理解 AI 的能力边界，先要理解 AI 的工作原理。\n'><link rel="shortcut icon" href=/favicon/favicon.ico><script defer src=/js/vendors/mermaid.min.js></script><script defer src="/js/mermaid-theme.js?v=1"></script><link rel=stylesheet href="/css/mermaid-zoom.css?v=3"><script defer src="/js/mermaid-zoom.js?v=5"></script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar.png width=486 height=484 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>😄</span></figure><div class=site-meta><h1 class=site-name><a href=/>庄泽伟的博客</a></h1><h2 class=site-description>一只乌鸦的自白</h2></div></header><ol class=menu-social><li><a href=https://space.bilibili.com/106612965 title=Bilibili rel=me><svg class="icon icon-tabler icon-tabler-brand-twitter" width="800" height="800" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.223 3.086a1.25 1.25.0 010 1.768L17.08 5.996h1.17A3.75 3.75.0 0122 9.747v7.5a3.75 3.75.0 01-3.75 3.75H5.75A3.75 3.75.0 012 17.247v-7.5a3.75 3.75.0 013.75-3.75h1.166L5.775 4.855a1.25 1.25.0 111.767-1.768l2.652 2.652c.079.079.145.165.198.257h3.213c.053-.092.12-.18.199-.258l2.651-2.652a1.25 1.25.0 011.768.0zm.027 5.42H5.75A1.25 1.25.0 004.503 9.663l-.003.094v7.5c0 .659.51 1.199 1.157 1.246l.093.004h12.5a1.25 1.25.0 001.247-1.157l.003-.093v-7.5c0-.69-.56-1.25-1.25-1.25zm-10 2.5c.69.0 1.25.56 1.25 1.25v1.25a1.25 1.25.0 11-2.5.0v-1.25c0-.69.56-1.25 1.25-1.25zm7.5.0c.69.0 1.25.56 1.25 1.25v1.25a1.25 1.25.0 11-2.5.0v-1.25c0-.69.56-1.25 1.25-1.25z"/></svg></a></li><li><a href=https://github.com/CrownJoker07 title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>文章</span></a></li><li><a href=/notes/><svg class="icon icon-tabler icon-tabler-notebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="12" y1="11" x2="16" y2="11"/><line x1="12" y1="15" x2="16" y2="15"/></svg>
+<span>笔记</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>项目</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/personal/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>个人</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ol><li><a href=#一ai-的本质预测下一个-token>一、AI 的本质：预测下一个 token</a><ol><li><a href=#各-ai-大模型为什么不一样>各 AI 大模型为什么不一样</a></li></ol></li><li><a href=#二ai-编程的三大崩溃>二、AI 编程的三大崩溃</a><ol><li><a href=#21-上下文崩溃context-collapse>2.1 上下文崩溃（Context Collapse）</a></li><li><a href=#22-任务崩溃task-collapse>2.2 任务崩溃（Task Collapse）</a></li><li><a href=#23-质量崩溃quality-collapse>2.3 质量崩溃（Quality Collapse）</a></li><li><a href=#24-判断力退化容易被忽视的问题>2.4 判断力退化（容易被忽视的问题）</a></li></ol></li><li><a href=#三ai-编程的演进>三、AI 编程的演进</a><ol><li><a href=#31-进化历程>3.1 进化历程</a></li><li><a href=#32-vibe-coding-的困境>3.2 Vibe Coding 的困境</a></li><li><a href=#33-agentic-engineering-的提出>3.3 Agentic Engineering 的提出</a></li></ol></li><li><a href=#sdd给ai立规矩>SDD：给AI立规矩</a></li><li><a href=#四bmad-是什么>四、BMAD 是什么</a><ol><li><a href=#41-核心思路>4.1 核心思路</a></li><li><a href=#42-解决三大崩溃>4.2 解决三大崩溃</a></li></ol></li><li><a href=#五bmad-核心机制>五、BMAD 核心机制</a><ol><li><a href=#51-步骤文件架构>5.1 步骤文件架构</a></li><li><a href=#52-任务分层>5.2 任务分层</a></li><li><a href=#53-三模式循环>5.3 三模式循环</a></li><li><a href=#54-完整工作流>5.4 完整工作流</a></li><li><a href=#bmad-背后的原理context-engineering>BMAD 背后的原理：Context Engineering</a></li></ol></li><li><a href=#六bmgd-模块游戏开发工作室>六、BMGD 模块：游戏开发工作室</a><ol><li><a href=#61-功能特性>6.1 功能特性</a></li><li><a href=#62-安装方式>6.2 安装方式</a></li><li><a href=#63-开发模式>6.3 开发模式</a></li></ol></li><li><a href=#进阶让ai开发具有复利>进阶：让AI开发具有复利</a></li><li><a href=#七未来程序员的核心能力>七、未来程序员的核心能力</a></li><li><a href=#八总结>八、总结</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/aillm/ style=background-color:#bed3ef;color:#0f233d>AILLM</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/bmadai-%E9%A9%B1%E5%8A%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E7%9A%84%E7%AA%81%E7%A0%B4%E6%80%A7%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%A1%86%E6%9E%B6%E5%85%A8%E8%A7%A3%E6%9E%90/>BMAD：AI 驱动敏捷开发的突破性方法论与框架全解析</a></h2></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-03-13T07:45:00+08:00>3月 13, 2026</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 9 分钟</time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span>目录</span></div></summary><nav class=toc-nav><ol><li><a href=#一ai-的本质预测下一个-token>一、AI 的本质：预测下一个 token</a><ol><li><a href=#各-ai-大模型为什么不一样>各 AI 大模型为什么不一样</a></li></ol></li><li><a href=#二ai-编程的三大崩溃>二、AI 编程的三大崩溃</a><ol><li><a href=#21-上下文崩溃context-collapse>2.1 上下文崩溃（Context Collapse）</a></li><li><a href=#22-任务崩溃task-collapse>2.2 任务崩溃（Task Collapse）</a></li><li><a href=#23-质量崩溃quality-collapse>2.3 质量崩溃（Quality Collapse）</a></li><li><a href=#24-判断力退化容易被忽视的问题>2.4 判断力退化（容易被忽视的问题）</a></li></ol></li><li><a href=#三ai-编程的演进>三、AI 编程的演进</a><ol><li><a href=#31-进化历程>3.1 进化历程</a></li><li><a href=#32-vibe-coding-的困境>3.2 Vibe Coding 的困境</a></li><li><a href=#33-agentic-engineering-的提出>3.3 Agentic Engineering 的提出</a></li></ol></li><li><a href=#sdd给ai立规矩>SDD：给AI立规矩</a></li><li><a href=#四bmad-是什么>四、BMAD 是什么</a><ol><li><a href=#41-核心思路>4.1 核心思路</a></li><li><a href=#42-解决三大崩溃>4.2 解决三大崩溃</a></li></ol></li><li><a href=#五bmad-核心机制>五、BMAD 核心机制</a><ol><li><a href=#51-步骤文件架构>5.1 步骤文件架构</a></li><li><a href=#52-任务分层>5.2 任务分层</a></li><li><a href=#53-三模式循环>5.3 三模式循环</a></li><li><a href=#54-完整工作流>5.4 完整工作流</a></li><li><a href=#bmad-背后的原理context-engineering>BMAD 背后的原理：Context Engineering</a></li></ol></li><li><a href=#六bmgd-模块游戏开发工作室>六、BMGD 模块：游戏开发工作室</a><ol><li><a href=#61-功能特性>6.1 功能特性</a></li><li><a href=#62-安装方式>6.2 安装方式</a></li><li><a href=#63-开发模式>6.3 开发模式</a></li></ol></li><li><a href=#进阶让ai开发具有复利>进阶：让AI开发具有复利</a></li><li><a href=#七未来程序员的核心能力>七、未来程序员的核心能力</a></li><li><a href=#八总结>八、总结</a></li></ol></nav></details></aside><section class=article-content><blockquote><p>在讨论 BMAD 之前，需要先理解一个根本性问题：AI 到底是"怎么工作"的。这个问题的答案直接影响我们如何正确使用 AI 进行开发。</p></blockquote><h2 id=一ai-的本质预测下一个-token>一、AI 的本质：预测下一个 token</h2><p>理解 AI 的能力边界，先要理解 AI 的工作原理。</p><p>大语言模型的核心机制非常简单：<strong>根据已有的文本序列，预测下一个最可能出现的 token（词/子词）</strong>。</p><div class=mermaid align=center>flowchart LR
+A[输入序列 今天天气] --> B[Transformer 神经网络]
+B --> |计算概率分布| C[预测下一个token]
+C --> |好| D[输出 今天天气好]
+D --> |作为下一轮输入| A</div><p>这个过程可以形式化为：</p><div class=mermaid align=center>flowchart LR
+subgraph Input
+I1(token1)
+I2(token2)
+I3(...)
+In(tokenN)
+end
+subgraph Model
+M{计算下一个token的概率}
+end
+subgraph Output
+O1(token1)
+O2(token2)
+O3(token3)
+end
+Input --> Model --> Output</div><p>AI 本身并不"理解"代码，它只是在<strong>模仿</strong>训练数据中见过的模式。这带来两个关键结论：</p><div class=table-wrapper><table><thead><tr><th>AI 擅长</th><th>AI 不擅长</th></tr></thead><tbody><tr><td>按已有模式生成内容</td><td>真正理解业务目标</td></tr><tr><td>处理大量信息</td><td>处理模糊、歧义的需求</td></tr><tr><td>执行明确指令</td><td>做全新的推理</td></tr></tbody></table></div><blockquote><p>AI 见过海量代码，所以能写出看起来正确的代码，但它不知道这段代码为什么要这样写。</p></blockquote><h3 id=各-ai-大模型为什么不一样>各 AI 大模型为什么不一样</h3><p>虽然所有大语言模型都基于"预测下一个 token"的工作机制，但不同模型之间存在差异：</p><div class=table-wrapper><table><thead><tr><th>差异维度</th><th>说明</th></tr></thead><tbody><tr><td>训练数据</td><td>代码占比、质量不同</td></tr><tr><td>上下文窗口</td><td>影响长项目处理能力</td></tr><tr><td>对齐技术</td><td>RLHF/DPO<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>影响指令遵循能力</td></tr></tbody></table></div><hr><h2 id=二ai-编程的三大崩溃>二、AI 编程的三大崩溃</h2><p>当用 AI 进行软件开发时，会遇到三个核心问题，统称为"三大崩溃"。</p><h3 id=21-上下文崩溃context-collapse>2.1 上下文崩溃（Context Collapse）</h3><p>AI 的上下文窗口（Context Window）有上限。即使模型支持 100K token，真实项目可能涉及数百万 token 的代码和文档。</p><div class=mermaid align=center>flowchart TD
+subgraph Problem [上下文崩溃]
+P1[项目规模] --> |50+ 文件| P2[代码量爆炸]
+P2 --> P3[AI 无法全部理解]
+P3 --> R1[AI 忘记之前代码]
+P3 --> R2[AI 重复实现功能]
+P3 --> R3[AI 破坏已有逻辑]
+end
+style P1 fill:#ffcccc
+style P3 fill:#ffcccc
+style R1 fill:#ffeeaa
+style R2 fill:#ffeeaa
+style R3 fill:#ffeeaa</div><p>典型表现：</p><ul><li>让 AI 修改一个函数，它忘记了同文件中另一个相关函数</li><li>让 AI 实现登录功能，它重新写了一个已有的用户模块</li><li>让 AI 添加新功能，它改动了不相关的代码导致 bug</li></ul><h3 id=22-任务崩溃task-collapse>2.2 任务崩溃（Task Collapse）</h3><p>如果不给 AI 明确的任务边界，它会"放飞自我"。</p><div class=mermaid align=center>flowchart LR
+subgraph Problem [任务崩溃]
+Input[需求： 做一个商城系统] --> AI[AI 自主发挥]
+AI --> A[写一点登录]
+AI --> B[写一点购物车]
+AI --> C[写一点支付]
+A & B & C --> Chaos((代码混乱))
+end
+style Input fill:#e1f5fe
+style Chaos fill:#ffcccc</div><p>你说"做个商城"，AI 可能：</p><ul><li>每个功能都写一点</li><li>没有统一的架构</li><li>代码风格不一致</li><li>最后变成无法维护的"屎山"</li></ul><h3 id=23-质量崩溃quality-collapse>2.3 质量崩溃（Quality Collapse）</h3><p>AI 生成的代码 bug 率远高于人类程序员。</p><div class=mermaid align=center>flowchart TD
+subgraph Problem [质量崩溃]
+Code[AI 生成代码] --> Check{检查结果}
+Check -->|有bug| Fix[AI 修复]
+Fix --> Check
+Check -->|修复中引入新bug| Worse[更差的代码]
+end
+style Code fill:#e1f5fe
+style Worse fill:#ffcccc</div><p>常见问题：</p><div class=table-wrapper><table><thead><tr><th>问题类型</th><th>典型表现</th></tr></thead><tbody><tr><td>幻觉</td><td>调用不存在的 API、使用不存在的库</td></tr><tr><td>安全风险</td><td>硬编码密码、SQL 注入漏洞</td></tr><tr><td>逻辑错误</td><td>边界条件未处理、异常未捕获</td></tr><tr><td>风格问题</td><td>命名不一致、格式混乱</td></tr></tbody></table></div><h3 id=24-判断力退化容易被忽视的问题>2.4 判断力退化（容易被忽视的问题）</h3><p>除了技术问题，Vibe Coding 还有一个容易被忽视的危害：<strong>人的判断力在退化</strong>。</p><p>当你习惯了"出错 → 贴报错 → 让AI再改"这个循环，你会逐渐失去对代码的深度理解。你可能说不清某个模块到底是怎么工作的，只是知道"让AI改改能跑"。</p><div class=table-wrapper><table><thead><tr><th>以前</th><th>Vibe Coding 后</th></tr></thead><tbody><tr><td>理解代码为什么这样写</td><td>只知道"能跑"</td></tr><tr><td>能定位 bug 在哪</td><td>只会贴报错给 AI</td></tr><tr><td>知道技术选型的理由</td><td>依赖 AI 做决定</td></tr></tbody></table></div><blockquote><p>AI 时代，最稀缺的不是能写代码的人，而是能判断代码好坏的人。</p></blockquote><hr><h2 id=三ai-编程的演进>三、AI 编程的演进</h2><h3 id=31-进化历程>3.1 进化历程</h3><div class=mermaid align=center>timeline
+title AI 编程进化史
+section 2013-2018
+语法补全 : Tabnine、Kite
+section 2018-2021
+智能补全 : GitHub Copilot
+section 2021-2023
+对话编程 : ChatGPT、Claude
+section 2023-2024
+IDE 集成 : Cursor、Windsurf
+section 2024-2025
+Vibe Coding : Andrej Karpathy 提出
+section 2025-未来
+Agent 主导 : Claude Code、BMAD</div><div class=table-wrapper><table><thead><tr><th>阶段</th><th>时间</th><th>特点</th><th>程序员角色</th></tr></thead><tbody><tr><td>语法补全</td><td>2013-2018</td><td>预测下一个词</td><td>代码工人</td></tr><tr><td>智能补全</td><td>2018-2021</td><td>代码片段建议</td><td>副驾驶</td></tr><tr><td>对话编程</td><td>2021-2023</td><td>自然语言生成代码</td><td>需求描述者</td></tr><tr><td>IDE 集成</td><td>2023-2024</td><td>多文件操作</td><td>协作者</td></tr><tr><td>Vibe Coding</td><td>2024-2025</td><td>AI 主导实现</td><td>审核者</td></tr><tr><td>Agent 主导</td><td>2025-未来</td><td>全流程自主执行</td><td>架构师</td></tr></tbody></table></div><h3 id=32-vibe-coding-的困境>3.2 Vibe Coding 的困境</h3><p>Vibe Coding（凭感觉编程）由 Andrej Karpathy 提出，核心理念是"用自然语言描述需求，AI 直接生成整个应用"。</p><div class=mermaid align=center>flowchart LR
+subgraph Old [Vibe Coding 模式]
+U[你：描述需求] --> AI[AI：生成代码]
+AI --> R[你：运行测试]
+R --> |报错| AI
+end
+style U fill:#e8f5e9
+style AI fill:#fff3e0
+style R fill:#ffebee</div><p>问题在于：这种模式缺乏系统化的工程管理，代码质量完全不可控。</p><h3 id=33-agentic-engineering-的提出>3.3 Agentic Engineering 的提出</h3><p>Andrej Karpathy 进一步提出了 <strong>Agentic Engineering</strong>（智能体工程化）的概念：</p><blockquote><p>AI 时代的软件开发是一门需要学习的专业技术。</p></blockquote><div class=mermaid align=center>flowchart LR
+subgraph Change [角色转变]
+Old1[程序员 = 代码工人] --> New1[程序员 = AI 架构师]
+Old2[写代码] --> New2[指挥 AI]
+Old3[Debug] --> New3[Review]
+end</div><p>核心变化：</p><ul><li>以前：人写代码，AI 辅助</li><li>现在：人定义目标和架构，AI 执行具体任务</li></ul><hr><h2 id=sdd给ai立规矩>SDD：给AI立规矩</h2><p>面对 Vibe Coding 的问题，社区提出了 <strong>Spec-Driven Development (SDD)</strong> 思路：先写规格，再让 AI 干活。</p><p>主流三个框架对比：</p><div class=table-wrapper><table><thead><tr><th>框架</th><th>核心理念</th><th>适用场景</th></tr></thead><tbody><tr><td>Spec Kit</td><td>宪法+七阶段门禁</td><td>0→1 新项目</td></tr><tr><td>OpenSpec</td><td>增量 Delta</td><td>日常迭代改功能</td></tr><tr><td>BMAD</td><td>多 Agent 模拟团队</td><td>复杂项目 / 学习</td></tr></tbody></table></div><ul><li><strong>Spec Kit</strong>：GitHub 官方出品，适合需要严格流程管控的场景</li><li><strong>OpenSpec</strong>：轻量级，适合在已有项目上做增量开发</li><li><strong>BMAD</strong>：覆盖最全面，适合想系统学习 AI 开发全流程的团队</li></ul><hr><h2 id=四bmad-是什么>四、BMAD 是什么</h2><p><strong>BMAD</strong> 全称 <strong>Breakthrough Method of Agile AI Driven Development</strong>（敏捷 AI 驱动开发的突破性方法），是一个 AI 驱动的敏捷开发框架。</p><p>官方定义：帮助完成从构思规划到智能体实现的完整软件开发过程。</p><h3 id=41-核心思路>4.1 核心思路</h3><p>BMAD 让 AI 模拟一个完整的软件团队：</p><div class=mermaid align=center>flowchart TD
+subgraph Team [BMAD AI 团队]
+BA[Business Analyst] --> PM[Product Manager]
+PM --> Arch[Architect]
+Arch --> SM[Scrum Master]
+SM --> Dev[Developer]
+SM --> QA[QA]
+end
+Human[人类] --> |定义目标| Team
+style Human fill:#e8f5e9
+style Team fill:#e3f2fd</div><p>内置 12+ 领域专家智能体，覆盖产品、设计、开发、测试全流程。</p><h3 id=42-解决三大崩溃>4.2 解决三大崩溃</h3><div class=mermaid align=center>flowchart TD
+subgraph Solution [BMAD 解决方案]
+C1[上下文崩溃] --> S1[文档分片 Epic Sharding]
+C2[任务崩溃] --> S2[任务分层 Epic→Story→Task]
+C3[质量崩溃] --> S3[三模式循环 Create→Validate→Edit]
+end
+style C1 fill:#ffebee
+style C2 fill:#ffebee
+style C3 fill:#ffebee
+style S1 fill:#e8f5e9
+style S2 fill:#e8f5e9
+style S3 fill:#e8f5e9</div><div class=table-wrapper><table><thead><tr><th>崩溃</th><th>BMAD 方案</th></tr></thead><tbody><tr><td>上下文崩溃</td><td>文档分片 + Epic Sharding</td></tr><tr><td>任务崩溃</td><td>Epic → Story → Task 层级</td></tr><tr><td>质量崩溃</td><td>Create → Validate → Edit 循环</td></tr></tbody></table></div><hr><h2 id=五bmad-核心机制>五、BMAD 核心机制</h2><h3 id=51-步骤文件架构>5.1 步骤文件架构</h3><p>每个步骤都重新加载上下文，避免 AI &ldquo;中间迷失&rdquo;：</p><div class=mermaid align=center>flowchart TD
+subgraph Steps [BMAD 步骤文件]
+S1[Step 1 需求分析] --> S2[Step 2 PRD 输出]
+S2 --> S3[Step 3 架构设计]
+S3 --> S4[Step 4 Epic 拆分]
+S4 --> S5[Step 5 Story 开发]
+end
+S1 --> |加载上下文| C1[Context1]
+S2 --> |加载上下文| C2[Context2]
+S3 --> |加载上下文| C3[Context3]
+S4 --> |加载上下文| C4[Context4]
+S5 --> |加载上下文| C5[Context5]</div><h3 id=52-任务分层>5.2 任务分层</h3><div class=mermaid align=center>flowchart TD
+Epic[Epic 大功能] --> Story[Story 用户故事]
+Story --> Task[Task 具体任务]
+Task --> Code[Code 代码实现]
+Epic --> |拆分| Epic1[Epic1]
+Epic --> |拆分| Epic2[Epic2]
+Epic --> |拆分| Epic3[Epic3]
+style Epic fill:#e3f2fd
+style Story fill:#e8f5e9
+style Task fill:#fff3e0
+style Code fill:#f3e5f5</div><h3 id=53-三模式循环>5.3 三模式循环</h3><p>每个工作流都具备三种能力：</p><div class=mermaid align=center>flowchart LR
+Create[Create 创建] --> Validate[Validate 验证]
+Validate -->|不通过| Edit[Edit 编辑]
+Edit --> Validate
+Validate -->|通过| Done[完成]
+style Create fill:#e8f5e9
+style Validate fill:#fff3e0
+style Edit fill:#e3f2fd
+style Done fill:#f3e5f5</div><h3 id=54-完整工作流>5.4 完整工作流</h3><div class=mermaid align=center>flowchart TD
+Start[需求] --> PRD[PRD 文档]
+PRD --> Arch[架构设计]
+Arch --> Epic[Epic 拆分]
+Epic --> Story1[Story1]
+Epic --> Story2[Story2]
+Epic --> Story3[StoryN]
+Story1 --> Task1[Task1]
+Story2 --> Task2[Task2]
+Story3 --> Task3[TaskN]
+Task1 --> Code1[代码]
+Task2 --> Code2[代码]
+Task3 --> Code3[代码]
+Code1 & Code2 & Code3 --> Test[测试]
+Test --> Review[Review]
+style Start fill:#e8f5e9
+style PRD fill:#e3f2fd
+style Arch fill:#fff3e0
+style Epic fill:#f3e5f5
+style Review fill:#ffcdd2</div><h3 id=bmad-背后的原理context-engineering>BMAD 背后的原理：Context Engineering</h3><p>BMAD 的"步骤文件架构"本质上是在解决一个问题：<strong>如何管理 AI 的认知</strong>。</p><p>AI 就像一个"失忆的强同事"——每次坐下来都需要准备好它需要的材料。材料不全，它干不好活；材料太多，它会迷失在信息海洋里。</p><p><strong>Context Engineering</strong>（上下文工程）是 Anthropic 提出的概念，核心思路是系统性地管理 AI 在每次交互中能"看到"的信息：</p><div class=table-wrapper><table><thead><tr><th>层级</th><th>内容</th></tr></thead><tbody><tr><td>System Context</td><td>AI 规则、角色定义</td></tr><tr><td>Project Context</td><td>项目背景、架构、技术栈</td></tr><tr><td>Task Context</td><td>当前任务的需求和约束</td></tr><tr><td>Local Context</td><td>当前代码的具体实现</td></tr></tbody></table></div><p>BMAD 通过每步重新加载上下文，让 AI 始终"记得"该记得的事——这正是 Context Engineering 的实践。</p><hr><h2 id=六bmgd-模块游戏开发工作室>六、BMGD 模块：游戏开发工作室</h2><p>BMGD（Game Dev Studio）是 BMAD 的游戏开发模块，专注于游戏开发场景。</p><h3 id=61-功能特性>6.1 功能特性</h3><ul><li><strong>多引擎支持</strong>：Unity、Unreal、Godot、自定义引擎</li><li><strong>GDD 生成</strong>：游戏设计文档自动生成</li><li><strong>Quick Dev 模式</strong>：快速原型制作</li><li><strong>叙事设计支持</strong>：角色、对话、世界构建</li><li><strong>21+ 种游戏类型</strong>：包含特定引擎的架构指导</li></ul><h3 id=62-安装方式>6.2 安装方式</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>npx bmad-method install
+</span></span><span class=line><span class=cl><span class=c1># 选择 gds 模块</span>
+</span></span></code></pre></td></tr></table></div></div><p>或直接安装：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>npm install -g bmad-game-dev-studio
+</span></span></code></pre></td></tr></table></div></div><h3 id=63-开发模式>6.3 开发模式</h3><div class=mermaid align=center>flowchart TD
+A[开始] --> B[选择引擎]
+B --> C[选择模式]
+C -->|快速原型| QuickDev[Quick Dev]
+C -->|完整生产| EpicFlow[Epic 驱动冲刺]
+QuickDev --> GDD1[GDD 生成]
+EpicFlow --> GDD2[GDD 生成]
+GDD1 & GDD2 --> Dev[开发]
+Dev --> Test[测试]
+Test --> Deploy[部署]
+style QuickDev fill:#e8f5e9
+style EpicFlow fill:#e3f2fd</div><div class=table-wrapper><table><thead><tr><th>模式</th><th>适用场景</th></tr></thead><tbody><tr><td>Quick Dev</td><td>快速原型验证、概念验证</td></tr><tr><td>Epic 冲刺</td><td>完整生产开发周期</td></tr></tbody></table></div><hr><h2 id=进阶让ai开发具有复利>进阶：让AI开发具有复利</h2><p>传统 SDD 有一个局限：<strong>每次任务都要从头组装上下文</strong>。上次做类似功能积累的经验、踩过的坑、选的方案——下次做相似的事，AI 不记得。你得重新告诉它一遍。</p><p><strong>Compound Engineering</strong>（复利工程）想要解决的是这个问题：让 AI 开发系统具有"学习能力"。</p><div class=mermaid align=center>flowchart LR
+Task1[第1次：45分钟] -->|沉淀经验| Index[经验索引]
+Index -->|自动加载| Task2[第2次：15分钟]
+Task2 --> Index
+Index -->|持续优化| TaskN[第N次：5分钟]
+style Index fill:#e8f5e9</div><p>核心思路：每次完成任务后，把方案、踩过的坑、决策理由抽取出来，写入经验索引。下次遇到类似场景，这些经验会被自动加载到 AI 的上下文里。</p><p>这就是从"人指挥 AI"到"AI 为人工作"的转变。</p><hr><h2 id=七未来程序员的核心能力>七、未来程序员的核心能力</h2><p>AI 时代，程序员的核心能力发生转变：</p><div class=mermaid align=center>flowchart LR
+subgraph Old [以前]
+O1[语法熟练]
+O2[编码速度]
+O3[框架掌握]
+end
+subgraph New [未来]
+N1[架构设计]
+N2[需求表达]
+N3[代码审查]
+end
+Old -->|时代变化| New</div><div class=table-wrapper><table><thead><tr><th>能力</th><th>作用</th></tr></thead><tbody><tr><td>架构能力</td><td>告诉 AI 怎么拆分模块、选什么方案</td></tr><tr><td>Prompt 能力</td><td>把需求清晰、无歧义地表达给 AI</td></tr><tr><td>Review 能力</td><td>一眼看出 AI 生成代码的问题</td></tr><tr><td>产品思维</td><td>知道该做什么，比知道怎么做更重要</td></tr></tbody></table></div><blockquote><p>AI 时代，最稀缺的不是能写代码的人，而是能定义好问题的人。</p></blockquote><hr><h2 id=八总结>八、总结</h2><p>BMAD 本质上是在回答一个问题：<strong>如何让 AI 开发变得可控</strong>。</p><p>从 Vibe Coding 的"快速但混乱"，到 Agentic Engineering 的"工程化"，再到 BMAD 的"系统框架"，AI 编程正在从粗放走向精细。</p><p>关键认知：</p><ol><li>AI 的本质是"预测下一个 token"，是模仿而非思考</li><li>三大崩溃（上下文、任务、质量）是 AI 开发的根本挑战</li><li>BMAD 通过步骤文件、任务分层、三模式循环来解决这些问题</li><li>BMGD 模块为游戏开发提供了专业的工作流</li></ol><p>未来，不会淘汰程序员，但会淘汰"只会在键盘上打字的人"。</p><hr><p><strong>参考资料：</strong></p><ul><li>[1] <a class=link href=https://docs.bmad-method.org/zh-cn/ target=_blank rel=noopener>欢迎使用 BMad 方法 | BMAD Method</a></li><li>[2] <a class=link href=https://github.com/bmad-code-org/BMAD-METHOD target=_blank rel=noopener>BMAD-METHOD GitHub 仓库</a></li></ul><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>RLHF (Reinforcement Learning from Human Feedback) 和 DPO (Direct Preference Optimization) 是训练时让模型更好地理解人类意图的技术&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></section><footer class="article-meta article-footer"><section class="article-copyright inline-meta"><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside><h2 class=section-title>相关文章</h2><div class=subsection-list><div class=article-list--tile><article><a href=/p/ai-agent-%E5%85%A8%E9%80%8F%E5%BD%BB%E8%A7%A3%E6%9E%90skilltoolmcp-%E4%B8%8E%E4%B8%BB%E6%B5%81-agent-%E7%9A%84%E5%85%B3%E7%B3%BB/><div class=article-details><h2 class=article-title>AI Agent 全透彻解析：Skill、Tool、MCP 与主流 Agent 的关系</h2></div></a></article><article><a href=/p/%E6%8A%8A-bug-%E4%BF%AE%E5%A4%8D%E6%8E%A5%E5%85%A5%E9%A3%9E%E4%B9%A6%E5%A4%9A%E7%BB%B4%E8%A1%A8%E6%A0%BC%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E-nanobot-%E7%9A%84%E4%BA%BA%E6%9C%BA%E5%8D%8F%E5%90%8C%E9%97%AD%E7%8E%AF/><div class=article-details><h2 class=article-title>把 Bug 修复接入飞书：多维表格、机器人与 Nanobot 的人机协同闭环</h2></div></a></article><article><a href=/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9Frag/><div class=article-details><h2 class=article-title>大模型检索增强系统（RAG）</h2></div></a></article><article><a href=/p/deepseek-v3%E5%AD%A6%E4%B9%A0/><div class=article-details><h2 class=article-title>DeepSeek-V3学习</h2></div></a></article></div></div></aside><script src=https://utteranc.es/client.js repo=CrownJoker07/CrownJoker07.github.io issue-term=pathname label=Comment crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>let utterancesLoaded=!1;function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;utterancesLoaded=!0,setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{if(!utterancesLoaded)return;setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
+2025 -
+2026 ZhuangZewei</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=4.0.3>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.f856840516f7c2ad1769a8f5937e3d08d6cb386e2cd2dd025ae696e0ff207958.js defer></script></body></html>

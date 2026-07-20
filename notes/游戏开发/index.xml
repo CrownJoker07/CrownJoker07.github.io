@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>游戏开发 on 庄泽伟的博客</title><link>https://crownjoker07.github.io/notes/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</link><description>Recent content in 游戏开发 on 庄泽伟的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>ZhuangZewei</copyright><lastBuildDate>Sun, 16 Feb 2025 15:16:25 +0800</lastBuildDate><atom:link href="https://crownjoker07.github.io/notes/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>游戏项目复盘</title><link>https://crownjoker07.github.io/notes/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%9B%98/</link><pubDate>Sun, 16 Feb 2025 15:16:25 +0800</pubDate><guid>https://crownjoker07.github.io/notes/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%9B%98/</guid><description>&lt;h3 id="雷霆战机"&gt;雷霆战机
+&lt;/h3&gt;&lt;p&gt;雷霆战机：躲避弹幕，击败敌机，通过吃比自己小的敌机升级。&lt;/p&gt;
+&lt;p&gt;遇到的困难：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;飞机机体与子弹不匹配，通过字典匹配在一起。&lt;/li&gt;
+&lt;li&gt;飞机升级，子弹位置不确定，提取建好空对象，获取空对象位置。&lt;/li&gt;
+&lt;li&gt;子弹数目过多，导致卡顿，采用对象池统一管理子弹，多个子弹享元同一个贴图（享元模式），多个子弹克隆同一个原型子弹（原型模式）。&lt;/li&gt;
+&lt;li&gt;敌机生成数量不稳定，种类不均衡，采用工厂模式统一管理，控制各种类敌机数量。&lt;/li&gt;
+&lt;li&gt;UI血量变化，一开始直接将血量写在了UI里，这样不符合低耦合的游戏思想，我又将血量放在飞机类，采用事件的形式，将扣血的通知传递给UI，更新血量。&lt;/li&gt;
+&lt;li&gt;地图循环播放，无限复制地图实现，发现这样低效，浪费内存，利用offset位置偏移，只用两种地图贴图不停循环实现，或者使用shader方式实现。&lt;/li&gt;
+&lt;li&gt;音频管理，不同敌机都会有一个音频组件，但不利于统一管理，单例一个总音频统一管理（单例模式）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;学习反馈：学会了如何优化游戏，各种设计模式的使用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="球球大冒险"&gt;球球大冒险
+&lt;/h3&gt;&lt;p&gt;基本玩法：在规定时间内，玩家要利用好各种球的特性去闯关卡&lt;/p&gt;
+&lt;p&gt;遇到困难：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;小球的移动：一开始采用旋转Rotation进行旋转，但缺乏物理性，后面采用小球与地面的摩檫力驱动小球前进，给小球一个向前的扭矩力&lt;/li&gt;
+&lt;li&gt;小球的切换：不同小球间的切换涉及（大小、弹性、角动力等），如果制作三个蓝图来进行切换，会有很多组件重复切换例如相机等，所以直接切换staticmesh组件里的模型会更加好，而且我将各种物理属性用一个结构体存储，并用DataTable进行统一管理（后期只需要调整DataTable的值就行，无需更改代码）&lt;/li&gt;
+&lt;li&gt;温度系统的设计：火、水、风三个系统的开发，
+火：采用Niagara粒子特效表现火，可燃物体间的交互
+风：对于不同质量物体所产生的效果
+水：浮力的计算，以及水效果的制作&lt;/li&gt;
+&lt;li&gt;物理障碍的制作：涉及物理约束组件的使用&lt;/li&gt;
+&lt;li&gt;关卡程序化生成的管理和销毁，关卡模块的设计&lt;/li&gt;
+&lt;li&gt;排行榜UI的设计：玩家开始游戏时会要求输入用户名，当游戏结束会判定是否有该用户的数据，若不存在，则保存当前用户数据，若存在，比较是否破纪录，破纪录就更新数据。数据保存本地时，先进行所有用户数据的排序再存储。最后输出UI显示出来&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>从零搭建 Unity 游戏框架：前言</title><link>https://crownjoker07.github.io/notes/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/unity%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/</link><pubDate>Thu, 06 Feb 2025 15:18:48 +0800</pubDate><guid>https://crownjoker07.github.io/notes/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/unity%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/</guid><description>&lt;h1 id="前言"&gt;前言
+&lt;/h1&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;什么是游戏框架？&lt;br&gt;
+我认为框架是支撑整个游戏生命的骨架，有以下几个作用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;避免重复造轮子，可以快速搭建起一个游戏启动流程，程序只需专注实现游戏核心玩法&lt;/li&gt;
+&lt;li&gt;规范开发流程，规范程序开发，方便协同工作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因此拥有一个好的游戏框架是很重要的，他人的游戏开源框架固然厉害，但终究不是自己研发的，适合自己才是最好的，所以打算从零搭建游戏框架，拥有一套属于自己的超级厉害的游戏框架&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;开发核心思路：&lt;br&gt;
+在不影响耦合度的情况下，代码极简，对比了很多框架，很多逻辑都过度设计，代码复杂意味着阅读困难，维护困难等，我认为没有复杂的逻辑，只有复杂的思想，无论什么逻辑进行一番梳理之后，代码逻辑都可以进行简化。
+目标是制作一套容易理解，方便上手的框架，且每个部分几乎都可以热插拔，不会互相耦合。&lt;/p&gt;
+&lt;p&gt;开源第三方库推荐：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.yooasset.com/" target="_blank" rel="noopener"
+ &gt;https://www.yooasset.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://hybridclr.doc.code-philosophy.com/docs/basic" target="_blank" rel="noopener"
+ &gt;https://hybridclr.doc.code-philosophy.com/docs/basic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://luban.doc.code-philosophy.com/docs/intro" target="_blank" rel="noopener"
+ &gt;https://luban.doc.code-philosophy.com/docs/intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.fairygui.com/" target="_blank" rel="noopener"
+ &gt;https://www.fairygui.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dotween.demigiant.com/" target="_blank" rel="noopener"
+ &gt;https://dotween.demigiant.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description></item></channel></rss>
